@@ -3,6 +3,12 @@ A common space to analyze GESTALT sperm data.
 
 The purpose of this repository is to provide a common space to share code to process, analyze, and visualize serial sperm sampling data.
 
+To install the Python environment, open the terminal, navigate to this directory and run:
+```
+conda create --name <env> --file python_requirements.txt
+conda activate <env>
+```
+
 The main directories are as follows:
 ```
 sperm-data-analysis
@@ -17,7 +23,7 @@ sperm-data-analysis
         ├── fish1_s1_rep2/
 	    ├── fish1_s1_rep3/
 	    ├── fish1_s2_rep1/
-        .
+            .
 	    .
 	    .
 ├── experiments/
