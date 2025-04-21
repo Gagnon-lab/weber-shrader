@@ -1,7 +1,7 @@
 #Muller to Single Barcode
 #Goal: Maintain color code across plot types
 
-experiment <- "03.25.2025_01.22_PM"
+experiment <- "04.02.2025_06.15_AM"
 fish <- 6
 
 # Import packages
