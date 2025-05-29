@@ -1,0 +1,2 @@
+sample	umi	reference	output.dir	fastq1	fastq2	barcode.fastq1	barcode.fastq2	barcode1	barcode2
+SAMPLE_single_deletion_simulated	FALSE	/my_data/sperm.referenceseq.fa	/my_data/***OUTPUT_FOLDER***	/my_data/SAMPLE_simulated/single_swap_forward.fastq.gz	/my_data/SAMPLE_simulated/single_swap_reverse.fastq.gz	NA	NA	ALL	ALL
