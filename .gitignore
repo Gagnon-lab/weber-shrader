@@ -2,6 +2,7 @@
 # potential to contain very large files.
 data/
 experiments/
+fastq-data/clustering/
 
 ##################################################################
 # PYTHON GITIGNORE                                               #
