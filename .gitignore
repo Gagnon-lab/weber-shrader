@@ -3,6 +3,7 @@
 data/
 experiments/
 fastq-data/clustering/
+**.DS_Store
 
 ##################################################################
 # PYTHON GITIGNORE                                               #
