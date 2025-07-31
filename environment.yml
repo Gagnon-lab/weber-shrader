@@ -1,20 +1,28 @@
-name: gagnon
+name: tm
 channels:
-  - defaults
+  - https://repo.anaconda.com/pkgs/main
+  - https://repo.anaconda.com/pkgs/r
+  - conda-forge
 dependencies:
-  - python=3.11
-  - jupyter
-  - numpy
-  - matplotlib
-  - ipympl
+  - importnb
+  - ipympl=0.9.7
   - joblib
-  - scipy
-  - tqdm
-  - pandas
+  - jupyter
+  - matplotlib
   - mpmath
   - natsort
-  - seaborn
-  - openpyxl
   - nbformat
-  - importnb
-prefix: /home/connor/anaconda3/envs/gagnon
+  - numpy
+  - openpyxl
+  - pandas
+  - python=3.11
+  - scipy
+  - seaborn
+  - tqdm
+  - levenshtein
+  - scikit-learn
+  - jupyter_contrib_nbextensions
+  - nodejs
+  - networkx
+  - statsmodels
+prefix: /opt/anaconda3/envs/tm
