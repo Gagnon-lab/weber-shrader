@@ -2,61 +2,56 @@ import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
 
-def plot(results, ax, replicate = None, unedited_index = None, colors = None, offset_time = 0):
+def where_unedited(barcode_list):
     """
-    Input a `results` dataframe and `ax` axis and
-    plot the corresponding Muller plot.
-
-    If `replicate` is None, then all replicates are combined.
-    Otherwise, `replicate` specifies which replicate will
-    be plotted.
+    Given a list of barcodes (strings), returns the index where the unedited barcode occurs.
+    If the unedited barcode does not appear, return `None` instead.
     """
+    unedited_barcode = 'NONE_NONE_NONE_NONE_NONE_NONE_NONE_NONE_NONE_NONE'
+    where = np.where(barcode_list == unedited_barcode)[0]
+    return where[0] if len(where) == 1 else None
 
-    if replicate is None:
-        # For each sample, combine the results of all
-        # replicates into a single row, where the
-        # tuples representing reads are added
-        # together elementwise.
-        grouped = (
-            results.groupby("time")["obs_result"]
-            .agg(lambda tuples: tuple(map(sum, zip(*tuples))))
-            .reset_index()
-        )
-    else:
-        grouped = results[results.replicate == replicate]
+def plot(data, fish, ax = None, replicate = None, offset_time = 0):
+    subset = data.query('fish == @fish')
+    if replicate is not None:
+        subset = subset.query('replicate == @replicate')
 
-    # obs_data has shape (n_clones, n_times)
-    # Element i, j is the number of reads of clone i at time j.
-    obs_data = np.array([list(result) for result in grouped.obs_result]).T
-
-    # Convert reads to frequencies by dividing by row sums.
-    freq_data = obs_data / np.sum(obs_data, axis = 0)
-
-    # Extract all the times at which reads occur.
-    times = np.array(grouped.time)
-
-    if colors is None:
+    sorted_data = subset.sort_values(by=['sample', 'reads'], ascending=[True, False])
+    barcode_order = sorted_data['barcode'].unique()
+    
+    grouped = subset.groupby(['barcode', 'sample'], as_index = False).aggregate({'reads': 'sum'})
+    matrix = grouped.pivot(index = 'barcode', columns = 'sample', values = 'reads')
+    matrix.fillna(0, inplace = True)
+    matrix = matrix.loc[barcode_order]
+    freqs = matrix.div(matrix.sum(axis=0), axis=1)
+    
     # Source: https://github.com/BlakeRMills/MoMAColors/blob/main/R/Colors.R
-        colors = np.array(["#ff4d6f", "#579ea4", "#df7713", "#f9c000", "#86ad34",
-              "#5d7298", "#81b28d", "#7e1a2f", "#2d2651", "#c8350d", "#bd777a"])
-
-    n_clones = np.shape(freq_data)[0]
+    colors = np.array(["#ff4d6f", "#579ea4", "#df7713", "#f9c000", "#86ad34",
+          "#5d7298", "#81b28d", "#7e1a2f", "#2d2651", "#c8350d", "#bd777a"])
+    
+    n_clones = np.shape(freqs)[0]
     repeats = -(-n_clones // len(colors))
     colors_extended = np.tile(colors, repeats)[:n_clones]
     
+    unedited_index = where_unedited(freqs.index)
     if unedited_index is not None:
         # put in grey in the element corresponding to the unedited array.
         colors_extended = np.insert(colors_extended, unedited_index, '#aaaaaa')
-
+    
         # remove the last index so that the array maintains the correct length.
         colors_extended = colors_extended[:-1]
-
-    times = times + offset_time
-    ax.stackplot(times, *freq_data[::-1,:], colors=colors_extended[::-1])
-
-    ax.set_xticks(times)
     
+    ts = matrix.columns
+
+    if ax is None:
+        fig, ax = plt.subplots()
+        
+    ax.stackplot(ts, freqs[::-1], colors = colors_extended[::-1]);
+    ax.set_xticks(ts);
     ax.set_xlabel("Time")
     ax.set_ylabel("Clonal frequency")
-    ax.set_xlim(times[0], times[-1])
+    ax.set_xlim(ts[0], ts[-1])
     ax.set_ylim(0, 1);
+
+    if ax is None:
+        return fig, ax
