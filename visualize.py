@@ -62,7 +62,7 @@ def plot(data, fish, ax = None, replicate = None, add_legend = False, offset_tim
     
     # Add legend to plot
     if add_legend:
-        ax.legend(handles=handles, title="Barcode", bbox_to_anchor=(1.05, 1), loc='upper left')
+        ax.legend(handles=handles[:20], title="Barcode", bbox_to_anchor=(1.05, 1), loc='upper left')
 
     if ax is None:
         return fig, ax
