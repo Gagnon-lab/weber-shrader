@@ -2,6 +2,8 @@ import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
 
+from matplotlib.patches import Patch
+
 def where_unedited(barcode_list):
     """
     Given a list of barcodes (strings), returns the index where the unedited barcode occurs.
@@ -11,7 +13,7 @@ def where_unedited(barcode_list):
     where = np.where(barcode_list == unedited_barcode)[0]
     return where[0] if len(where) == 1 else None
 
-def plot(data, fish, ax = None, replicate = None, offset_time = 0):
+def plot(data, fish, ax = None, replicate = None, add_legend = False, offset_time = 0):
     subset = data.query('fish == @fish')
     if replicate is not None:
         subset = subset.query('replicate == @replicate')
@@ -52,6 +54,15 @@ def plot(data, fish, ax = None, replicate = None, offset_time = 0):
     ax.set_ylabel("Clonal frequency")
     ax.set_xlim(ts[0], ts[-1])
     ax.set_ylim(0, 1);
+
+    # Create legend handles
+    legend_labels = barcode_order
+    legend_colors = colors_extended
+    handles = [Patch(facecolor=c, label=b) for c, b in zip(legend_colors, legend_labels)]
+    
+    # Add legend to plot
+    if add_legend:
+        ax.legend(handles=handles, title="Barcode", bbox_to_anchor=(1.05, 1), loc='upper left')
 
     if ax is None:
         return fig, ax
