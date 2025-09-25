@@ -36,7 +36,9 @@ def tuple_from_file(filepath):
     directory('./SpermAnalysis_Muller1/data/viz-Output/fish1_s2_rep3/fish1_s2_rep3.allReadCounts')
     will return ('fish1', '2', '3').
     """
-    fish, sample, replicate = (filepath.split("/")[-1]).split('.')[0].split('_')
+    filename = os.path.splitext(os.path.basename(filepath))[0]
+    fish, sample, replicate = filename.split('_')
+    # fish, sample, replicate = (filepath.split("/")[-1]).split('.')[0].split('_')
     return fish, sample[1:], replicate[3:]
 
 #

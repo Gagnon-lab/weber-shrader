@@ -13,7 +13,8 @@ def where_unedited(barcode_list):
     where = np.where(barcode_list == unedited_barcode)[0]
     return where[0] if len(where) == 1 else None
 
-def plot(data, fish, ax = None, replicate = None, add_legend = False, offset_time = 0):
+def plot(data, fish, ax = None, replicate = None, add_legend = False, map_samples = False):
+    sample_map = {1: 5, 2: 6, 3: 7, 4: 8, 5: 9, 6: 10, 7: 11, 8:12, 9:13, 10:14, 11:16, 12:17, 13:18, 14: 20, 15: 22, 16: 24, 17: 25, 18:26}
     subset = data.query('fish == @fish')
     if replicate is not None:
         subset = subset.query('replicate == @replicate')
@@ -44,6 +45,8 @@ def plot(data, fish, ax = None, replicate = None, add_legend = False, offset_tim
         colors_extended = colors_extended[:-1]
     
     ts = matrix.columns
+    if map_samples:
+        ts = [sample_map[t] for t in ts]
 
     if ax is None:
         fig, ax = plt.subplots()
