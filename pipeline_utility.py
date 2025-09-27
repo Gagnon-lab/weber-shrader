@@ -1,7 +1,8 @@
 # pipeline_utility.py
 # 
 # This file contains numerous helper functions for use in the main pipeline
-# script, `process_sperm_barcodes.ipynb`.
+# script, `process_sperm_barcodes.ipynb`. This helps reduce the length of
+# the main pipeline and maintain its readability.
 # 
 # Author: Connor Shrader
 
@@ -12,10 +13,13 @@ from matplotlib.colors import LinearSegmentedColormap
 import seaborn as sns
 import networkx as nx
 import Levenshtein
+import os
+from matplotlib.patches import Patch
 
 #
 # Reading and writing to files
 # 
+
 # def directory(fish, sample, replicate):
 #     """
 #     This function takes in an identifier for the fish, sample, and replicate,
@@ -69,7 +73,17 @@ def find_connected_components(D, threshold=1):
     G = nx.from_numpy_array(d_inf <= threshold)
     return list(nx.connected_components(G))
 
-def summarize_component(i, component_data, distance_matrix, summary):
+def summarize_component(i, component_data, distance_matrix):
+    """
+    This function inputs information about a connected component from
+    clustering and outputs a string describing the cluster.
+
+    `i`: The component index.
+    `component_data`: All data associated with the cluster.
+    `distance_matrix`: The distances between sequences in this cluster.
+    """
+    output = []
+    
     idx = component_data.index
     local_distances = distance_matrix[np.ix_(idx, idx)]
     avg = np.mean(local_distances, axis=0)
@@ -78,12 +92,14 @@ def summarize_component(i, component_data, distance_matrix, summary):
     max_pairwise = int(np.max(np.triu(local_distances)))
     max_to_center = int(np.max(local_distances[center_idx, :]))
 
-    summary.write(f"Component {i}: indices {list(idx)}\n")
-    summary.write(f"Max distance between barcodes: {max_pairwise}. Max distance to center: {max_to_center}\n")
+    output.append(f"Component {i}\n")
+    output.append(f"Max distance between barcodes: {max_pairwise}. Max distance to center: {max_to_center}\n")
     
     for j, row in component_data.iterrows():
         marker = '*' if j == idx[center_idx] else ' '
-        summary.write(f"{row['reads']:>6}\t{marker}{row['barcode']}.\n")
+        output.append(f"{row['reads']:>6}\t{marker}{row['barcode']}.\n")
+
+    return output
 
 def resolve_winner_barcode(component_data, unedited):
     return unedited if unedited in component_data['barcode'].values else component_data.iloc[0]['barcode']
@@ -91,6 +107,7 @@ def resolve_winner_barcode(component_data, unedited):
 #
 # Part E: cleaning contaminated barcodes
 #
+
 def identify_questionable(data, unedited):
     """
     This function takes in a DataFrame of reads and identifies which barcodes are questionable.
@@ -113,7 +130,7 @@ def summarize_barcode(data, barcode):
     given barcode in each fish. In addition, this function returns the 'ratio'
     used to identify winner fish.
     """
-    single_barcode = data[data.barcode == barcode].drop("barcode", axis = 1)
+    single_barcode = data.query('barcode == @barcode').drop("barcode", axis = 1)
     group_fish = single_barcode.groupby(['fish'], observed = True, as_index = False).aggregate({'reads': 'sum'})
     group_fish.sort_values('reads', ascending = False, inplace = True)
 
@@ -124,21 +141,21 @@ def summarize_barcode(data, barcode):
 
     return group_fish, ratio
 
-def heatmap(data, barcode):
+def heatmap_barcode(data, barcode):
     """
     This function inputs a DataFrame ('data') of reads and a barcode. It plots a heatmap showing
     the reads of that barcode across all fish, samples, and replicates.
     """
-    data['sample'] = pd.to_numeric(data['sample'])
+    # data['sample'] = pd.to_numeric(data['sample'])
     group_fish, ratio = summarize_barcode(data, barcode)
 
-    # sort fish in reverse order so that fish with large reads are on top.
+    # `idx` is the order that the fish will appear in the heatmap.
     idx = group_fish.index#[::-1]
     
     single_barcode = data[data.barcode == barcode].drop("barcode", axis = 1)
     single_barcode["rep_count"] = 1
     group_samples = single_barcode.groupby(['fish', 'sample'], as_index = False, observed = True) \
-                             .aggregate({'rep_count': 'sum', 'reads': 'sum'})
+                                  .aggregate({'rep_count': 'sum', 'reads': 'sum'})
     
     to_plot = group_samples.pivot(index = 'fish', columns = 'sample', values = 'rep_count') \
                            .fillna(0).iloc[idx]
@@ -164,3 +181,148 @@ def heatmap(data, barcode):
     colorbar.set_label("Number of replicates the barcode appeared in")
 
     return fig, ax
+
+def heatmap_fish(data, fish):
+    """
+    This function inputs a DataFrame ('data') of reads and a fish. It plots a heatmap showing
+    the reads of that barcode across all barcodes, samples, and replicates.
+    """
+    single_barcode = data.query('fish == @fish').copy().drop("fish", axis = 1)
+
+    # Find appropriate order
+    sorted_data = single_barcode.sort_values(by=['sample', 'reads'], ascending=[True, False])
+    barcode_order = sorted_data['barcode'].unique()
+    
+    single_barcode["rep_count"] = 1
+    group_samples = single_barcode.groupby(['barcode', 'sample'], as_index = False, observed = True) \
+                             .aggregate({'rep_count': 'sum', 'reads': 'sum'})
+    
+    to_plot = group_samples.pivot(index = 'barcode', columns = 'sample', values = 'rep_count') \
+                           .fillna(0).loc[barcode_order]
+
+    # print(single_barcode)
+    
+    read_counts = group_samples.pivot(index = "barcode", columns = "sample", values = "reads") \
+                               .fillna(0).astype(int).loc[barcode_order]
+
+    # the maximum number of replicates that appear in any fish/sample for this barcode
+    max_rep = int(to_plot.values.max())
+
+    # [black, red, green, blue]
+    myColors = ((0.0, 0.0, 0.0, 1.0), (0.8, 0.0, 0.0, 1.0), (0.0, 0.8, 0.0, 1.0), (0.0, 0.0, 0.8, 1.0))
+    cmap = LinearSegmentedColormap.from_list('Custom', myColors[:max_rep+1], max_rep+1)
+    
+    fig, ax = plt.subplots()
+    ax = sns.heatmap(to_plot, annot = read_counts, annot_kws = {"size": 6}, fmt = 'd', cmap = cmap, vmin = 0, vmax = max_rep)
+    # ax.invert_yaxis()
+    ax.set_title(fish)
+    
+    colorbar = ax.collections[0].colorbar
+    colorbar.set_ticks([max_rep/(max_rep+1)*i+max_rep/(2*(max_rep+1)) for i in range(max_rep + 1)])
+    colorbar.set_ticklabels([f'{i}' for i in range(max_rep+1)])
+    colorbar.set_label("Number of replicates the barcode appeared in")
+
+    return fig, ax
+
+def where_unedited(barcode_list):
+    """
+    Given a list of barcodes (strings), returns the index where the unedited barcode occurs.
+    If the unedited barcode does not appear, return `None` instead.
+    """
+    unedited_barcode = 'NONE_NONE_NONE_NONE_NONE_NONE_NONE_NONE_NONE_NONE'
+    where = np.where(barcode_list == unedited_barcode)[0]
+    return where[0] if len(where) == 1 else None
+
+# sample_map is a dictionary that maps sample numbers to the actual age
+# of the fish during that month.
+sample_map = {
+    1: 5, 
+    2: 6, 
+    3: 7, 
+    4: 8, 
+    5: 9, 
+    6: 10, 
+    7: 11, 
+    8: 12, 
+    9: 13, 
+    10: 14, 
+    11: 16, 
+    12: 17, 
+    13: 18, 
+    14: 20, 
+    15: 22, 
+    16: 24, 
+    17: 25, 
+    18: 26
+}
+
+def plot_muller(data, fish, ax = None, replicate = None, add_legend = False, map_samples = False):
+    """
+    Plot a Muller plot of the barcode data.
+
+    data: The dataset to use (in the pipeline, this will be all_data, pass_data,
+        etc.)
+    fish: The fish number to be plotted.
+    replicate (default None): Which replicate (1 through 3) to plot. If `None`
+        is passed, then all three replicates are combined.
+    add_legend (defualt False): Whether to add a legend that lists the names
+        of barcodes.
+    map_samples (default False): If `False`, then the x axis contains the sample
+        numbers. If `True`, then the x axis contains the real-life months that
+        the samples occurred.
+    """
+    
+    subset = data.query('fish == @fish')
+    if replicate is not None:
+        subset = subset.query('replicate == @replicate')
+
+    sorted_data = subset.sort_values(by=['sample', 'reads'], ascending=[True, False])
+    barcode_order = sorted_data['barcode'].unique()
+    
+    grouped = subset.groupby(['barcode', 'sample'], as_index = False).aggregate({'reads': 'sum'})
+    matrix = grouped.pivot(index = 'barcode', columns = 'sample', values = 'reads')
+    matrix.fillna(0, inplace = True)
+    matrix = matrix.loc[barcode_order]
+    freqs = matrix.div(matrix.sum(axis=0), axis=1)
+    
+    # Source: https://github.com/BlakeRMills/MoMAColors/blob/main/R/Colors.R
+    colors = np.array(["#ff4d6f", "#579ea4", "#df7713", "#f9c000", "#86ad34",
+          "#5d7298", "#81b28d", "#7e1a2f", "#2d2651", "#c8350d", "#bd777a"])
+    
+    n_clones = np.shape(freqs)[0]
+    repeats = -(-n_clones // len(colors))
+    colors_extended = np.tile(colors, repeats)[:n_clones]
+    
+    unedited_index = where_unedited(freqs.index)
+    if unedited_index is not None:
+        # put in grey in the element corresponding to the unedited array.
+        colors_extended = np.insert(colors_extended, unedited_index, '#aaaaaa')
+    
+        # remove the last index so that the array maintains the correct length.
+        colors_extended = colors_extended[:-1]
+    
+    ts = matrix.columns
+    if map_samples:
+        ts = [sample_map[t] for t in ts]
+
+    if ax is None:
+        fig, ax = plt.subplots()
+        
+    ax.stackplot(ts, freqs[::-1], colors = colors_extended[::-1]);
+    ax.set_xticks(ts);
+    ax.set_xlabel("Time")
+    ax.set_ylabel("Clonal frequency")
+    ax.set_xlim(ts[0], ts[-1])
+    ax.set_ylim(0, 1);
+
+    # Create legend handles
+    legend_labels = barcode_order
+    legend_colors = colors_extended
+    handles = [Patch(facecolor=c, label=b) for c, b in zip(legend_colors, legend_labels)]
+    
+    # Add legend to plot
+    if add_legend:
+        ax.legend(handles=handles[:20], title="Barcode", bbox_to_anchor=(1.05, 1), loc='upper left')
+
+    if ax is None:
+        return fig, ax
