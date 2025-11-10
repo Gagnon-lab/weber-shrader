@@ -5,11 +5,19 @@ The purpose of this repository is to provide a common space to share code to pro
 
 To install the Python environment, open the terminal, navigate to this directory and run:
 ```
-conda create --name <env> --file python_requirements.txt
-conda activate <env>
+conda create --name <name> --file python_requirements.yml
+conda activate <name>
+pip install -e .
+python -m ipykernel install --user --name neutral_model --display-name Python (neutral_model)
 ```
 
 The main directories are as follows:
+* `data`: The data output from the GESALT pipeline.
+* `experiments`: Contains processed data.
+* `model_simulations`: Contains data from running simulations of the mathematical model.
+* `neutral_model`: Contains the python package to simulate the model and perform inference.
+* `notebooks`: Contains code to generate paper figures.
+
 ```
 sperm-data-analysis
 ├── data/
@@ -41,5 +49,3 @@ sperm-data-analysis
 ├── pipeline/
     ├── process_sperm_barcodes.ipynb
 ```
-
-TODO: Describe Python version and environment, R version.
