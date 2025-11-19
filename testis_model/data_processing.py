@@ -45,8 +45,47 @@ def get_barcodes(data):
 # This function is currently unused because I made an edited version in
 # `convert_experimental_data` that works off of frequencies. Consider
 # repurposing or removing.
-def convert_to_tuple_format(data, unique_barcodes):
-# def convert_data_to_results(data, unique_barcodes):
+# def convert_to_tuple_format(data, unique_barcodes):
+#     """
+#     Load the data corresponding to a given `fish`
+#     and format it in a dataframe suitable for use
+#     in my model.
+
+#     The returned dataframe has columns `time`, `replicate`,
+#     and `obs_result`.
+#     """
+    
+#     barcode_index = {s: i for i, s in enumerate(unique_barcodes)}
+
+#     def create_read_arr(barcode, read_count):
+#         """
+#         Create an array of length `len(barcode_index)` that contains
+#         `read_count` at position `barcode_index[barcode]`.
+#         """
+#         reads = np.zeros(len(unique_barcodes), dtype = int)
+#         reads[barcode_index[barcode]] = read_count
+#         return reads
+
+#     data['obs_result'] = data.apply(lambda row: create_read_arr(row['barcode'], row['reads']), axis = 1)
+
+#     # Group by sample and replicate, and sum over all the 'obs_result' arrays.
+#     grouped_df = data.groupby(['sample', 'replicate'], as_index=False)['obs_result'].sum()
+
+#     grouped_df['obs_result'] = grouped_df['obs_result'].apply(tuple)
+#     grouped_df = grouped_df.rename(columns={'sample': 'time'})
+
+#     # Create a new series, `isempty`, that is `True` if the clone of interest has size 0.
+#     # We use this to remove all rows of the dataframe before the clone actually appears.
+#     isempty = grouped_df['obs_result'].apply(lambda x: x[0] == 0)
+#     smallest_time_with_clone = grouped_df[isempty == False]['time'].min()
+#     grouped_df = grouped_df[grouped_df['time'] >= smallest_time_with_clone]
+
+#     grouped_df = grouped_df.reset_index(drop=True)
+#     grouped_df['n_sperm'] = grouped_df['obs_result'].apply(sum)
+    
+#     return grouped_df
+
+def convert_to_tuple_format(data, n_sperm = None):
     """
     Load the data corresponding to a given `fish`
     and format it in a dataframe suitable for use
@@ -55,19 +94,26 @@ def convert_to_tuple_format(data, unique_barcodes):
     The returned dataframe has columns `time`, `replicate`,
     and `obs_result`.
     """
-    
+    data = data.copy()
+
+    unique_barcodes = get_barcodes(data)
     barcode_index = {s: i for i, s in enumerate(unique_barcodes)}
 
-    def create_read_arr(barcode, read_count):
+    def create_read_arr(barcode, proportion):
         """
         Create an array of length `len(barcode_index)` that contains
         `read_count` at position `barcode_index[barcode]`.
         """
-        reads = np.zeros(len(unique_barcodes), dtype = int)
-        reads[barcode_index[barcode]] = read_count
+
+        if n_sperm is None:
+            reads = np.zeros(len(barcode_index), dtype = float)
+            reads[barcode_index[barcode]] = proportion
+        else:
+            reads = np.zeros(len(barcode_index), dtype = int)
+            reads[barcode_index[barcode]] = round(proportion * n_sperm)
         return reads
 
-    data['obs_result'] = data.apply(lambda row: create_read_arr(row['barcode'], row['reads']), axis = 1)
+    data['obs_result'] = data.apply(lambda row: create_read_arr(row['barcode'], row['proportion']), axis = 1)
 
     # Group by sample and replicate, and sum over all the 'obs_result' arrays.
     grouped_df = data.groupby(['sample', 'replicate'], as_index=False)['obs_result'].sum()
@@ -82,19 +128,21 @@ def convert_to_tuple_format(data, unique_barcodes):
     grouped_df = grouped_df[grouped_df['time'] >= smallest_time_with_clone]
 
     grouped_df = grouped_df.reset_index(drop=True)
-    grouped_df['n_sperm'] = grouped_df['obs_result'].apply(sum)
+    
+    if n_sperm is not None:
+        grouped_df['n_sperm'] = n_sperm #grouped_df['obs_result'].apply(sum)
     
     return grouped_df
 
-def add_tuples_elementwise(*tuples):
+def add_tuples_elementwise(tuples):
     """
-    This function inputs any number of tuples, and outputs their elementwise
+    This function inputs a series of tuples, and outputs their elementwise
     sum. All tuples must have the same length.
     
     Example:
     add_tuples_elementwise((1, 2), (3, 4), (5, 6)) --> (9, 12)
     """
-    length = len(tuples[0])
+    length = len(tuples.iloc[0])
     if not all(len(t) == length for t in tuples):
         raise ValueError("All input tuples must have the same length.")
     
@@ -213,6 +261,27 @@ def where_unedited(barcode_list):
     unedited_barcode = 'NONE_NONE_NONE_NONE_NONE_NONE_NONE_NONE_NONE_NONE'
     where = np.where(barcode_list == unedited_barcode)[0]
     return where[0] if len(where) == 1 else None
+
+def combine_replicates(data):
+    """
+    Input data in table format and combine the replicates together.
+
+    This function is currently unused.
+    """
+    agg = (
+        data.groupby("time", as_index=False)
+          .agg({
+              "obs_result": tm.data_processing.add_tuples_elementwise,  # elementwise sum of tuples
+              "n_sperm": "sum"                                         # sum across replicates
+          })
+    )
+    
+    #Recompute clone_freq from aggregated obs_result
+    agg["clone_freq"] = agg["obs_result"].apply(
+        lambda x: x[0] / (x[0] + x[1]) if (x[0] + x[1]) > 0 else float("nan")
+    )
+
+    return agg
 
 #
 # Generating and loading simulation data

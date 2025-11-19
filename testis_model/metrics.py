@@ -10,7 +10,7 @@ def init_time(data):
     if np.isnan(time):
         return None
     else:
-        return int(data.loc[data['obs_result'].apply(lambda x: x[0] != 0), 'time'].min())
+        return data.loc[data['obs_result'].apply(lambda x: x[0] != 0), 'time'].min()
 
 # def final_time(data):
 #     return int(data.loc[data['obs_result'].apply(lambda x: x[0] != 0), 'time'].max())
@@ -26,18 +26,18 @@ def last_time(data):
 
 def freq_at(data, t):
     state_at_t = tm.data_processing.add_tuples_elementwise(
-        *data.query('time == @t')['obs_result'])
+        data.query('time == @t')['obs_result'])
     return freq(state_at_t)
 
 def size(data):
-    total_state = tm.data_processing.add_tuples_elementwise(*data.obs_result)
+    total_state = tm.data_processing.add_tuples_elementwise(data.obs_result)
     return freq(total_state)
 
-def sum_tuples(series):
-    return tm.data_processing.add_tuples_elementwise(*series)
+# def sum_tuples(series):
+#     return tm.data_processing.add_tuples_elementwise(*series)
 
 def avg_freq_change(data):
-    grouped = data.groupby('time', as_index=False).agg({'obs_result': sum_tuples})
+    grouped = data.groupby('time', as_index=False).agg({'obs_result': tm.data_processing.add_tuples_elementwise})
     grouped['freq'] = grouped['obs_result'].apply(freq)
     grouped.set_index('time', inplace = True)
     # print(grouped)
@@ -56,7 +56,7 @@ def run_likelihood(data, lm = None, statistic = 2):
     if lm is None:
         lm = tm.likelihood.LikelihoodModel(1000)
         
-    data = tm.data_processing.normalize_sperm_counts(data.copy(), 371)
+    # data = tm.data_processing.normalize_sperm_counts(data.copy(), 371)
     r_opt, if_opt, l_max, lower, upper = lm.max_likelihood(data, statistic = statistic, init_time = 4)
     if_null, l_null = lm.max_likelihood_null(data, init_time = 4)
 

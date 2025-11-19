@@ -9,8 +9,8 @@ import traceback
 import time
 import warnings
 
-from metrics import init_time, freq_at, run_likelihood
 import testis_model as tm
+from testis_model.metrics import init_time, freq_at, run_likelihood
 
 lm = tm.likelihood.LikelihoodModel(1000)
 

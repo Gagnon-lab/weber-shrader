@@ -5,17 +5,22 @@ The purpose of this repository is to provide a common space to share code to pro
 
 To install the Python environment, open the terminal, navigate to this directory and run:
 ```
-conda create --name <name> --file python_requirements.yml
+conda env create --name <name> --file python_requirements.yml
 conda activate <name>
 pip install -e .
 python -m ipykernel install --user --name neutral_model --display-name Python (neutral_model)
+```
+
+Helpful commands if this fails:
+```
+conda clean --packages --tarballs --yes
 ```
 
 The main directories are as follows:
 * `data`: The data output from the GESALT pipeline.
 * `experiments`: Contains processed data.
 * `model_simulations`: Contains data from running simulations of the mathematical model.
-* `neutral_model`: Contains the python package to simulate the model and perform inference.
+* `testis_model`: Contains the python package to simulate the model and perform inference.
 * `notebooks`: Contains code to generate paper figures.
 
 ```

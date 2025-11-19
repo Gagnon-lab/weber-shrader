@@ -2,6 +2,7 @@ import numpy as np
 
 from numba import njit
 from numba.typed import List
+import pandas as pd
 
 from math import log, exp
 
@@ -134,9 +135,14 @@ def forward_algorithm(init_state, obs, Ts, Es, f_cutoff):
     alpha = np.zeros((n_obs, n_states))
     log_scaling = np.zeros(n_obs)
 
-    # Initialization
-    for i in range(n_states):
-        alpha[0, i] = init_state[i] * Es[0][i, obs[0]]
+    # Initialization: propagate through first transition before first observation
+    T0 = Ts[0]
+    E0 = Es[0]
+    for j in range(n_states):
+        total = 0.0
+        for i in range(n_states):
+            total += init_state[i] * T0[i, j]
+        alpha[0, j] = total * E0[j, obs[0]]
 
     # Scale alpha[0, :]
     max_val = np.max(alpha[0, :])
@@ -148,7 +154,9 @@ def forward_algorithm(init_state, obs, Ts, Es, f_cutoff):
     
     # Recursion
     for t in range(1, n_obs):
-        max_f = np.max(alpha[t - 1, :])
+        # For computational efficiency, only iterate over rows where
+        # alpha is not negligible relative to the maximum value.
+        max_f = np.max(alpha[t - 1, 1:-1])
         threshold = max_f * f_cutoff
         active_rows = np.where(alpha[t - 1, :] >= threshold)[0]
         
@@ -190,6 +198,15 @@ def binomial_log_likelihood(p, samps, n_sperm):
 from scipy.linalg import eig, inv
 from scipy.stats import binom
 from scipy.optimize import minimize, root_scalar
+
+def freq(tup):
+    return tup[0] / (tup[0] + tup[1])
+
+def logit(p):
+    return np.log(p / (1 - p))
+
+def inv_logit(x):
+    return 1 / (1 + np.exp(-x))
 
 class LikelihoodModel:
 
@@ -267,7 +284,7 @@ class LikelihoodModel:
             log_l = np.sum(log_scaling) + np.log(l)
             
         if return_alpha:
-            return log_l, alpha
+            return log_l, alpha, log_scaling
         return log_l
 
     # def max_likelihood_null(self, samples):
@@ -283,18 +300,19 @@ class LikelihoodModel:
         # this is numerically unstable
         clone_samples = samples['obs_result'].apply(lambda x: x[0])
         n_sperms = samples['n_sperm']
-        ic = clone_samples.sum() / n_sperms.sum()
+        init_init_freq = clone_samples.sum() / n_sperms.sum()
 
         def neg_likelihood(freq):
-            ret_val = -self.likelihood(samples, 0, freq[0], **kwargs)
+            ret_val = -self.likelihood(samples, 0, inv_logit(freq[0]), **kwargs)
+            ret_val = 1e6 if ret_val == np.inf else ret_val
             # print(f'r = {r:.2f}, if = {init_freq:.2f}, like = {ret_val:.2f}.')
             
             return ret_val
 
-        bounds = [(1e-2, 1 - 1e-2)]
-        result = minimize(neg_likelihood, x0=ic, method='L-BFGS-B', bounds=bounds)
+        bounds = [(-100, 100)]
+        result = minimize(neg_likelihood, x0=logit(init_init_freq), method='L-BFGS-B', bounds=bounds)
         
-        if_opt  = result.x[0]
+        if_opt  = inv_logit(result.x[0])
         l_max  = -result.fun
 
         return if_opt, l_max
@@ -304,21 +322,28 @@ class LikelihoodModel:
         # initial_state = binom.pmf(np.arange(n_stem + 1), n = lm.n_stem, p = init_freq)
         
         def neg_likelihood(params):
-            r, init_freq = params
-            ret_val = -self.likelihood(samples, r, init_freq, **kwargs)
+            r, logit_init_freq = params
+            ret_val = -self.likelihood(samples, r, inv_logit(logit_init_freq), **kwargs)
+            ret_val = 1e6 if ret_val == np.inf else ret_val
+            # print(r, inv_logit(logit_init_freq), ret_val)
             # print(f'r = {r:.2f}, if = {init_freq:.2f}, like = {ret_val:.2f}.')
             
             return ret_val
 
+        rhat, init_init_freq = self.fit_moran_rate_variance(samples)
+        # print(rhat, init_init_freq)
+        
         if ic is None:
-            ic = [36.00, 0.5]
+            ic = [rhat, logit(init_init_freq)]
+        else:
+            ic[1] = logit(ic[1])
             
-        bounds = [(0.0, 1000.0), (1e-2, 1 - 1e-2)]
+        bounds = [(0.0, 10000.0), (-100, 100)]
         
         result = minimize(neg_likelihood, x0=ic, method='L-BFGS-B', bounds=bounds)
         
         r_opt  = result.x[0]
-        if_opt = result.x[1]
+        if_opt = inv_logit(result.x[1])
         l_max  = -result.fun
     
         if statistic is None:
@@ -361,6 +386,57 @@ class LikelihoodModel:
             ls[i] = self.likelihood(samples, r, init_freq)
 
         return ls
+
+    def fit_moran_rate_variance(self, data):
+        """
+        Estimate Moran process rate r from allele frequency time series
+        using variance matching.
+        
+        Parameters
+        ----------
+        g : pd.DataFrame
+            Must contain columns 'time' and 'freq'.
+        N : int
+            Population size.
+        
+        Returns
+        -------
+        r_hat : float
+            Estimated rate parameter.
+        """
+
+        data = data.copy()
+        data['freq'] = data['obs_result'].apply(freq)
+        g = data.groupby('time', as_index = False).agg({'freq': 'mean'})
+    
+        g['delta_t'] = g['time'].diff()
+        g['delta_p'] = g['freq'].diff()
+    
+        # Build interval dataframe
+        intervals = pd.DataFrame({
+            'p_start': g['freq'].iloc[:-1].to_numpy(),          # allele freq at start
+            'delta_t': g['time'].diff().iloc[1:].to_numpy(),    # time increment
+            'delta_p': g['freq'].diff().iloc[1:].to_numpy()     # freq increment
+        })
+    
+        # Observed variance per unit time
+        obs_var = (intervals['delta_p']**2) / intervals['delta_t']
+    
+        # Expected variance design term
+        design = (intervals['p_start'] * (1 - intervals['p_start'])) / self.n_stem
+        
+        # Closed-form least squares estimator
+        num = np.sum(obs_var * design)
+        den = np.sum(design**2)
+        r_hat = num / den if den > 0 else np.nan
+
+        first_nonzero_freq = (
+            g.loc[g['freq'] != 0]        # filter to non-zero freq
+             .sort_values('time')        # order by earliest time
+             .iloc[0]['freq']            # take the first row's freq
+        )
+        
+        return float(r_hat), first_nonzero_freq#, intervals
         
 
     # def likelihood(self, data, r, initial_state):

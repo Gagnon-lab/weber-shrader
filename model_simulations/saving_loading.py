@@ -14,7 +14,8 @@ def check_scenario(scenario, overwrite = False):
     then an error is raised so that it is not overwritten. To suppress this error
     (meaning you are ok with overwriting data), set the optional parameter overwrite = True.
     """
-    directory = f'./scenarios/{scenario}'
+    directory = os.path.join('scenarios', scenario)
+    
     if not os.path.exists(directory):
         os.makedirs(directory)
     if not overwrite and os.path.exists(f'{directory}/{scenario}.csv'):
@@ -23,8 +24,6 @@ def check_scenario(scenario, overwrite = False):
 def combine_and_save(data, scenario):
     """
     Takes a DataFrame `data` of results in tuple format and saves it to a file.
-    
-
     """
     df = pd.concat(data, ignore_index = True, sort = False)
 
@@ -37,21 +36,21 @@ def combine_and_save(data, scenario):
 
     return df
 
-def find_scenarios():
+def find_scenarios(directory = 'scenarios'):
     """
     This function searches the './scenarios' subdirectory and returns a
     list containing the names of all files that are found.
     """
     scenarios = []
 
-    for scenario in os.listdir('scenarios'):
-        path = os.path.join('scenarios', scenario, f'{scenario}.csv')
+    for scenario in os.listdir(directory):
+        path = os.path.join(directory, scenario, f'{scenario}.csv')
         if os.path.isfile(path):
             scenarios.append(scenario)
 
     return scenarios
 
-def load_all_scenarios(scenarios):
+def load_all_scenarios(scenarios, directory = 'scenarios'):
     """
     Load data about fish and clones from a saved file.
 
@@ -67,7 +66,9 @@ def load_all_scenarios(scenarios):
         scenarios = [scenarios]
         
     for scenario in scenarios:
-        df = pd.read_csv(f'./scenarios/{scenario}/{scenario}.csv')
+        filepath = os.path.join(directory, scenario, f'{scenario}.csv')
+        # df = pd.read_csv(f'./scenarios/{scenario}/{scenario}.csv')
+        df = pd.read_csv(filepath)
 
         # Convert 'obs_result' from string to tuple of ints
         for col in ['obs_result', 'hid_result', 'full_result']:
@@ -89,14 +90,17 @@ def load_all_scenarios(scenarios):
 
     return fish_data, clone_data
 
-def load_clone_names():
+def load_clone_names(directory = 'scenarios'):
     """
     Creates a dictionary `barcodes` such that `barcodes[fish, clone_name]`
     returns the index of that clone in the fish, while
     `barcodes[fish, index]` returns the name of the corresponding clone.
     """
     barcodes = dict()
-    with open("./scenarios/real/barcodes.json", "r") as f:
+    
+    filepath = os.path.join(directory, 'real', 'barcodes.json')
+    # with open("./scenarios/real/barcodes.json", "r") as f:
+    with open(filepath, 'r') as f:
         bc_file = json.load(f)
     
         for fish, bc_list in bc_file.items():
