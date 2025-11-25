@@ -52,15 +52,15 @@ def avg_freq_change(data):
     else:
         return (grouped.loc[it]['freq'] - grouped.loc[dt]['freq']) / (dt - it)
 
-def run_likelihood(data, lm = None, statistic = 2):
+def run_likelihood(data, lm = None, statistic = 4):
     if lm is None:
         lm = tm.likelihood.LikelihoodModel(1000)
         
     # data = tm.data_processing.normalize_sperm_counts(data.copy(), 371)
-    r_opt, if_opt, l_max, lower, upper = lm.max_likelihood(data, statistic = statistic, init_time = 4)
-    if_null, l_null = lm.max_likelihood_null(data, init_time = 4)
+    r_opt, l_max, lower, upper = lm.max_likelihood(data, statistic = statistic, init_time = 4)
+    l_null = lm.likelihood(data, 0, None, init_time = 4, f_cutoff = 0)
 
-    return r_opt, if_opt, l_max, lower, upper, if_null, l_null
+    return r_opt, l_max, lower, upper, l_null
         
 # def run_binom_likelihood(data, test_statistic = 4):
 #     data = tm.data_processing.normalize_sperm_counts(data.copy(), 500)

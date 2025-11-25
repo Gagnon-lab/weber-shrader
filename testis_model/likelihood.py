@@ -156,6 +156,7 @@ def forward_algorithm(init_state, obs, Ts, Es, f_cutoff):
     for t in range(1, n_obs):
         # For computational efficiency, only iterate over rows where
         # alpha is not negligible relative to the maximum value.
+        # max_f = np.max(alpha[t - 1, :])
         max_f = np.max(alpha[t - 1, 1:-1])
         threshold = max_f * f_cutoff
         active_rows = np.where(alpha[t - 1, :] >= threshold)[0]
@@ -196,7 +197,7 @@ def binomial_log_likelihood(p, samps, n_sperm):
     return np.sum(log_likelihood)
 
 from scipy.linalg import eig, inv
-from scipy.stats import binom
+from scipy.stats import binom, betabinom
 from scipy.optimize import minimize, root_scalar
 
 def freq(tup):
@@ -257,9 +258,22 @@ class LikelihoodModel:
         Es = List()
 
         if init_freq is None:
-            init_freq = samples['obs_result'].iloc[0][0] / samples['n_sperm'].iloc[0]
+            # init_freq = samples['obs_result'].iloc[0][0] / samples['n_sperm'].iloc[0]
+            init_freq = np.ones(self.n_stem + 1)
+            init_freq = init_freq / np.sum(init_freq)
+
+        initial_state = None
+        if isinstance(init_freq, float): 
+            # alpha, beta = 0.5, 0.5
             
-        initial_state = binom.pmf(np.arange(self.n_stem + 1), n = self.n_stem, p = init_freq)
+            # k = np.arange(self.n_stem + 1)
+            # initial_state = betabinom.pmf(k, self.n_stem, alpha, beta)
+            
+            initial_state = binom.pmf(np.arange(self.n_stem + 1), n = self.n_stem, p = init_freq)
+        elif isinstance(init_freq, np.ndarray) and np.shape(init_freq) == (self.n_stem + 1,):
+            initial_state = init_freq
+        else:
+            raise Exception('init_freq is unexpected, either pass a float or length n_stem array.')
 
         times = samples['time']
         n_sperms = samples['n_sperm']
@@ -309,7 +323,7 @@ class LikelihoodModel:
             
             return ret_val
 
-        bounds = [(-100, 100)]
+        bounds = [(-7, 7)]
         result = minimize(neg_likelihood, x0=logit(init_init_freq), method='L-BFGS-B', bounds=bounds)
         
         if_opt  = inv_logit(result.x[0])
@@ -317,7 +331,7 @@ class LikelihoodModel:
 
         return if_opt, l_max
 
-    def max_likelihood(self, samples, statistic = 2, ic = None, **kwargs):
+    def max_likelihood_full(self, samples, statistic = 2, ic = None, **kwargs):
         # init_freq = samples['obs_result'].iloc[0][0] / samples['n_sperm'].iloc[0]
         # initial_state = binom.pmf(np.arange(n_stem + 1), n = lm.n_stem, p = init_freq)
         
@@ -332,13 +346,17 @@ class LikelihoodModel:
 
         rhat, init_init_freq = self.fit_moran_rate_variance(samples)
         # print(rhat, init_init_freq)
+
+        if np.isnan(rhat):
+            rhat = 1.0
         
         if ic is None:
             ic = [rhat, logit(init_init_freq)]
         else:
             ic[1] = logit(ic[1])
-            
-        bounds = [(0.0, 10000.0), (-100, 100)]
+
+        # logit(0.001) ~= -7
+        bounds = [(0.0, 10000.0), (-7, 7)]
         
         result = minimize(neg_likelihood, x0=ic, method='L-BFGS-B', bounds=bounds)
         
@@ -351,7 +369,7 @@ class LikelihoodModel:
             
         # Define target function for root finding
         def target(r):
-            return self.likelihood(samples, r, if_opt, **kwargs) - (l_max - 2 * statistic)
+            return self.likelihood(samples, r, if_opt, **kwargs) - (l_max - statistic / 2)
     
         # Find lower bound root
         lower_root = None
@@ -378,6 +396,66 @@ class LikelihoodModel:
                 pass
     
         return r_opt, if_opt, l_max, lower_root, upper_root
+
+    def max_likelihood(self, samples, statistic = 2, ic = None, **kwargs):
+        # init_freq = samples['obs_result'].iloc[0][0] / samples['n_sperm'].iloc[0]
+        # initial_state = binom.pmf(np.arange(n_stem + 1), n = lm.n_stem, p = init_freq)
+
+        def neg_likelihood(r):
+            # print(r)
+            ret_val = -self.likelihood(samples, r[0], None, **kwargs)
+            ret_val = 1e6 if ret_val == np.inf else ret_val
+            
+            return ret_val
+
+        rhat, init_init_freq = self.fit_moran_rate_variance(samples)
+        # print(rhat, init_init_freq)
+
+        if np.isnan(rhat):
+            ic = 1.0
+        else:
+            ic = rhat
+
+        # logit(0.001) ~= -7
+        bounds = [(0.0, 10000.0)]
+        
+        result = minimize(neg_likelihood, x0=ic, method='L-BFGS-B', bounds=bounds)
+        
+        r_opt  = result.x[0]
+        l_max  = -result.fun
+    
+        if statistic is None:
+            return r_opt, l_max
+            
+        # Define target function for root finding
+        def target(r):
+            return self.likelihood(samples, r, None, **kwargs) - (l_max - statistic / 2)
+    
+        # Find lower bound root
+        lower_root = None
+        if r_opt > bounds[0][0] and target(0) < 0:
+            try:
+                lower_result = root_scalar(target, bracket=[bounds[0][0], r_opt], method='brentq')
+                if lower_result.converged:
+                    lower_root = lower_result.root
+                else:
+                    lower_root = 0.0
+            except ValueError:
+                lower_root = np.nan
+        else:
+            lower_root = 0.0
+    
+        # Find upper bound root
+        upper_root = None
+        if r_opt < bounds[0][1]:
+            try:
+                upper_result = root_scalar(target, bracket=[r_opt, bounds[0][1]], method='brentq')
+                if upper_result.converged:
+                    upper_root = upper_result.root
+            except ValueError:
+                pass
+    
+        return r_opt, l_max, lower_root, upper_root
     
     def likelihood_grid(self, samples, rs, init_freq):
         ls = np.zeros_like(rs)

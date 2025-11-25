@@ -10,7 +10,7 @@ import time
 import warnings
 
 import testis_model as tm
-from testis_model.metrics import init_time, freq_at, run_likelihood
+from testis_model.metrics import init_time, freq_at, run_likelihood, size
 
 lm = tm.likelihood.LikelihoodModel(1000)
 
@@ -29,15 +29,15 @@ def process_clone(data):
             category=RuntimeWarning,
             message=".*invalid value encountered in subtract.*"
         )
-        r_opt, if_opt, l_max, lower, upper, if_null, l_null = \
+        r_opt, l_max, lower, upper, l_null = \
             run_likelihood(data, lm = lm)
 
     series['r_opt'] = r_opt
-    series['if_opt'] = if_opt
+    # series['if_opt'] = if_opt
     series['l_max'] = l_max
     series['lower'] = lower
     series['upper'] = upper
-    series['if_null'] = if_null
+    # series['if_null'] = if_null
     series['l_null'] = l_null
 
     return series

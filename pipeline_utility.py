@@ -288,7 +288,9 @@ def plot_muller(data, fish, ax = None, replicate = None, add_legend = False, map
     
     # Source: https://github.com/BlakeRMills/MoMAColors/blob/main/R/Colors.R
     colors = np.array(["#ff4d6f", "#579ea4", "#df7713", "#f9c000", "#86ad34",
-          "#5d7298", "#81b28d", "#7e1a2f", "#2d2651", "#c8350d", "#bd777a"])
+              "#5d7298", "#81b28d", "#7e1a2f", "#2d2651", "#c8350d", "#bd777a",
+              '#1a5f7a', '#8b4c8f', '#4a9eff', '#ffd93d', '#3dcc8e', '#ff8c42',
+              '#e63946', '#a0c334', '#6b4e71', '#00b4d8'])
     
     n_clones = np.shape(freqs)[0]
     repeats = -(-n_clones // len(colors))
