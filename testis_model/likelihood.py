@@ -8,6 +8,13 @@ from math import log, exp
 
 from scipy.linalg import expm
 
+from scipy.linalg import eig, inv
+from scipy.stats import binom, betabinom
+from scipy.optimize import minimize, root_scalar
+
+import numpy as np
+from scipy.special import gammaln
+
 @njit
 def moran_rate_matrix_numba(n_stem, r):
     """
@@ -54,77 +61,6 @@ def compute_emission_matrix(n_stem, n_sperm):
             log_pmf = log_binom_pmf(j, n_sperm, p)
             E[i, j] = exp(log_pmf) if log_pmf > -np.inf else 0.0
     return E
-
-#
-# Add more variance when r is big
-#
-
-# from numba import njit
-# import numpy as np
-# from math import exp, log
-# from math import lgamma
-
-# @njit
-# def log_beta_binom_pmf(k, n, a, b):
-#     return (
-#         lgamma(n + 1) - lgamma(k + 1) - lgamma(n - k + 1)
-#         + lgamma(k + a) + lgamma(n - k + b)
-#         - lgamma(n + a + b)
-#         + lgamma(a + b) - lgamma(a) - lgamma(b)
-#     )
-
-# @njit
-# def log_binom_pmf(k, n, p):
-#     if p == 0.0:
-#         return 0.0 if k == 0 else -np.inf
-#     if p == 1.0:
-#         return 0.0 if k == n else -np.inf
-#     return (
-#         lgamma(n + 1) - lgamma(k + 1) - lgamma(n - k + 1)
-#         + k * log(p) + (n - k) * log(1 - p)
-#     )
-
-# @njit
-# def compute_emission_matrix(n_stem, n_sperm, r):
-#     E = np.zeros((n_stem + 1, n_sperm + 1))
-#     for i in range(n_stem + 1):
-#         p = i / n_stem
-#         var = r * p * (1 - p) / n_stem
-#         if var == 0.0:
-#             # Use standard binomial
-#             for j in range(n_sperm + 1):
-#                 log_pmf = log_binom_pmf(j, n_sperm, p)
-#                 E[i, j] = exp(log_pmf) if log_pmf > -np.inf else 0.0
-#         else:
-#             common = p * (1 - p) / var - 1
-#             a = p * common
-#             b = (1 - p) * common
-#             for j in range(n_sperm + 1):
-#                 log_pmf = log_beta_binom_pmf(j, n_sperm, a, b)
-#                 E[i, j] = exp(log_pmf) if log_pmf > -np.inf else 0.0
-#     return E
-
-# @njit
-# def forward_algorithm(init_state, T, E, obs):
-#     n_states = T.shape[0]
-#     n_obs = len(obs)
-
-#     # Forward matrix: alpha[t, i] = P(obs_0:t, state_t = i)
-#     alpha = np.zeros((n_obs, n_states))
-
-#     # Initialization
-#     for i in range(n_states):
-#         alpha[0, i] = init_state[i] * E[i, obs[0]]
-
-#     # Recursion
-#     for t in range(1, n_obs):
-#         for j in range(n_states):
-#             total = 0.0
-#             for i in range(n_states):
-#                 total += alpha[t - 1, i] * T[i, j]
-#             alpha[t, j] = total * E[j, obs[t]]
-
-#     return alpha
 
 @njit
 def forward_algorithm(init_state, obs, Ts, Es, f_cutoff):
@@ -179,8 +115,7 @@ def forward_algorithm(init_state, obs, Ts, Es, f_cutoff):
 
     return alpha, log_scaling
 
-import numpy as np
-from scipy.special import gammaln
+
 
 def binomial_log_likelihood(p, samps, n_sperm):
     if p <= 0 or p >= 1:
@@ -196,11 +131,10 @@ def binomial_log_likelihood(p, samps, n_sperm):
 
     return np.sum(log_likelihood)
 
-from scipy.linalg import eig, inv
-from scipy.stats import binom, betabinom
-from scipy.optimize import minimize, root_scalar
-
 def freq(tup):
+    """
+    Given a 2-tuple (x, y), return x/(x+y)
+    """
     return tup[0] / (tup[0] + tup[1])
 
 def logit(p):
@@ -210,12 +144,20 @@ def inv_logit(x):
     return 1 / (1 + np.exp(-x))
 
 class LikelihoodModel:
+    def __init__(self, n_stem, tau = 0.2):
+        """
+        Initialize the likelihood model.
 
-    def __init__(self, n_stem):
+        Inputs:
+            n_stem (int): The number of stem cells
+            tau (float, default 0.2): The time (in months) between stem cell
+            differentiation and observation.
+        """
         self.n_stem = n_stem
         self.T_cache = {}
         self.E_cache = {}
         self.R = moran_rate_matrix_numba(n_stem, 1)
+        self.tau = tau
 
         evals, evecs = eig(self.R)
         self.evals = np.real(evals)
@@ -252,6 +194,19 @@ class LikelihoodModel:
 
     def likelihood(self, samples, r, init_freq, f_cutoff = 1e-10, return_alpha = False, save = False,
                   init_time = 0):
+        """
+        Computes the likelihood of getting the data in `samples`, given drift rate
+        `r` and initial clone frequency `init_freq`.
+
+        Inputs:
+            samples (DataFrame): The observed data. It should have columns `time`
+            (float) and `obs_result` (2-tuples).
+            r (float): The drift value.
+            init_freq: The assumed distribution of the initial state. If `init_freq`
+                is `None`, use a uniform distribution. If `init_freq` is an array
+                of length `self.n_stem`, it is used as a PMF. If `init_freq` is a float
+                between 0 and 1, use the distribution Binomial(self.n_stem, init_freq).
+        """
         
         n_samples = len(samples)
         Ts = List()
@@ -264,19 +219,22 @@ class LikelihoodModel:
 
         initial_state = None
         if isinstance(init_freq, float): 
-            # alpha, beta = 0.5, 0.5
-            
-            # k = np.arange(self.n_stem + 1)
-            # initial_state = betabinom.pmf(k, self.n_stem, alpha, beta)
-            
             initial_state = binom.pmf(np.arange(self.n_stem + 1), n = self.n_stem, p = init_freq)
         elif isinstance(init_freq, np.ndarray) and np.shape(init_freq) == (self.n_stem + 1,):
             initial_state = init_freq
         else:
             raise Exception('init_freq is unexpected, either pass a float or length n_stem array.')
 
-        times = samples['time']
-        n_sperms = samples['n_sperm']
+        if samples['time'].min() < init_time + self.tau:
+            raise Exception('Initial time + tau is greater than the min. value in samples[\'time\'].')
+
+        # Shift time by tau units (the time between stem cell differentiation
+        # and becoming sperm).
+        samples_shifted = samples.copy()
+        samples_shifted['time'] = samples_shifted['time'] - self.tau
+            
+        times = samples_shifted['time']
+        n_sperms = samples_shifted['n_sperm']
 
         t_gaps = [times[0] - init_time if i == 0 else times[i] - times[i-1] for i in range(len(times))]
         T_dict = {t_gap: self.get_T(t_gap * r, save = save) for t_gap in np.unique(t_gaps)}
@@ -287,7 +245,7 @@ class LikelihoodModel:
             Ts.append(T_dict[t_gap])
             Es.append(self.get_E(n_sperms[i]))
 
-        obs = np.array(samples['obs_result'].apply(lambda x: x[0]))
+        obs = np.array(samples_shifted['obs_result'].apply(lambda x: x[0]))
 
         alpha, log_scaling = forward_algorithm(initial_state, obs, Ts, Es, f_cutoff)
 

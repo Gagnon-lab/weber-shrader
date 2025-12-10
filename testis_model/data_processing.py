@@ -148,18 +148,54 @@ def add_tuples_elementwise(tuples):
     
     return tuple(sum(values) for values in zip(*tuples))
 
+# def normalize_tuple(tup, target_sum):
+#     """
+#     This function inputs a tuple `tup` and divides each entry a constant
+#     so that the sum of the entries equals `target_sum`.
+
+#     The purpose of this function is to convert a tuple of sperm 'reads'
+#     from each clone into plausible sperm cell counts.
+    
+#     tup: input tuple
+#     count: target total sum
+#     """
+#     return tuple([round(idx/sum(tup)*target_sum) for idx in tup])
+
 def normalize_tuple(tup, target_sum):
     """
-    This function inputs a tuple `tup` and divides each entry a constant
-    so that the sum of the entries equals `target_sum`.
-
-    The purpose of this function is to convert a tuple of sperm 'reads'
-    from each clone into plausible sperm cell counts.
-    
-    tup: input tuple
-    count: target total sum
+    Scale the values in `tup` so that their sum equals `target_sum`,
+    while keeping integer outputs. Uses the largest remainder method
+    to fairly distribute rounding errors.
     """
-    return tuple([round(idx/sum(tup)*target_sum) for idx in tup])
+
+    # Step 1: Compute the scaling factor
+    total = sum(tup)
+    scaled_values = [(value / total) * target_sum for value in tup]
+
+    # Step 2: Take the floor of each scaled value (convert to int)
+    floored_values = [int(val) for val in scaled_values]
+
+    # Step 3: Calculate how much we are short of the target sum
+    current_sum = sum(floored_values)
+    remainder = target_sum - current_sum
+
+    # Step 4: Compute fractional parts of each scaled value
+    fractional_parts = [val - int(val) for val in scaled_values]
+
+    # Step 5: Identify indices with the largest fractional parts
+    # These are the ones that should get the extra counts
+    indices_sorted_by_fraction = sorted(
+        range(len(tup)),
+        key=lambda idx: fractional_parts[idx],
+        reverse=True
+    )
+
+    # Step 6: Distribute the remainder across the top indices
+    for idx in indices_sorted_by_fraction[:remainder]:
+        floored_values[idx] += 1
+
+    # Step 7: Return the adjusted tuple
+    return tuple(floored_values)
 
 def normalize_sperm_counts(data, target_sum):
     """

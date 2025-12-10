@@ -90,7 +90,7 @@ def load_all_scenarios(scenarios, directory = 'scenarios'):
 
     return fish_data, clone_data
 
-def load_clone_names(directory = 'scenarios'):
+def load_clone_names(name, directory = 'scenarios'):
     """
     Creates a dictionary `barcodes` such that `barcodes[fish, clone_name]`
     returns the index of that clone in the fish, while
@@ -98,7 +98,7 @@ def load_clone_names(directory = 'scenarios'):
     """
     barcodes = dict()
     
-    filepath = os.path.join(directory, 'real', 'barcodes.json')
+    filepath = os.path.join(directory, name, 'barcodes.json')
     # with open("./scenarios/real/barcodes.json", "r") as f:
     with open(filepath, 'r') as f:
         bc_file = json.load(f)

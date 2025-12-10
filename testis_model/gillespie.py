@@ -42,7 +42,7 @@ def sample_ic(n_stem, n_clones, rng = np.random.default_rng()):
     return np.array(parts)
 
 class AdvancedTestisModel:
-    def __init__(self, n_stem, n_clones, r_event, p_diff, q_div, r_decay, sperm_per_diff, init_freq):
+    def __init__(self, n_stem, n_clones, r_event, p_diff, q_div, r_decay, tau, sperm_per_diff, init_freq):
         """
         compute_rate: whether to compute the full rate transition matrix. This is necessary to run
         simulate().
@@ -65,6 +65,7 @@ class AdvancedTestisModel:
         self.q_div = verify_param_array(q_div, n_clones)
         self.r_decay = r_decay
         self.sperm_per_diff = sperm_per_diff
+        self.tau = tau
 
         self.div_rates = self.r_event * self.q_div
         self.diff_rates = self.r_event * self.p_diff
@@ -100,7 +101,7 @@ class AdvancedTestisModel:
             avg_stem_state
         ) = gillespie_core(
             init_time, times, state.copy(), self.r_event, self.p_diff, self.q_div,
-            self.r_decay, self.sperm_per_diff, self.div_rates, self.diff_rates,
+            self.r_decay, self.tau, self.sperm_per_diff, self.div_rates, self.diff_rates,
             self.n_clones, sample_flags, record_flags, n_sperm, rng
         )
     
@@ -123,22 +124,6 @@ class AdvancedTestisModel:
         })
     
         return sample_df, record_df, avg_stem_state
-
-    # def clone_with(self, **overrides):
-    #     """
-    #     Return a new AdvancedTestisModel with updated parameters.
-    #     Only parameters passed in `overrides` will be changed.
-    #     """
-    #     return AdvancedTestisModel(
-    #         n_stem = overrides.get('n_stem', self.n_stem),
-    #         n_clones = overrides.get('n_clones', self.n_clones),
-    #         r_event = overrides.get('r_event', self.r_event),
-    #         p_diff = overrides.get('p_diff', self.p_diff),
-    #         q_div = overrides.get('q_div', self.q_div),
-    #         r_decay = overrides.get('r_decay', self.r_decay),
-    #         sperm_per_diff = overrides.get('sperm_per_diff', self.sperm_per_diff),
-    #         init_freq = overrides.get('init_freq', self.init_freq)
-    #     )
 
 @njit
 def weighted_choice(probs, rng):
@@ -200,7 +185,7 @@ def dirichlet_numba(alpha_vec, rng):
     return gammas / gammas.sum()
 
 @njit
-def gillespie_core(init_time, times, state, r_event, p_diff, q_div, r_decay, sperm_per_diff,
+def gillespie_core(init_time, times, state, r_event, p_diff, q_div, r_decay, tau, sperm_per_diff,
                    div_rates, diff_rates, n_clones, sample_flags, record_flags, n_sperm, rng):
 
     t = init_time
@@ -226,9 +211,9 @@ def gillespie_core(init_time, times, state, r_event, p_diff, q_div, r_decay, spe
     total_time_accumulated = 0.0
 
     for i in range(n_times):
-        time = times[i]
+        target_time = times[i] - tau
 
-        while t < time:
+        while t < target_time:
             stem_state = state[0, :]
             event_rate_per_clone = r_event * stem_state
             total_rate = np.sum(event_rate_per_clone)
@@ -236,7 +221,7 @@ def gillespie_core(init_time, times, state, r_event, p_diff, q_div, r_decay, spe
                 break
 
             t_step = rng.exponential(1 / total_rate)
-            if t_step >= time - t:
+            if t_step >= target_time - t:
                 break
 
             sperm_before = state[1, :].copy()
@@ -268,12 +253,13 @@ def gillespie_core(init_time, times, state, r_event, p_diff, q_div, r_decay, spe
             stem_accumulator += stem_state * t_step
             total_time_accumulated += t_step
 
-        lam_array = (time - t) * r_decay * state[1, :]
+        lam_array = (target_time - t) * r_decay * state[1, :]
         decayed_sperm = poisson_array(lam_array, rng)
         state[1, :] -= decayed_sperm
+        t = target_time
 
         if record_flags[i]:
-            record_times[record_idx] = time
+            record_times[record_idx] = target_time + tau
             record_stem[record_idx, :] = state[0, :]
             record_sperm[record_idx, :] = state[1, :]
             record_idx += 1
@@ -295,14 +281,14 @@ def gillespie_core(init_time, times, state, r_event, p_diff, q_div, r_decay, spe
                 sample_obs[sample_idx, :] = state[1, :]
                 sample_n_obs[sample_idx] = sperm_total
 
-            sample_times[sample_idx] = time
+            sample_times[sample_idx] = target_time + tau
             sample_stem[sample_idx, :] = state[0, :]
             sample_sperm[sample_idx, :] = state[1, :]
             sample_idx += 1
 
             # If next sample/record time is greater than current time,
             # remove all sperm.
-            if times[i+1] > time:
+            if i + 1 < n_times and times[i + 1] > times[i]:
                 state[1, :] = 0
 
     avg_stem_state = stem_accumulator / total_time_accumulated

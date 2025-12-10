@@ -15,6 +15,9 @@ def init_time(data):
 # def final_time(data):
 #     return int(data.loc[data['obs_result'].apply(lambda x: x[0] != 0), 'time'].max())
 
+def min_time(data):
+    return data['time'].min()
+
 def max_time(data):
     return data['time'].max()
 
@@ -55,10 +58,15 @@ def avg_freq_change(data):
 def run_likelihood(data, lm = None, statistic = 4):
     if lm is None:
         lm = tm.likelihood.LikelihoodModel(1000)
+
+    init_t = init_time(data)
+
+    # Only use data after the clone appears
+    used_data = data[data['time'] >= tm.metrics.init_time(data)].reset_index()
         
     # data = tm.data_processing.normalize_sperm_counts(data.copy(), 371)
-    r_opt, l_max, lower, upper = lm.max_likelihood(data, statistic = statistic, init_time = 4)
-    l_null = lm.likelihood(data, 0, None, init_time = 4, f_cutoff = 0)
+    r_opt, l_max, lower, upper = lm.max_likelihood(used_data, statistic = statistic, init_time = init_t)
+    l_null = lm.likelihood(used_data, 0, None, init_time = init_t, f_cutoff = 0)
 
     return r_opt, l_max, lower, upper, l_null
         
