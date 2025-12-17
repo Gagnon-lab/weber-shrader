@@ -22,6 +22,12 @@ import pandas as pd
 # ------+--------+-----------+--------------------+--------
 # fish5 | 1      | 1         | (9595, 5871, 4091) | 19557
 
+# sample_map and sample_map_int are dictionary that map sample ID numbers in
+# the experimental data into real-life months.
+
+# sample_map_int is the same as sample_map but rounded to integers. We use the
+# rounded version for visualizations (plots), as well as for model simulations
+# (rounding to months saves on computational runtime significantly).
 sample_map_int = {1:5, 2:6, 3:7, 4:8, 5:9, 6:10, 7:11, 8:12, 9:13, 10:14,
                   11:16, 12:17, 13:18, 14: 20, 15: 22, 16: 24, 17: 25, 18:26}
 
@@ -168,33 +174,28 @@ def normalize_tuple(tup, target_sum):
     to fairly distribute rounding errors.
     """
 
-    # Step 1: Compute the scaling factor
+    # Scale all values towards the target sum & convert to ints
     total = sum(tup)
     scaled_values = [(value / total) * target_sum for value in tup]
-
-    # Step 2: Take the floor of each scaled value (convert to int)
     floored_values = [int(val) for val in scaled_values]
 
-    # Step 3: Calculate how much we are short of the target sum
+    # Scaling may be off by a few units due to rounding.
+    # This calculates how much we are short of the target sum
     current_sum = sum(floored_values)
     remainder = target_sum - current_sum
 
-    # Step 4: Compute fractional parts of each scaled value
-    fractional_parts = [val - int(val) for val in scaled_values]
-
-    # Step 5: Identify indices with the largest fractional parts
+    # Identify indices with the largest fractional parts.
     # These are the ones that should get the extra counts
+    fractional_parts = [val - int(val) for val in scaled_values]
     indices_sorted_by_fraction = sorted(
         range(len(tup)),
         key=lambda idx: fractional_parts[idx],
         reverse=True
     )
 
-    # Step 6: Distribute the remainder across the top indices
     for idx in indices_sorted_by_fraction[:remainder]:
         floored_values[idx] += 1
 
-    # Step 7: Return the adjusted tuple
     return tuple(floored_values)
 
 def normalize_sperm_counts(data, target_sum):

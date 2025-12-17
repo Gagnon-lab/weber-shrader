@@ -7,7 +7,6 @@ import pandas as pd
 from math import log, exp
 
 from scipy.linalg import expm
-
 from scipy.linalg import eig, inv
 from scipy.stats import binom, betabinom
 from scipy.optimize import minimize, root_scalar

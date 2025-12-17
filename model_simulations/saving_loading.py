@@ -6,20 +6,28 @@ import json
 
 import testis_model as tm
 
-def check_scenario(scenario, overwrite = False):
+def scenario_exists(scenario, makedir = True):
     """
     This file checks whether the directory and data file for a given scenario already exists.
 
-    If the directory does not exist, then one is created. If the file already exists,
-    then an error is raised so that it is not overwritten. To suppress this error
-    (meaning you are ok with overwriting data), set the optional parameter overwrite = True.
+    Inputs:
+        scenario (string): The scenario name.
+        makedir (boolean, default True): whether to make a new directory if one
+            does not already exist.
+
+    Outputs: True if the scenario file exists, else False.
     """
     directory = os.path.join('scenarios', scenario)
+    filepath = os.path.join('scenarios', scenario, f'{scenario}.csv')
     
     if not os.path.exists(directory):
-        os.makedirs(directory)
-    if not overwrite and os.path.exists(f'{directory}/{scenario}.csv'):
-        raise Exception(f'A CSV file for scenario {scenario} already exists.')
+        if makedir:
+            os.makedirs(directory)
+            
+    if os.path.exists(filepath):
+        return True
+    else:
+        return False
 
 def combine_and_save(data, scenario):
     """

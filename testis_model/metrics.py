@@ -22,10 +22,19 @@ def max_time(data):
     return data['time'].max()
 
 def last_time(data):
+    """
+    Returns the last time before the clone is lost (OR is fixed).
+    """
     max_t = max_time(data)
-    final_alive_t = data.loc[data['obs_result'].apply(lambda x: x[0] != 0), 'time'].max()
+    final_alive_t = data.loc[data['obs_result'].apply(lambda x: x[0] > 0 and x[1] > 0), 'time'].max()
 
     return final_alive_t
+
+def n_transient(data):
+    """
+    Returns the number of time points not at fixation or loss.
+    """
+    return data.loc[data['obs_result'].apply(lambda x: x[0] > 0 and x[1] > 0), 'time'].nunique()
 
 def freq_at(data, t):
     state_at_t = tm.data_processing.add_tuples_elementwise(
@@ -59,7 +68,7 @@ def run_likelihood(data, lm = None, statistic = 4):
     if lm is None:
         lm = tm.likelihood.LikelihoodModel(1000)
 
-    init_t = init_time(data)
+    init_t = init_time(data) - lm.tau
 
     # Only use data after the clone appears
     used_data = data[data['time'] >= tm.metrics.init_time(data)].reset_index()

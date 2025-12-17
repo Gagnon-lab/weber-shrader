@@ -42,7 +42,7 @@ def sample_ic(n_stem, n_clones, rng = np.random.default_rng()):
     return np.array(parts)
 
 class AdvancedTestisModel:
-    def __init__(self, n_stem, n_clones, r_event, p_diff, q_div, r_decay, tau, sperm_per_diff, init_freq):
+    def __init__(self, n_stem, n_clones, r_event, p_diff, r_decay, tau, sperm_per_diff, init_freq):
         """
         compute_rate: whether to compute the full rate transition matrix. This is necessary to run
         simulate().
@@ -62,12 +62,10 @@ class AdvancedTestisModel:
         self.init_freq = init_freq
         self.r_event = verify_param_array(r_event, n_clones)
         self.p_diff = verify_param_array(p_diff, n_clones)
-        self.q_div = verify_param_array(q_div, n_clones)
         self.r_decay = r_decay
         self.sperm_per_diff = sperm_per_diff
         self.tau = tau
 
-        self.div_rates = self.r_event * self.q_div
         self.diff_rates = self.r_event * self.p_diff
 
     def simulate_gillespie(self, sample_times, record_times=np.array([]),
@@ -100,21 +98,23 @@ class AdvancedTestisModel:
             record_sperm,
             avg_stem_state
         ) = gillespie_core(
-            init_time, times, state.copy(), self.r_event, self.p_diff, self.q_div,
-            self.r_decay, self.tau, self.sperm_per_diff, self.div_rates, self.diff_rates,
+            init_time, times, state.copy(), self.r_event, self.p_diff,
+            self.r_decay, self.tau, self.sperm_per_diff, self.diff_rates,
             self.n_clones, sample_flags, record_flags, n_sperm, rng
         )
     
         # Assemble sample_df
         sample_df = pd.DataFrame({
             'time': sample_times_out,
-            'n_sperm': sample_n_obs,
             'obs_result': [obs.tolist() for obs in sample_obs],
             'hid_result': [stem.tolist() for stem in sample_stem],
-            'full_result': [sperm.tolist() for sperm in sample_sperm]
+            'full_result': [sperm.tolist() for sperm in sample_sperm],
+            'n_sperm': sample_n_obs
         })
 
-        sample_df['replicate'] = sample_df.groupby('time').cumcount() + 1
+        # Compute replicate
+        replicate = sample_df.groupby("time").cumcount() + 1
+        sample_df.insert(1, "replicate", replicate)
     
         # Assemble record_df
         record_df = pd.DataFrame({
@@ -185,8 +185,8 @@ def dirichlet_numba(alpha_vec, rng):
     return gammas / gammas.sum()
 
 @njit
-def gillespie_core(init_time, times, state, r_event, p_diff, q_div, r_decay, tau, sperm_per_diff,
-                   div_rates, diff_rates, n_clones, sample_flags, record_flags, n_sperm, rng):
+def gillespie_core(init_time, times, state, r_event, p_diff, r_decay, tau, sperm_per_diff,
+                   diff_rates, n_clones, sample_flags, record_flags, n_sperm, rng):
 
     t = init_time
     n_times = len(times)
@@ -227,22 +227,22 @@ def gillespie_core(init_time, times, state, r_event, p_diff, q_div, r_decay, tau
             sperm_before = state[1, :].copy()
 
             j = weighted_choice(event_rate_per_clone / total_rate, rng)
-            p_diff_j, q_div_j = p_diff[j], q_div[j]
-            p_asymmetric = max(0.0, 1.0 - p_diff_j - q_div_j)
-            outcome = weighted_choice(np.array([p_diff_j, q_div_j, p_asymmetric]), rng)
+            p_diff_j = p_diff[j]
+            p_asymmetric = max(0.0, 1.0 - p_diff_j)
+            outcome = weighted_choice(np.array([p_diff_j, p_asymmetric]), rng)
 
             if outcome == 0:
-                div_probs = div_rates * stem_state
+                div_probs = diff_rates * stem_state
                 k = weighted_choice(div_probs / np.sum(div_probs), rng)
                 state[0, j] -= 1
                 state[1, j] += 2 * sperm_per_diff
                 state[0, k] += 1
-            elif outcome == 1:
-                diff_probs = diff_rates * stem_state
-                k = weighted_choice(diff_probs / np.sum(diff_probs), rng)
-                state[0, k] -= 1
-                state[1, k] += 2 * sperm_per_diff
-                state[0, j] += 1
+            # elif outcome == 1:
+            #     diff_probs = diff_rates * stem_state
+            #     k = weighted_choice(diff_probs / np.sum(diff_probs), rng)
+            #     state[0, k] -= 1
+            #     state[1, k] += 2 * sperm_per_diff
+            #     state[0, j] += 1
             else:
                 state[1, j] += sperm_per_diff
 
