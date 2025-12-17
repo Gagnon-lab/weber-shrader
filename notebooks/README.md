@@ -1,4 +1,9 @@
+# `sperm-data-analysis/notebooks`
+
 This directory contains several notebooks to conduct the main analysis for the paper.
+
+## Sub-directories
+* `images/`: Images generated are outputted to this directory.
 
 Files:
 * `model_analysis.ipynb`: creates several figure plots, including
@@ -12,5 +17,5 @@ supplemental figures/tables XXX.
 model interface.
 * `triplicate_noise.ipynb`: Estimates the sperm pseudocount parameter $M=472$.
 
-References:
+## References
 * Cattelan, S., & Gasparini, C. (2021). Male sperm storage impairs sperm quality in the zebrafish. Scientific reports, 11(1), 16689.

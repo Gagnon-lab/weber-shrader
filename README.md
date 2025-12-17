@@ -1,7 +1,6 @@
 # sperm-data-analysis
-A common space to analyze GESTALT sperm data. 
-
-The purpose of this repository is to provide a common space to share code to process, analyze, and visualize serial sperm sampling data.
+This repository contains all of the data cleaning, mathematical modeling, and
+statistical analysis done by Weber et. al. (2026).
 
 To install the Python environment, open the terminal, navigate to this directory and run:
 ```
@@ -17,40 +16,11 @@ conda clean --packages --tarballs --yes
 ```
 
 The main directories are as follows:
-* `data`: The data output from the GESALT pipeline.
-* `experiments`: Contains processed data.
-* `model_simulations`: Contains data from running simulations of the mathematical model.
-* `testis_model`: Contains the python package to simulate the model and perform inference.
-* `notebooks`: Contains code to generate paper figures.
+* `data/`: Contains the serial sperm data that is output from the GESALT pipeline.
+* `experiments/`: Stores the output of the `pipeline.ipynb` data cleaning file.
+* `model_simulations/`: Contains data from running simulations of the mathematical model.
+* `testis_model/`: Contains the python package to simulate the model and perform inference.
+* `notebooks/`: Contains code for all later analysis, including statistical tests
+and figure generation.
 
-```
-sperm-data-analysis
-├── data/
-    ├── viz-Output/
-        ├── fish1_s1_rep1/
-            ├── fish1_s1_rep1.allReadCounts (input)
-            ├── fish1_s1_rep1.passReadCounts (intermediate output from step A)
-            ├── fish1_s1_rep1.filteredReadCounts (intermediate output from step B)
-            ├── fish1_s1_rep1.filteredQualityReadCounts (output from step D)
-            ├── fish1_s1_rep1_stepB_removed_barcodes.txt (related to .filteredReadCounts)
-        ├── fish1_s1_rep2/
-	    ├── fish1_s1_rep3/
-	    ├── fish1_s2_rep1/
-            .
-	    .
-	    .
-├── experiments/
-	├── 11.11.2024_01.56_PM/
-        ├── matrix/
-            ├── fish1_barcodeMatrix_3filters.tsv
-            ├── fish5_barcodeMatrix_3filters.tsv
-            ├── fish10_barcodeMatrix_3filters.tsv
-            ├── fishctrl3_barcodeMatrix_3filters.tsv
-        ├── full_job_report.txt
-        ├── stepA_summary.txt
-        ├── stepB_summary.txt
-        ├── stepD_summary.txt
-        ├── stepE_summary.txt
-├── pipeline/
-    ├── process_sperm_barcodes.ipynb
-```
+Each of these directories has its own `README.md` file with more details.
