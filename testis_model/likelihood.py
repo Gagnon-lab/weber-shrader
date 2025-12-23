@@ -1,7 +1,4 @@
 import numpy as np
-
-from numba import njit
-from numba.typed import List
 import pandas as pd
 
 from math import log, exp
@@ -10,9 +7,10 @@ from scipy.linalg import expm
 from scipy.linalg import eig, inv
 from scipy.stats import binom, betabinom
 from scipy.optimize import minimize, root_scalar
-
-import numpy as np
 from scipy.special import gammaln
+
+from numba import njit
+from numba.typed import List
 
 @njit
 def moran_rate_matrix_numba(n_stem, r):
@@ -39,6 +37,20 @@ def moran_rate_matrix_numba(n_stem, r):
 
 @njit
 def log_binom_pmf(k, n, p):
+    """
+    Compute the log of the binomial probability mass function.
+    
+    Inputs:
+        k (int): number of successes.
+        n (int): number of trials.
+        p (float): probability of success on each trial (0 <= p <= 1).
+
+    Returns:
+        The log of the binomial PMF value. Returns -inf if the probability is zero.
+
+    The purpose of computing the *log* binomial PMF is for numerical stability.
+    This is all wrapped in an @njit decorator to increase runtime efficiency.
+    """
     if p == 0.0:
         return 0.0 if k == 0 else -np.inf
     if p == 1.0:
@@ -472,11 +484,3 @@ class LikelihoodModel:
         )
         
         return float(r_hat), first_nonzero_freq#, intervals
-        
-
-    # def likelihood(self, data, r, initial_state):
-    #     T = self.get_T(r)
-    #     E = self.get_E(371)
-    
-    #     alpha = forward_algorithm(initial_state, T, E, data)
-    #     return np.log(np.sum(alpha[-1,:]))

@@ -33,23 +33,21 @@ def process_clone(data):
             run_likelihood(data, lm = lm)
 
     series['r_opt'] = r_opt
-    # series['if_opt'] = if_opt
     series['l_max'] = l_max
     series['lower'] = lower
     series['upper'] = upper
-    # series['if_null'] = if_null
     series['l_null'] = l_null
 
     return series
 
-def process_scenario(scenario, n_sims, overwrite):
+def process_scenario(scenario, n_sims, overwrite):    
     start_time = time.time()
-    directory = f'./scenarios/{scenario}'
-
+    directory = os.path.join('.', 'scenarios', scenario)
+    
     if n_sims is None:
-        filename = f'{directory}/{scenario}_long.csv'
+        filename = os.path.join(directory, f'{scenario}_long.csv')
     else:
-        filename = f'{directory}/{scenario}_long_test.csv'
+        filename = os.path.join(directory, f'{scenario}_long_test.csv')
 
     if not os.path.isdir(directory):
         return {'scenario': scenario, 'status': 'error - missing directory'}
@@ -65,13 +63,14 @@ def process_scenario(scenario, n_sims, overwrite):
         items = islice(clone_data.items(), n_sims)
     
     all_series = []
-    for (scenario, fish, clone), data in items:
+    for (scenario, fish, duplicate, clone), data in items:
         try:    
             series = process_clone(data)
             if series is None:
                 continue
             series['scenario'] = scenario
             series['fish'] = fish
+            series['duplicate'] = duplicate
             series['clone'] = clone
             
             all_series.append(series)

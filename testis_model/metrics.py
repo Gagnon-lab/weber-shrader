@@ -64,7 +64,7 @@ def avg_freq_change(data):
     else:
         return (grouped.loc[it]['freq'] - grouped.loc[dt]['freq']) / (dt - it)
 
-def run_likelihood(data, lm = None, statistic = 4):
+def run_likelihood(data, lm = None, statistic = 3.84):
     if lm is None:
         lm = tm.likelihood.LikelihoodModel(1000)
 

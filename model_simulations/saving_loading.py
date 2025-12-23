@@ -83,18 +83,33 @@ def load_all_scenarios(scenarios, directory = 'scenarios'):
             if col in df.columns:
                 df[col] = df[col].apply(ast.literal_eval)
             
-        fish_list = df['fish'].unique()
+        # fish_list = df['fish'].unique()
     
-        for i, fish in enumerate(fish_list):
-            fish_df = df.query('fish == @fish').copy().reset_index(drop = True)
+        # for i, fish in enumerate(fish_list):
+        #     fish_df = df.query('fish == @fish').copy().reset_index(drop = True)
+        #     n_clones = len(fish_df['obs_result'].iloc[0])
+    
+        #     fish_data[scenario, fish] = fish_df
+        
+        #     for clone in range(n_clones):
+        #         collapsed = tm.data_processing.collapse(fish_df, clone)
+        #         collapsed.insert(2, 'clone', clone)
+        #         clone_data[scenario, int(fish), clone] = collapsed
+
+        # Get all unique (fish, copy) pairs
+        fish_copy_list = df[['fish', 'duplicate']].drop_duplicates().values
+        
+        for i, (fish, duplicate) in enumerate(fish_copy_list):
+            # fish_df = df[(df['fish'] == fish_id) & (df['copy'] == copy_id)].copy().reset_index(drop=True)
+            fish_df = df.query('fish == @fish and duplicate == @duplicate').copy().reset_index(drop=True)
             n_clones = len(fish_df['obs_result'].iloc[0])
-    
-            fish_data[scenario, fish] = fish_df
+        
+            fish_data[scenario, fish, duplicate] = fish_df
         
             for clone in range(n_clones):
                 collapsed = tm.data_processing.collapse(fish_df, clone)
                 collapsed.insert(2, 'clone', clone)
-                clone_data[scenario, int(fish), clone] = collapsed
+                clone_data[scenario, int(fish), int(duplicate), clone] = collapsed
 
     return fish_data, clone_data
 
