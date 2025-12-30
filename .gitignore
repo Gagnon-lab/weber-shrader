@@ -1,6 +1,7 @@
 # The directories data/ and experiments/ are ignored because they have the
 # potential to contain very large files.
 data/
+data*/
 experiments/
 fastq-data/clustering/
 **.DS_Store
