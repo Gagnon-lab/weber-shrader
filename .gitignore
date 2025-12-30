@@ -3,6 +3,7 @@
 data/
 data*/
 experiments/
+model_simulations/*/
 fastq-data/clustering/
 **.DS_Store
 
