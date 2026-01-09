@@ -2,6 +2,12 @@ import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
 
+# Source: https://github.com/BlakeRMills/MoMAColors/blob/main/R/Colors.R
+default_colors = np.array(["#ff4d6f", "#579ea4", "#df7713", "#f9c000", "#86ad34",
+              "#5d7298", "#81b28d", "#7e1a2f", "#2d2651", "#c8350d", "#bd777a",
+              '#1a5f7a', '#8b4c8f', '#4a9eff', '#ffd93d', '#3dcc8e', '#ff8c42',
+              '#e63946', '#a0c334', '#6b4e71', '#00b4d8'])
+
 def plot(results, ax = None, replicate = None, unedited_index = None, colors = None, offset_time = 0):
     """
     Input a `results` dataframe and `ax` axis and
@@ -38,11 +44,7 @@ def plot(results, ax = None, replicate = None, unedited_index = None, colors = N
     times = np.array(grouped.time)
 
     if colors is None:
-    # Source: https://github.com/BlakeRMills/MoMAColors/blob/main/R/Colors.R
-        colors = np.array(["#ff4d6f", "#579ea4", "#df7713", "#f9c000", "#86ad34",
-              "#5d7298", "#81b28d", "#7e1a2f", "#2d2651", "#c8350d", "#bd777a",
-              '#1a5f7a', '#8b4c8f', '#4a9eff', '#ffd93d', '#3dcc8e', '#ff8c42',
-              '#e63946', '#a0c334', '#6b4e71', '#00b4d8'])
+        colors = default_colors
         
     n_clones = np.shape(freq_data)[0]
     repeats = -(-n_clones // len(colors)) # same as n_clones/len(colors) rounded up
