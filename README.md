@@ -23,7 +23,7 @@ The remaining files in this directory are:
 
 ## Installation
 
-To install the Python environment, we highly recommend using a Unix command line (if using Windows, consider using [https://learn.microsoft.com/en-us/windows/wsl/install](Windows Subsystem for Linux). Open the terminal, navigate to the repository directory and run:
+To install the Python environment, we highly recommend using a Unix command line (if using Windows, consider using [Windows Subsystem for Linux](https://learn.microsoft.com/en-us/windows/wsl/install). Open the terminal, navigate to the repository directory and run:
 ```
 conda env create --name weber --file environment.yml
 conda activate weber
