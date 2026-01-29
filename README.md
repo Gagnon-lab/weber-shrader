@@ -23,22 +23,17 @@ The remaining files in this directory are:
 
 ## Installation
 
-To install the Python environment, open the terminal, navigate to this directory and run:
+To install the Python environment, we highly recommend using a Unix command line (if using Windows, consider using [https://learn.microsoft.com/en-us/windows/wsl/install](Windows Subsystem for Linux). Open the terminal, navigate to the repository directory and run:
 ```
-conda env create --name <name> --file python_requirements.yml
-conda activate <name>
-pip install .
-python -m ipykernel install --user --name neutral_model --display-name Python (neutral_model)
+conda env create --name weber --file environment.yml
+conda activate weber
 ```
+Note that the local `testis_model` package is installed in editable mode (meaning that changes you make will affect the installation).
 
-If you intend to edit the `testis_model` package, install it in editable mode using
+To open the files with Jupyter notebooks, you can then run, for example:
 ```
-pip install -e .
-```
-
-Helpful commands if this fails:
-```
-conda clean --packages --tarballs --yes
+python -m ipykernel install --user --name weber --display-name "weber"
+jupyter lab
 ```
 
 ## Reproducing our analysis
