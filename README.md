@@ -23,7 +23,7 @@ The remaining files in this directory are:
 
 ## Installation
 
-To install the Python environment, we highly recommend using a Unix command line (if using Windows, consider using [Windows Subsystem for Linux](https://learn.microsoft.com/en-us/windows/wsl/install). Open the terminal, navigate to the repository directory and run:
+To install the Python environment, we highly recommend using [Anaconda](https://anaconda.org/) and a Unix command line (if using Windows, consider using [Windows Subsystem for Linux](https://learn.microsoft.com/en-us/windows/wsl/install)). Open the terminal, navigate to the repository directory and run:
 ```
 conda env create --name weber --file environment.yml
 conda activate weber
@@ -52,10 +52,7 @@ Each step produces intermediate result files, so readers interested in simply re
 ### Secondary data cleaning pipeline
 1. Make sure the GESTALT `.allReadCounts` and `merged.info` files are available in `data/`.
 2. Install the Python environment using the steps above.
-3. Run `pipeline.ipynb` with a few different settings:
-  * Set the variables `dataset = 'full-barcoded-fish'`, `mergedinfos = 'mergedinfos'`, `cluster_barcodes = True`.
-  * (Talk to Jenna & Drew about how we will format this)
-  * (Some changes I can make: allow experiment "names" (instead of just outputting a timestamp) and make defaults choices in the pipeline.
+3. [TODO: Make the pipeline more straightforward to use so I can explain this easily]
 
 This will produce tables of final clonal reads in the `experiments/` subfolder.
 
