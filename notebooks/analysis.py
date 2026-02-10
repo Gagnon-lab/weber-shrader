@@ -20,8 +20,9 @@ def inv_symlog10(y, linthresh=1e-2):
     return np.sign(y) * ((10**np.abs(y) - 1) * linthresh)
 
 exp_hue = '#ffc566'
-alt_hue = '#f75973'
-trunc_hue = '#c56eeb'
+mp_hue = '#f75973'
+# trunc_hue = '#c56eeb'
+tq_hue = '#c56eeb'
 no_collapse_hue = '#3ddb6f'
 
 small_label_settings = {
@@ -44,12 +45,14 @@ palette = {
     'Model\n($rp=8$)': hue(8),
     'Model\n($rp=25$)': hue(25),
     'Exp. data': exp_hue,
-    'Exp. data\n(MP 0.95)': alt_hue,
-    'Exp. data (MP 0.95)': alt_hue,
+    'Exp. data\n(MP 0.95)': mp_hue,
+    'Exp. data (MP 0.95)': mp_hue,
+    'Exp. data\n(TQ 14)': tq_hue,
+    'Exp. data (TQ 14)': tq_hue,
     'Exp. data\n(no cluster)': no_collapse_hue,
     'Exp. data (no cluster)': no_collapse_hue,
-    'Exp. data\n(trunc.)': trunc_hue,
-    'Exp. data (truncated)': trunc_hue
+    # 'Exp. data\n(trunc.)': trunc_hue,
+    # 'Exp. data (truncated)': trunc_hue
 }
 
 # Load in the cloner results file.

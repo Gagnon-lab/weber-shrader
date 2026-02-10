@@ -47,7 +47,18 @@ Our analysis code consists of 4 main steps:
 Each step produces intermediate result files, so readers interested in simply re-generating the figures can skip ahead to that section.
 
 ### Reproducing GESTALT runs
-(Is this necessary to include? Or just have readers start with allReadCounts files)
+Download the fastq files from (TODO: link) and place them into the `gestalt/` directory according to the sample number.
+
+(Copy Docker instructions from takasugi)
+
+For each sample, you can run the scriph file (or edit as necessary). This produces an `OUTPUT/` directory.
+
+After running on all samples, copy the `.allReadCounts` and `merged.info` files from HPC cluster to your local `data/mp0.8_tq10`.
+
+To run on other parameter values, edit the shell scripts accordingly, changing the `--matchProportion 0.85` and `--trimQual 14`.
+
+
+Install the GESTALT pipeline from [github.com/aaronmck/Cas9FateMapping](https://github.com/aaronmck/Cas9FateMapping) and the `pipeline/gestalt_pipeline_no_trees.scala` file from [github.com/Gagnon-lab/takasugi-genetics](https://github.com/Gagnon-lab/takasugi-genetics)
 
 ### Secondary data cleaning pipeline
 1. Make sure the GESTALT `.allReadCounts` and `merged.info` files are available in `data/`.
