@@ -47,25 +47,32 @@ Our analysis code consists of 4 main steps:
 Each step produces intermediate result files, so readers interested in simply re-generating the figures can skip ahead to that section.
 
 ### Reproducing GESTALT runs
-Download the fastq files from (TODO: link) and place them into the `gestalt/` directory according to the sample number.
+Download the fastq files from (TODO: link) and place them into the `gestalt/` directory according to the sample number. For example, the data folder for sample 9 can be placed in the `gestalt/sample9/` directory.
 
-(Copy Docker instructions from takasugi)
+Next, download the Docker container. The Center for High Performance Computing (CHPC) at the University of Utah offers Singularity as a container alternative. You can download the container as a Singularity image using:
+```
+singularity build GESTALT.sif docker://aaronmck/genomics:sc_GESTALT 
+```
+The other necessary files to run GESTALT are included in the sample directories.
 
-For each sample, you can run the scriph file (or edit as necessary). This produces an `OUTPUT/` directory.
+For each sample, you can run the bash (`.sh`) script file (or edit as necessary). This produces an `OUTPUT/` directory. After running on all samples, copy the `.allReadCounts` and `merged.info` files from HPC cluster to your local `gestalt_output/mp0.8_tq10`.
 
-After running on all samples, copy the `.allReadCounts` and `merged.info` files from HPC cluster to your local `data/mp0.8_tq10`.
-
-To run on other parameter values, edit the shell scripts accordingly, changing the `--matchProportion 0.85` and `--trimQual 14`.
+To run on other parameter values, edit the shell scripts accordingly, changing the settings to `--matchProportion 0.95` or `--trimQual 14`.
 
 
-Install the GESTALT pipeline from [github.com/aaronmck/Cas9FateMapping](https://github.com/aaronmck/Cas9FateMapping) and the `pipeline/gestalt_pipeline_no_trees.scala` file from [github.com/Gagnon-lab/takasugi-genetics](https://github.com/Gagnon-lab/takasugi-genetics)
+<!-- Install the GESTALT pipeline from [github.com/aaronmck/Cas9FateMapping](https://github.com/aaronmck/Cas9FateMapping) and the `pipeline/gestalt_pipeline_no_trees.scala` file from [github.com/Gagnon-lab/takasugi-genetics](https://github.com/Gagnon-lab/takasugi-genetics) -->
 
-### Secondary data cleaning pipeline
-1. Make sure the GESTALT `.allReadCounts` and `merged.info` files are available in `data/`.
+### Secondary quality control pipeline
+1. Make sure that the `gestalt_output/` directory contains the subdirectories `mp0.8_tq10`, `mp0.95_tq10`, and `mp0.8_tq14`, each containing `.allReadCounts` and `merged.info` files. These can either be downloaded from this repository or re-generated using the instructions above.
 2. Install the Python environment using the steps above.
-3. [TODO: Make the pipeline more straightforward to use so I can explain this easily]
+3. Run the pipeline using the following settings:
+    a. `name = 'full_pipeline'`, `dataset = 'mp0.8_tq10`, `cluster_barcodes = True`
+    b. `name = 'full_pipeline_TQ14'`, `dataset = 'mp0.8_tq14`, `cluster_barcodes = True`
+    c. `name = 'full_pipeline_MP0.95'`, `dataset = 'mp0.95_tq10`, `cluster_barcodes = True`
+    d. `name = 'no_cluster'`, `dataset = 'mp0.8_tq10`, `cluster_barcodes = False`
+Note that if the results already exist in `experiments/` (for example, if you just cloned this repository), then you should either delete these results or change the `name` parameter above. The quality control code will not overwrite this data automatically.
 
-This will produce tables of final clonal reads in the `experiments/` subfolder.
+Running this code will (re-)produce tables of final clonal reads in the `experiments/` subfolder.
 
 ### Clonal metric analysis
 1. Move to the `model_simulations/` directory.
