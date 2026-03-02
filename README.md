@@ -5,7 +5,8 @@ statistical analysis done by Weber et. al. (2026).
 ## Sub-directories
 
 The main directories are as follows:
-* `data/`: Contains the serial sperm data that is output from the GESALT pipeline.
+* `gestalt/`: Code to run the GESTALT pipeline.
+* `gestalt_output/`: Contains the serial sperm data that is output from the GESALT pipeline.
 * `experiments/`: Stores the output of the `pipeline.ipynb` data cleaning file.
 * `model_simulations/`: Contains data from running simulations of the mathematical model.
 * `testis_model/`: Contains the python package to simulate the model and perform inference.
@@ -19,7 +20,7 @@ The remaining files in this directory are:
 * `pipeline.ipynb`: The main computational pipeline to transform GESTALT output into final data.
 * `pipeline_utility.py`: A collection of helper functions to streamline `pipeline.ipynb`.
 * `requirements.yml`: The file read by `conda` to recreate the Python environment.
-* `setup.py`: This file defines `testis_model/` as a Python package so that the user can install it using `pip install .`
+* `setup.py`: This file defines the `testis_model/` directory as a Python package so that the user can install it using `pip install .`
 
 ## Installation
 
