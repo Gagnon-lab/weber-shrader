@@ -6,15 +6,15 @@ DATA_DIR = sys.argv[2]
 
 # List of arguments to run
 match_proportion_values = [0.75, 0.8, 0.85, 0.9, 0.95, 0.99]
-match_count_values = [5, 15, 25, 35, 45]
+match_count_values = []
 trim_qual_values = [12, 13, 14, 15, 16, 17]
-trim_window_values = [4]
+trim_window_values = []
 
 # Use arguments. If true, will run gestalt for all above values. If false, uses only default the value.
 use_MP = True
 use_MC = False
 use_TQ = True
-use_TW = True
+use_TW = False
 
 # Default arguments
 default_MP = 0.8
