@@ -71,6 +71,7 @@ To run on other parameter values, edit the shell scripts accordingly, changing t
     b. `name = 'full_pipeline_TQ14'`, `dataset = 'mp0.8_tq14`, `cluster_barcodes = True`
     c. `name = 'full_pipeline_MP0.95'`, `dataset = 'mp0.95_tq10`, `cluster_barcodes = True`
     d. `name = 'no_cluster'`, `dataset = 'mp0.8_tq10`, `cluster_barcodes = False`
+    d. `name = 'keep_questionable'`, `dataset = 'mp0.8_tq10`, `cluster_barcodes = True`, 
 Note that if the results already exist in `experiments/` (for example, if you just cloned this repository), then you should either delete these results or change the `name` parameter above. The quality control code will not overwrite this data automatically.
 
 Running this code will (re-)produce tables of final clonal reads in the `experiments/` subfolder.
