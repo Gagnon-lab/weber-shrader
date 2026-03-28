@@ -1,0 +1,649 @@
+
+Summary of step E: Remove contaminant barcodes from their read files.
+
+The barcodes in questionable barcodes list were examined carefully
+for their presence across animals. If a clear source of that barcode
+could be found, the questionable barcode was assigned a source fish.
+If there was not a clear winner, the questionable barcode was
+considered contaminant everywhere.
+
+The data before contaminant detection is stored in `refined_data.csv`.
+The data after contaminant detection is stored in `classified_data.csv`.
+Data with the contaminants removed is stored in `final_data.csv`.
+
+Here is a recap of the filtering for each sample:
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+ === FISH fish1 ===
+
+1D+38_28D+41_NONE_NONE_NONE_NONE_54D+199_54D+199_54D+199_NONE: fish1 (found by ratio)
+
+3D+35_3D+64_NONE_81D+119_81D+119_81D+119_81D+119_NONE_1I+254+C_NONE: still questionable
+This barcode is found in <StringArray>
+[    'fish1',    'fish10',    'fish12',    'fish15',    'fish16',    'fish18',
+     'fish2',     'fish5',     'fish9', 'fishctrl2']
+Length: 10, dtype: str.
+
+NONE_NONE_NONE_NONE_NONE_81D+170_81D+170_81D+170_81D+170_NONE: still questionable
+This barcode is found in <StringArray>
+[    'fish1',    'fish15',    'fish16',    'fish22',    'fish23',     'fish4',
+    'fish40',    'fish42',    'fish50',     'fish8', 'fishctrl3']
+Length: 11, dtype: str.
+
+
+ === FISH fish10 ===
+
+NONE_NONE_NONE_NONE_1D+146_81D+170_81D+170_81D+170_81D+170_NONE: still questionable
+This barcode is found in <StringArray>
+[   'fish10',    'fish11',    'fish12',    'fish14',    'fish17',    'fish18',
+     'fish2',    'fish26',    'fish34',    'fish44',     'fish5',     'fish6',
+     'fish9', 'fishctrl2']
+Length: 14, dtype: str.
+
+NONE_NONE_NONE_NONE_NONE_NONE_54D+199_54D+199_54D+199_NONE: still questionable
+This barcode is found in <StringArray>
+['fish10', 'fish17', 'fish23']
+Length: 3, dtype: str.
+
+3D+35_3D+64_NONE_81D+119_81D+119_81D+119_81D+119_NONE_1I+254+C_NONE: still questionable
+This barcode is found in <StringArray>
+[    'fish1',    'fish10',    'fish12',    'fish15',    'fish16',    'fish18',
+     'fish2',     'fish5',     'fish9', 'fishctrl2']
+Length: 10, dtype: str.
+
+87D+36_87D+36_87D+36_87D+36_NONE_1D+172_NONE_NONE_NONE_NONE: still questionable
+This barcode is found in <StringArray>
+[   'fish10',    'fish12',    'fish14',    'fish17',    'fish18',     'fish2',
+    'fish26',    'fish38',    'fish41',    'fish44',     'fish5',     'fish6',
+     'fish9', 'fishctrl2']
+Length: 14, dtype: str.
+
+NONE_NONE_NONE_NONE_7D+139_NONE_NONE_NONE_1D+254_NONE: still questionable
+This barcode is found in <StringArray>
+['fish10', 'fish6']
+Length: 2, dtype: str.
+
+
+ === FISH fish11 ===
+
+NONE_NONE_NONE_NONE_108D+142_108D+142_108D+142_108D+142_108D+142_NONE: still questionable
+This barcode is found in <StringArray>
+['fish11', 'fish18', 'fish2', 'fish42', 'fish5']
+Length: 5, dtype: str.
+
+NONE_NONE_NONE_NONE_1D+146_81D+170_81D+170_81D+170_81D+170_NONE: still questionable
+This barcode is found in <StringArray>
+[   'fish10',    'fish11',    'fish12',    'fish14',    'fish17',    'fish18',
+     'fish2',    'fish26',    'fish34',    'fish44',     'fish5',     'fish6',
+     'fish9', 'fishctrl2']
+Length: 14, dtype: str.
+
+
+ === FISH fish12 ===
+
+3D+35_NONE_NONE_NONE_NONE_NONE_NONE_NONE_NONE_NONE: still questionable
+This barcode is found in <StringArray>
+['fish12', 'fish17', 'fish22']
+Length: 3, dtype: str.
+
+3D+35_3D+64_NONE_81D+119_81D+119_81D+119_81D+119_NONE_1I+254+C_NONE: still questionable
+This barcode is found in <StringArray>
+[    'fish1',    'fish10',    'fish12',    'fish15',    'fish16',    'fish18',
+     'fish2',     'fish5',     'fish9', 'fishctrl2']
+Length: 10, dtype: str.
+
+NONE_NONE_NONE_NONE_1D+146_81D+170_81D+170_81D+170_81D+170_NONE: still questionable
+This barcode is found in <StringArray>
+[   'fish10',    'fish11',    'fish12',    'fish14',    'fish17',    'fish18',
+     'fish2',    'fish26',    'fish34',    'fish44',     'fish5',     'fish6',
+     'fish9', 'fishctrl2']
+Length: 14, dtype: str.
+
+87D+36_87D+36_87D+36_87D+36_NONE_1D+172_NONE_NONE_NONE_NONE: still questionable
+This barcode is found in <StringArray>
+[   'fish10',    'fish12',    'fish14',    'fish17',    'fish18',     'fish2',
+    'fish26',    'fish38',    'fish41',    'fish44',     'fish5',     'fish6',
+     'fish9', 'fishctrl2']
+Length: 14, dtype: str.
+
+
+ === FISH fish13 ===
+
+82D+36_82D+36_82D+36_82D+36_NONE_NONE_NONE_NONE_NONE_NONE: still questionable
+This barcode is found in <StringArray>
+['fish13', 'fish18', 'fish34', 'fish9']
+Length: 4, dtype: str.
+
+
+ === FISH fish14 ===
+
+NONE_NONE_NONE_NONE_1D+146_81D+170_81D+170_81D+170_81D+170_NONE: still questionable
+This barcode is found in <StringArray>
+[   'fish10',    'fish11',    'fish12',    'fish14',    'fish17',    'fish18',
+     'fish2',    'fish26',    'fish34',    'fish44',     'fish5',     'fish6',
+     'fish9', 'fishctrl2']
+Length: 14, dtype: str.
+
+87D+36_87D+36_87D+36_87D+36_NONE_1D+172_NONE_NONE_NONE_NONE: still questionable
+This barcode is found in <StringArray>
+[   'fish10',    'fish12',    'fish14',    'fish17',    'fish18',     'fish2',
+    'fish26',    'fish38',    'fish41',    'fish44',     'fish5',     'fish6',
+     'fish9', 'fishctrl2']
+Length: 14, dtype: str.
+
+
+ === FISH fish15 ===
+
+3D+35_3D+64_NONE_81D+119_81D+119_81D+119_81D+119_NONE_1I+254+C_NONE: still questionable
+This barcode is found in <StringArray>
+[    'fish1',    'fish10',    'fish12',    'fish15',    'fish16',    'fish18',
+     'fish2',     'fish5',     'fish9', 'fishctrl2']
+Length: 10, dtype: str.
+
+NONE_NONE_NONE_NONE_NONE_81D+170_81D+170_81D+170_81D+170_NONE: still questionable
+This barcode is found in <StringArray>
+[    'fish1',    'fish15',    'fish16',    'fish22',    'fish23',     'fish4',
+    'fish40',    'fish42',    'fish50',     'fish8', 'fishctrl3']
+Length: 11, dtype: str.
+
+
+ === FISH fish16 ===
+
+3D+35_3D+64_NONE_81D+119_81D+119_81D+119_81D+119_NONE_1I+254+C_NONE: still questionable
+This barcode is found in <StringArray>
+[    'fish1',    'fish10',    'fish12',    'fish15',    'fish16',    'fish18',
+     'fish2',     'fish5',     'fish9', 'fishctrl2']
+Length: 10, dtype: str.
+
+NONE_NONE_NONE_NONE_NONE_81D+170_81D+170_81D+170_81D+170_NONE: still questionable
+This barcode is found in <StringArray>
+[    'fish1',    'fish15',    'fish16',    'fish22',    'fish23',     'fish4',
+    'fish40',    'fish42',    'fish50',     'fish8', 'fishctrl3']
+Length: 11, dtype: str.
+
+
+ === FISH fish17 ===
+
+3D+35_NONE_NONE_NONE_NONE_NONE_NONE_NONE_NONE_NONE: still questionable
+This barcode is found in <StringArray>
+['fish12', 'fish17', 'fish22']
+Length: 3, dtype: str.
+
+4D+38_15D+65_NONE_54D+119_54D+119_54D+119_NONE_NONE_NONE_NONE: fish17 (found by ratio)
+
+NONE_NONE_NONE_NONE_1D+146_81D+170_81D+170_81D+170_81D+170_NONE: still questionable
+This barcode is found in <StringArray>
+[   'fish10',    'fish11',    'fish12',    'fish14',    'fish17',    'fish18',
+     'fish2',    'fish26',    'fish34',    'fish44',     'fish5',     'fish6',
+     'fish9', 'fishctrl2']
+Length: 14, dtype: str.
+
+NONE_NONE_NONE_NONE_NONE_NONE_54D+199_54D+199_54D+199_NONE: still questionable
+This barcode is found in <StringArray>
+['fish10', 'fish17', 'fish23']
+Length: 3, dtype: str.
+
+87D+36_87D+36_87D+36_87D+36_NONE_1D+172_NONE_NONE_NONE_NONE: still questionable
+This barcode is found in <StringArray>
+[   'fish10',    'fish12',    'fish14',    'fish17',    'fish18',     'fish2',
+    'fish26',    'fish38',    'fish41',    'fish44',     'fish5',     'fish6',
+     'fish9', 'fishctrl2']
+Length: 14, dtype: str.
+
+
+ === FISH fish18 ===
+
+NONE_NONE_NONE_NONE_108D+142_108D+142_108D+142_108D+142_108D+142_NONE: still questionable
+This barcode is found in <StringArray>
+['fish11', 'fish18', 'fish2', 'fish42', 'fish5']
+Length: 5, dtype: str.
+
+3D+35_3D+64_NONE_81D+119_81D+119_81D+119_81D+119_NONE_1I+254+C_NONE: still questionable
+This barcode is found in <StringArray>
+[    'fish1',    'fish10',    'fish12',    'fish15',    'fish16',    'fish18',
+     'fish2',     'fish5',     'fish9', 'fishctrl2']
+Length: 10, dtype: str.
+
+82D+36_82D+36_82D+36_82D+36_NONE_NONE_NONE_NONE_NONE_NONE: still questionable
+This barcode is found in <StringArray>
+['fish13', 'fish18', 'fish34', 'fish9']
+Length: 4, dtype: str.
+
+84D+37_84D+37_84D+37_84D+37_2D+144_NONE_NONE_NONE_1D+253_NONE: still questionable
+This barcode is found in <StringArray>
+['fish18', 'fish21', 'fishctrl1']
+Length: 3, dtype: str.
+
+87D+36_87D+36_87D+36_87D+36_NONE_1D+172_NONE_NONE_NONE_NONE: still questionable
+This barcode is found in <StringArray>
+[   'fish10',    'fish12',    'fish14',    'fish17',    'fish18',     'fish2',
+    'fish26',    'fish38',    'fish41',    'fish44',     'fish5',     'fish6',
+     'fish9', 'fishctrl2']
+Length: 14, dtype: str.
+
+NONE_NONE_NONE_NONE_1D+146_81D+170_81D+170_81D+170_81D+170_NONE: still questionable
+This barcode is found in <StringArray>
+[   'fish10',    'fish11',    'fish12',    'fish14',    'fish17',    'fish18',
+     'fish2',    'fish26',    'fish34',    'fish44',     'fish5',     'fish6',
+     'fish9', 'fishctrl2']
+Length: 14, dtype: str.
+
+NONE_NONE_NONE_NONE_NONE_87D+167_87D+167_87D+167_87D+167_NONE: fish2 (found by ratio)
+
+
+ === FISH fish2 ===
+
+NONE_NONE_NONE_NONE_108D+142_108D+142_108D+142_108D+142_108D+142_NONE: still questionable
+This barcode is found in <StringArray>
+['fish11', 'fish18', 'fish2', 'fish42', 'fish5']
+Length: 5, dtype: str.
+
+NONE_NONE_NONE_NONE_NONE_87D+167_87D+167_87D+167_87D+167_NONE: fish2 (found by ratio)
+
+3D+35_3D+64_NONE_81D+119_81D+119_81D+119_81D+119_NONE_1I+254+C_NONE: still questionable
+This barcode is found in <StringArray>
+[    'fish1',    'fish10',    'fish12',    'fish15',    'fish16',    'fish18',
+     'fish2',     'fish5',     'fish9', 'fishctrl2']
+Length: 10, dtype: str.
+
+NONE_NONE_NONE_NONE_1D+146_81D+170_81D+170_81D+170_81D+170_NONE: still questionable
+This barcode is found in <StringArray>
+[   'fish10',    'fish11',    'fish12',    'fish14',    'fish17',    'fish18',
+     'fish2',    'fish26',    'fish34',    'fish44',     'fish5',     'fish6',
+     'fish9', 'fishctrl2']
+Length: 14, dtype: str.
+
+87D+36_87D+36_87D+36_87D+36_NONE_1D+172_NONE_NONE_NONE_NONE: still questionable
+This barcode is found in <StringArray>
+[   'fish10',    'fish12',    'fish14',    'fish17',    'fish18',     'fish2',
+    'fish26',    'fish38',    'fish41',    'fish44',     'fish5',     'fish6',
+     'fish9', 'fishctrl2']
+Length: 14, dtype: str.
+
+
+ === FISH fish21 ===
+
+1D+38_NONE_NONE_5I+116+AGAGC_108D+142_108D+142_108D+142_108D+142_108D+142_NONE: still questionable
+This barcode is found in <StringArray>
+['fish21', 'fishctrl1']
+Length: 2, dtype: str.
+
+40D+18_NONE_NONE_2I+118+TT_1D+145_NONE_NONE_NONE_NONE_NONE: still questionable
+This barcode is found in <StringArray>
+['fish21', 'fish45', 'fishctrl1']
+Length: 3, dtype: str.
+
+84D+37_84D+37_84D+37_84D+37_2D+144_NONE_NONE_NONE_1D+253_NONE: still questionable
+This barcode is found in <StringArray>
+['fish18', 'fish21', 'fishctrl1']
+Length: 3, dtype: str.
+
+
+ === FISH fish22 ===
+
+3D+35_NONE_NONE_NONE_NONE_NONE_NONE_NONE_NONE_NONE: still questionable
+This barcode is found in <StringArray>
+['fish12', 'fish17', 'fish22']
+Length: 3, dtype: str.
+
+54D+36_54D+36_54D+36_NONE_NONE_NONE_NONE_NONE_NONE_NONE: still questionable
+This barcode is found in <StringArray>
+['fish22', 'fish42', 'fish5', 'fish51']
+Length: 4, dtype: str.
+
+7D+33_NONE_NONE_NONE_NONE_NONE_NONE_NONE_NONE_NONE: still questionable
+This barcode is found in <StringArray>
+['fish22', 'fish43']
+Length: 2, dtype: str.
+
+NONE_NONE_NONE_NONE_NONE_81D+170_81D+170_81D+170_81D+170_NONE: still questionable
+This barcode is found in <StringArray>
+[    'fish1',    'fish15',    'fish16',    'fish22',    'fish23',     'fish4',
+    'fish40',    'fish42',    'fish50',     'fish8', 'fishctrl3']
+Length: 11, dtype: str.
+
+
+ === FISH fish23 ===
+
+NONE_NONE_NONE_NONE_NONE_81D+170_81D+170_81D+170_81D+170_NONE: still questionable
+This barcode is found in <StringArray>
+[    'fish1',    'fish15',    'fish16',    'fish22',    'fish23',     'fish4',
+    'fish40',    'fish42',    'fish50',     'fish8', 'fishctrl3']
+Length: 11, dtype: str.
+
+1D+38_28D+41_NONE_NONE_NONE_NONE_54D+199_54D+199_54D+199_NONE: fish1 (found by ratio)
+
+NONE_NONE_NONE_NONE_NONE_NONE_54D+199_54D+199_54D+199_NONE: still questionable
+This barcode is found in <StringArray>
+['fish10', 'fish17', 'fish23']
+Length: 3, dtype: str.
+
+
+ === FISH fish26 ===
+
+87D+36_87D+36_87D+36_87D+36_NONE_1D+172_NONE_NONE_NONE_NONE: still questionable
+This barcode is found in <StringArray>
+[   'fish10',    'fish12',    'fish14',    'fish17',    'fish18',     'fish2',
+    'fish26',    'fish38',    'fish41',    'fish44',     'fish5',     'fish6',
+     'fish9', 'fishctrl2']
+Length: 14, dtype: str.
+
+NONE_NONE_NONE_NONE_1D+146_81D+170_81D+170_81D+170_81D+170_NONE: still questionable
+This barcode is found in <StringArray>
+[   'fish10',    'fish11',    'fish12',    'fish14',    'fish17',    'fish18',
+     'fish2',    'fish26',    'fish34',    'fish44',     'fish5',     'fish6',
+     'fish9', 'fishctrl2']
+Length: 14, dtype: str.
+
+
+ === FISH fish34 ===
+
+82D+36_82D+36_82D+36_82D+36_NONE_NONE_NONE_NONE_NONE_NONE: still questionable
+This barcode is found in <StringArray>
+['fish13', 'fish18', 'fish34', 'fish9']
+Length: 4, dtype: str.
+
+87D+35_87D+35_87D+35_87D+35_NONE_NONE_NONE_NONE_NONE_NONE: still questionable
+This barcode is found in <StringArray>
+['fish34', 'fish43']
+Length: 2, dtype: str.
+
+NONE_NONE_NONE_NONE_1D+146_81D+170_81D+170_81D+170_81D+170_NONE: still questionable
+This barcode is found in <StringArray>
+[   'fish10',    'fish11',    'fish12',    'fish14',    'fish17',    'fish18',
+     'fish2',    'fish26',    'fish34',    'fish44',     'fish5',     'fish6',
+     'fish9', 'fishctrl2']
+Length: 14, dtype: str.
+
+
+ === FISH fish35 ===
+
+
+ === FISH fish37 ===
+
+
+ === FISH fish38 ===
+
+87D+36_87D+36_87D+36_87D+36_NONE_1D+172_NONE_NONE_NONE_NONE: still questionable
+This barcode is found in <StringArray>
+[   'fish10',    'fish12',    'fish14',    'fish17',    'fish18',     'fish2',
+    'fish26',    'fish38',    'fish41',    'fish44',     'fish5',     'fish6',
+     'fish9', 'fishctrl2']
+Length: 14, dtype: str.
+
+
+ === FISH fish4 ===
+
+NONE_NONE_NONE_NONE_NONE_81D+170_81D+170_81D+170_81D+170_NONE: still questionable
+This barcode is found in <StringArray>
+[    'fish1',    'fish15',    'fish16',    'fish22',    'fish23',     'fish4',
+    'fish40',    'fish42',    'fish50',     'fish8', 'fishctrl3']
+Length: 11, dtype: str.
+
+
+ === FISH fish40 ===
+
+2I+39+AG_NONE_NONE_NONE_NONE_NONE_NONE_NONE_NONE_NONE: fish8 (found by ratio)
+
+3D+35_27D+51_NONE_NONE_NONE_NONE_54D+199_54D+199_54D+199_NONE: fish8 (found by ratio)
+
+NONE_NONE_NONE_NONE_NONE_81D+170_81D+170_81D+170_81D+170_NONE: still questionable
+This barcode is found in <StringArray>
+[    'fish1',    'fish15',    'fish16',    'fish22',    'fish23',     'fish4',
+    'fish40',    'fish42',    'fish50',     'fish8', 'fishctrl3']
+Length: 11, dtype: str.
+
+
+ === FISH fish41 ===
+
+87D+36_87D+36_87D+36_87D+36_NONE_1D+172_NONE_NONE_NONE_NONE: still questionable
+This barcode is found in <StringArray>
+[   'fish10',    'fish12',    'fish14',    'fish17',    'fish18',     'fish2',
+    'fish26',    'fish38',    'fish41',    'fish44',     'fish5',     'fish6',
+     'fish9', 'fishctrl2']
+Length: 14, dtype: str.
+
+
+ === FISH fish42 ===
+
+1D+38_1D+64_NONE_NONE_NONE_NONE_NONE_NONE_NONE_NONE: still questionable
+This barcode is found in <StringArray>
+['fish42', 'fish5']
+Length: 2, dtype: str.
+
+54D+36_54D+36_54D+36_NONE_NONE_NONE_NONE_NONE_NONE_NONE: still questionable
+This barcode is found in <StringArray>
+['fish22', 'fish42', 'fish5', 'fish51']
+Length: 4, dtype: str.
+
+NONE_NONE_NONE_NONE_108D+142_108D+142_108D+142_108D+142_108D+142_NONE: still questionable
+This barcode is found in <StringArray>
+['fish11', 'fish18', 'fish2', 'fish42', 'fish5']
+Length: 5, dtype: str.
+
+NONE_NONE_NONE_NONE_NONE_81D+170_81D+170_81D+170_81D+170_NONE: still questionable
+This barcode is found in <StringArray>
+[    'fish1',    'fish15',    'fish16',    'fish22',    'fish23',     'fish4',
+    'fish40',    'fish42',    'fish50',     'fish8', 'fishctrl3']
+Length: 11, dtype: str.
+
+
+ === FISH fish43 ===
+
+7D+33_NONE_NONE_NONE_NONE_NONE_NONE_NONE_NONE_NONE: still questionable
+This barcode is found in <StringArray>
+['fish22', 'fish43']
+Length: 2, dtype: str.
+
+85D+33_85D+33_85D+33_85D+33_NONE_NONE_NONE_NONE_NONE_NONE: still questionable
+This barcode is found in <StringArray>
+['fish43', 'fish51']
+Length: 2, dtype: str.
+
+87D+35_87D+35_87D+35_87D+35_NONE_NONE_NONE_NONE_NONE_NONE: still questionable
+This barcode is found in <StringArray>
+['fish34', 'fish43']
+Length: 2, dtype: str.
+
+
+ === FISH fish44 ===
+
+NONE_NONE_NONE_NONE_1D+146_81D+170_81D+170_81D+170_81D+170_NONE: still questionable
+This barcode is found in <StringArray>
+[   'fish10',    'fish11',    'fish12',    'fish14',    'fish17',    'fish18',
+     'fish2',    'fish26',    'fish34',    'fish44',     'fish5',     'fish6',
+     'fish9', 'fishctrl2']
+Length: 14, dtype: str.
+
+87D+36_87D+36_87D+36_87D+36_NONE_1D+172_NONE_NONE_NONE_NONE: still questionable
+This barcode is found in <StringArray>
+[   'fish10',    'fish12',    'fish14',    'fish17',    'fish18',     'fish2',
+    'fish26',    'fish38',    'fish41',    'fish44',     'fish5',     'fish6',
+     'fish9', 'fishctrl2']
+Length: 14, dtype: str.
+
+
+ === FISH fish45 ===
+
+40D+18_NONE_NONE_2I+118+TT_1D+145_NONE_NONE_NONE_NONE_NONE: still questionable
+This barcode is found in <StringArray>
+['fish21', 'fish45', 'fishctrl1']
+Length: 3, dtype: str.
+
+4D+38_15D+65_NONE_54D+119_54D+119_54D+119_NONE_NONE_NONE_NONE: fish17 (found by ratio)
+
+
+ === FISH fish5 ===
+
+54D+36_54D+36_54D+36_NONE_NONE_NONE_NONE_NONE_NONE_NONE: still questionable
+This barcode is found in <StringArray>
+['fish22', 'fish42', 'fish5', 'fish51']
+Length: 4, dtype: str.
+
+NONE_NONE_NONE_NONE_108D+142_108D+142_108D+142_108D+142_108D+142_NONE: still questionable
+This barcode is found in <StringArray>
+['fish11', 'fish18', 'fish2', 'fish42', 'fish5']
+Length: 5, dtype: str.
+
+NONE_NONE_NONE_NONE_1D+146_81D+170_81D+170_81D+170_81D+170_NONE: still questionable
+This barcode is found in <StringArray>
+[   'fish10',    'fish11',    'fish12',    'fish14',    'fish17',    'fish18',
+     'fish2',    'fish26',    'fish34',    'fish44',     'fish5',     'fish6',
+     'fish9', 'fishctrl2']
+Length: 14, dtype: str.
+
+NONE_NONE_NONE_NONE_NONE_87D+167_87D+167_87D+167_87D+167_NONE: fish2 (found by ratio)
+
+1D+38_1D+64_NONE_NONE_NONE_NONE_NONE_NONE_NONE_NONE: still questionable
+This barcode is found in <StringArray>
+['fish42', 'fish5']
+Length: 2, dtype: str.
+
+3D+35_3D+64_NONE_81D+119_81D+119_81D+119_81D+119_NONE_1I+254+C_NONE: still questionable
+This barcode is found in <StringArray>
+[    'fish1',    'fish10',    'fish12',    'fish15',    'fish16',    'fish18',
+     'fish2',     'fish5',     'fish9', 'fishctrl2']
+Length: 10, dtype: str.
+
+87D+36_87D+36_87D+36_87D+36_NONE_1D+172_NONE_NONE_NONE_NONE: still questionable
+This barcode is found in <StringArray>
+[   'fish10',    'fish12',    'fish14',    'fish17',    'fish18',     'fish2',
+    'fish26',    'fish38',    'fish41',    'fish44',     'fish5',     'fish6',
+     'fish9', 'fishctrl2']
+Length: 14, dtype: str.
+
+
+ === FISH fish50 ===
+
+NONE_NONE_NONE_NONE_NONE_81D+170_81D+170_81D+170_81D+170_NONE: still questionable
+This barcode is found in <StringArray>
+[    'fish1',    'fish15',    'fish16',    'fish22',    'fish23',     'fish4',
+    'fish40',    'fish42',    'fish50',     'fish8', 'fishctrl3']
+Length: 11, dtype: str.
+
+
+ === FISH fish51 ===
+
+54D+36_54D+36_54D+36_NONE_NONE_NONE_NONE_NONE_NONE_NONE: still questionable
+This barcode is found in <StringArray>
+['fish22', 'fish42', 'fish5', 'fish51']
+Length: 4, dtype: str.
+
+85D+33_85D+33_85D+33_85D+33_NONE_NONE_NONE_NONE_NONE_NONE: still questionable
+This barcode is found in <StringArray>
+['fish43', 'fish51']
+Length: 2, dtype: str.
+
+
+ === FISH fish6 ===
+
+NONE_NONE_NONE_NONE_1D+146_81D+170_81D+170_81D+170_81D+170_NONE: still questionable
+This barcode is found in <StringArray>
+[   'fish10',    'fish11',    'fish12',    'fish14',    'fish17',    'fish18',
+     'fish2',    'fish26',    'fish34',    'fish44',     'fish5',     'fish6',
+     'fish9', 'fishctrl2']
+Length: 14, dtype: str.
+
+NONE_NONE_NONE_NONE_7D+139_NONE_NONE_NONE_1D+254_NONE: still questionable
+This barcode is found in <StringArray>
+['fish10', 'fish6']
+Length: 2, dtype: str.
+
+87D+36_87D+36_87D+36_87D+36_NONE_1D+172_NONE_NONE_NONE_NONE: still questionable
+This barcode is found in <StringArray>
+[   'fish10',    'fish12',    'fish14',    'fish17',    'fish18',     'fish2',
+    'fish26',    'fish38',    'fish41',    'fish44',     'fish5',     'fish6',
+     'fish9', 'fishctrl2']
+Length: 14, dtype: str.
+
+
+ === FISH fish8 ===
+
+2I+39+AG_NONE_NONE_NONE_NONE_NONE_NONE_NONE_NONE_NONE: fish8 (found by ratio)
+
+3D+35_27D+51_NONE_NONE_NONE_NONE_54D+199_54D+199_54D+199_NONE: fish8 (found by ratio)
+
+NONE_NONE_NONE_NONE_NONE_81D+170_81D+170_81D+170_81D+170_NONE: still questionable
+This barcode is found in <StringArray>
+[    'fish1',    'fish15',    'fish16',    'fish22',    'fish23',     'fish4',
+    'fish40',    'fish42',    'fish50',     'fish8', 'fishctrl3']
+Length: 11, dtype: str.
+
+
+ === FISH fish9 ===
+
+3D+35_3D+64_NONE_81D+119_81D+119_81D+119_81D+119_NONE_1I+254+C_NONE: still questionable
+This barcode is found in <StringArray>
+[    'fish1',    'fish10',    'fish12',    'fish15',    'fish16',    'fish18',
+     'fish2',     'fish5',     'fish9', 'fishctrl2']
+Length: 10, dtype: str.
+
+82D+36_82D+36_82D+36_82D+36_NONE_NONE_NONE_NONE_NONE_NONE: still questionable
+This barcode is found in <StringArray>
+['fish13', 'fish18', 'fish34', 'fish9']
+Length: 4, dtype: str.
+
+87D+36_87D+36_87D+36_87D+36_NONE_1D+172_NONE_NONE_NONE_NONE: still questionable
+This barcode is found in <StringArray>
+[   'fish10',    'fish12',    'fish14',    'fish17',    'fish18',     'fish2',
+    'fish26',    'fish38',    'fish41',    'fish44',     'fish5',     'fish6',
+     'fish9', 'fishctrl2']
+Length: 14, dtype: str.
+
+NONE_NONE_NONE_NONE_1D+146_81D+170_81D+170_81D+170_81D+170_NONE: still questionable
+This barcode is found in <StringArray>
+[   'fish10',    'fish11',    'fish12',    'fish14',    'fish17',    'fish18',
+     'fish2',    'fish26',    'fish34',    'fish44',     'fish5',     'fish6',
+     'fish9', 'fishctrl2']
+Length: 14, dtype: str.
+
+
+ === FISH fishctrl1 ===
+
+1D+38_NONE_NONE_5I+116+AGAGC_108D+142_108D+142_108D+142_108D+142_108D+142_NONE: still questionable
+This barcode is found in <StringArray>
+['fish21', 'fishctrl1']
+Length: 2, dtype: str.
+
+40D+18_NONE_NONE_2I+118+TT_1D+145_NONE_NONE_NONE_NONE_NONE: still questionable
+This barcode is found in <StringArray>
+['fish21', 'fish45', 'fishctrl1']
+Length: 3, dtype: str.
+
+84D+37_84D+37_84D+37_84D+37_2D+144_NONE_NONE_NONE_1D+253_NONE: still questionable
+This barcode is found in <StringArray>
+['fish18', 'fish21', 'fishctrl1']
+Length: 3, dtype: str.
+
+
+ === FISH fishctrl2 ===
+
+NONE_NONE_NONE_NONE_1D+146_81D+170_81D+170_81D+170_81D+170_NONE: still questionable
+This barcode is found in <StringArray>
+[   'fish10',    'fish11',    'fish12',    'fish14',    'fish17',    'fish18',
+     'fish2',    'fish26',    'fish34',    'fish44',     'fish5',     'fish6',
+     'fish9', 'fishctrl2']
+Length: 14, dtype: str.
+
+3D+35_3D+64_NONE_81D+119_81D+119_81D+119_81D+119_NONE_1I+254+C_NONE: still questionable
+This barcode is found in <StringArray>
+[    'fish1',    'fish10',    'fish12',    'fish15',    'fish16',    'fish18',
+     'fish2',     'fish5',     'fish9', 'fishctrl2']
+Length: 10, dtype: str.
+
+87D+36_87D+36_87D+36_87D+36_NONE_1D+172_NONE_NONE_NONE_NONE: still questionable
+This barcode is found in <StringArray>
+[   'fish10',    'fish12',    'fish14',    'fish17',    'fish18',     'fish2',
+    'fish26',    'fish38',    'fish41',    'fish44',     'fish5',     'fish6',
+     'fish9', 'fishctrl2']
+Length: 14, dtype: str.
+
+
+ === FISH fishctrl3 ===
+
+NONE_NONE_NONE_NONE_NONE_81D+170_81D+170_81D+170_81D+170_NONE: still questionable
+This barcode is found in <StringArray>
+[    'fish1',    'fish15',    'fish16',    'fish22',    'fish23',     'fish4',
+    'fish40',    'fish42',    'fish50',     'fish8', 'fishctrl3']
+Length: 11, dtype: str.
+

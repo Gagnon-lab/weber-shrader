@@ -1,0 +1,39 @@
+Settings used during the pipeline run [03.28.2026_11.20_AM].
+
+Step (A): throw out files with low read counts.
+	dataset ............. mp0.8_tq10
+	mergedinfos ......... <undefined>
+	total_read_cutoff ... 1000
+	used_prop_cutoff .... 0.3
+
+Step (B): filter barcodes.
+	reads_cutoff ........ 10
+	prop_cutoff ......... 0.005
+
+Step (C): cluster barcodes.
+	unedited ........... NONE_NONE_NONE_NONE_NONE_NONE_NONE_NONE_NONE_NONE
+	cluster_barcodes ... True
+	edge_distance ...... 1
+
+Step (D): additional filtering.
+	run_fish_triple_rep_filter ....... True
+	run_fish_one_sample_filter ....... True
+
+Step (E): identify contaminant barcodes.
+	ratio_cutoff ..................... 50
+
+	list_questionable_barcodes_before_classify ....... True
+	list_questionable_barcodes_after_classify ........ True
+	image_questionable_barcodes_before_classify ...... True
+	image_questionable_barcodes_after_classify ....... True
+
+	run_manual_classification ........ False
+
+	delete_still_questionable_barcodes ... False
+
+Step (F): create barcode matrices.
+	edited_fish_only ........ False
+	fillna .................. False
+	plot_all_mullers ........ True
+	plot_all_heatmaps ....... True
+	output_step_summaries ... True

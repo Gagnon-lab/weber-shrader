@@ -1,0 +1,165 @@
+Summary of step A: Throw out whole files that have low total reads.
+
+Your data contains 1307 .allReadCounts files.
+If a file contained at least 1000 total reads across all
+barcodes, then it has passed this filter step.
+
+148 files failed this step:
+
+fish1_s9_rep2 failed.       568 total reads,  72.73% used read proportion.
+fish1_s14_rep1 failed.      539 total reads,  53.74% used read proportion.
+fish4_s1_rep1 failed.       361 total reads,  15.58% used read proportion.
+fish4_s1_rep2 failed.       534 total reads,  18.10% used read proportion.
+fish4_s1_rep3 failed.      1007 total reads,  27.65% used read proportion.
+fish4_s3_rep1 failed.      1481 total reads,   8.41% used read proportion.
+fish4_s3_rep2 failed.      1484 total reads,  16.06% used read proportion.
+fish4_s3_rep3 failed.      1518 total reads,  14.46% used read proportion.
+fish4_s4_rep3 failed.      1053 total reads,  29.86% used read proportion.
+fish4_s5_rep3 failed.      1166 total reads,  29.21% used read proportion.
+fish4_s6_rep2 failed.      2106 total reads,  27.77% used read proportion.
+fish4_s7_rep1 failed.      1332 total reads,  28.55% used read proportion.
+fish4_s7_rep3 failed.      1063 total reads,  25.32% used read proportion.
+fish5_s3_rep1 failed.      3639 total reads,  24.13% used read proportion.
+fish5_s14_rep1 failed.      207 total reads,  64.49% used read proportion.
+fish5_s14_rep2 failed.      309 total reads,  66.31% used read proportion.
+fish8_s2_rep1 failed.        85 total reads,  27.24% used read proportion.
+fish9_s15_rep3 failed.      413 total reads,  67.26% used read proportion.
+fish10_s2_rep1 failed.       93 total reads,  16.88% used read proportion.
+fish10_s2_rep2 failed.       38 total reads,   8.98% used read proportion.
+fish10_s2_rep3 failed.       36 total reads,  10.65% used read proportion.
+fish12_s3_rep1 failed.     1777 total reads,  14.72% used read proportion.
+fish12_s3_rep2 failed.     2275 total reads,  16.44% used read proportion.
+fish12_s3_rep3 failed.     1918 total reads,  16.63% used read proportion.
+fish14_s3_rep1 failed.     7043 total reads,  28.94% used read proportion.
+fish14_s3_rep2 failed.     3704 total reads,  27.17% used read proportion.
+fish14_s3_rep3 failed.     4392 total reads,  25.92% used read proportion.
+fish14_s12_rep1 failed.      14 total reads,   6.19% used read proportion.
+fish14_s12_rep2 failed.      24 total reads,   8.63% used read proportion.
+fish14_s12_rep3 failed.      64 total reads,   5.99% used read proportion.
+fish15_s1_rep3 failed.      125 total reads,  35.61% used read proportion.
+fish15_s3_rep1 failed.     5717 total reads,  26.95% used read proportion.
+fish15_s3_rep2 failed.     5984 total reads,  29.91% used read proportion.
+fish15_s4_rep2 failed.        7 total reads,  20.59% used read proportion.
+fish15_s6_rep2 failed.     1918 total reads,  27.09% used read proportion.
+fish15_s6_rep3 failed.     1617 total reads,  29.38% used read proportion.
+fish16_s3_rep1 failed.      184 total reads,  10.08% used read proportion.
+fish16_s3_rep2 failed.      736 total reads,  14.43% used read proportion.
+fish16_s3_rep3 failed.      924 total reads,  12.80% used read proportion.
+fish16_s9_rep1 failed.      950 total reads,  74.45% used read proportion.
+fish16_s9_rep3 failed.      921 total reads,  55.42% used read proportion.
+fish17_s3_rep1 failed.       13 total reads,  11.82% used read proportion.
+fish18_s13_rep1 failed.    1106 total reads,  22.20% used read proportion.
+fish18_s15_rep1 failed.       9 total reads,  37.50% used read proportion.
+fish18_s15_rep2 failed.       2 total reads,  28.57% used read proportion.
+fish22_s1_rep1 failed.       71 total reads,  13.73% used read proportion.
+fish22_s1_rep2 failed.      282 total reads,  18.60% used read proportion.
+fish22_s1_rep3 failed.      201 total reads,  22.16% used read proportion.
+fish23_s1_rep3 failed.      143 total reads,  11.36% used read proportion.
+fish23_s3_rep1 failed.     1439 total reads,  12.43% used read proportion.
+fish23_s3_rep2 failed.     1922 total reads,  13.77% used read proportion.
+fish23_s3_rep3 failed.     1885 total reads,  13.46% used read proportion.
+fish23_s6_rep1 failed.     1271 total reads,  21.87% used read proportion.
+fish23_s6_rep2 failed.     2384 total reads,  28.92% used read proportion.
+fish23_s6_rep3 failed.     2137 total reads,  24.82% used read proportion.
+fish23_s7_rep1 failed.     1593 total reads,  26.64% used read proportion.
+fish23_s7_rep2 failed.     1673 total reads,  27.63% used read proportion.
+fish23_s7_rep3 failed.     1243 total reads,  20.45% used read proportion.
+fish23_s8_rep3 failed.     1447 total reads,  27.77% used read proportion.
+fish23_s9_rep1 failed.     1959 total reads,  21.91% used read proportion.
+fish23_s9_rep2 failed.     1689 total reads,  26.93% used read proportion.
+fish23_s9_rep3 failed.     1659 total reads,  22.61% used read proportion.
+fish23_s10_rep1 failed.     933 total reads,  17.93% used read proportion.
+fish23_s10_rep2 failed.     981 total reads,  21.18% used read proportion.
+fish23_s10_rep3 failed.    1305 total reads,  22.41% used read proportion.
+fish23_s12_rep1 failed.    1160 total reads,  12.62% used read proportion.
+fish23_s12_rep2 failed.     830 total reads,  11.64% used read proportion.
+fish23_s12_rep3 failed.    1047 total reads,  11.28% used read proportion.
+fish23_s13_rep1 failed.     513 total reads,  16.24% used read proportion.
+fish23_s13_rep2 failed.     428 total reads,  12.04% used read proportion.
+fish23_s13_rep3 failed.     327 total reads,  12.71% used read proportion.
+fish23_s14_rep1 failed.     274 total reads,   5.69% used read proportion.
+fish23_s14_rep2 failed.     128 total reads,   5.38% used read proportion.
+fish23_s14_rep3 failed.     363 total reads,   5.79% used read proportion.
+fish23_s15_rep1 failed.     233 total reads,   9.02% used read proportion.
+fish23_s15_rep2 failed.     298 total reads,   7.90% used read proportion.
+fish23_s15_rep3 failed.     192 total reads,   8.95% used read proportion.
+fish26_s1_rep1 failed.      560 total reads,  71.70% used read proportion.
+fish26_s1_rep2 failed.       14 total reads,  17.28% used read proportion.
+fish34_s2_rep1 failed.      246 total reads,  12.47% used read proportion.
+fish34_s2_rep2 failed.      287 total reads,  16.62% used read proportion.
+fish34_s2_rep3 failed.      345 total reads,  27.56% used read proportion.
+fish34_s3_rep1 failed.     1866 total reads,  13.69% used read proportion.
+fish34_s3_rep2 failed.     2333 total reads,  16.02% used read proportion.
+fish34_s3_rep3 failed.     2425 total reads,  17.43% used read proportion.
+fish34_s5_rep2 failed.      704 total reads,  36.03% used read proportion.
+fish34_s6_rep2 failed.     1593 total reads,  16.20% used read proportion.
+fish34_s6_rep3 failed.     1757 total reads,  15.28% used read proportion.
+fish34_s7_rep1 failed.      597 total reads,  11.97% used read proportion.
+fish34_s7_rep2 failed.      537 total reads,  11.67% used read proportion.
+fish34_s7_rep3 failed.      610 total reads,  12.45% used read proportion.
+fish34_s8_rep1 failed.      192 total reads,  26.19% used read proportion.
+fish34_s8_rep2 failed.      367 total reads,  11.26% used read proportion.
+fish34_s8_rep3 failed.      476 total reads,  13.31% used read proportion.
+fish34_s9_rep1 failed.      457 total reads,   7.75% used read proportion.
+fish34_s9_rep2 failed.      493 total reads,   8.39% used read proportion.
+fish34_s9_rep3 failed.      395 total reads,   6.66% used read proportion.
+fish34_s10_rep1 failed.     357 total reads,  10.17% used read proportion.
+fish34_s10_rep2 failed.     390 total reads,  11.25% used read proportion.
+fish34_s10_rep3 failed.     660 total reads,  10.82% used read proportion.
+fish34_s12_rep1 failed.    2259 total reads,  12.51% used read proportion.
+fish34_s12_rep2 failed.    1161 total reads,   8.74% used read proportion.
+fish34_s12_rep3 failed.     418 total reads,   8.82% used read proportion.
+fish34_s13_rep1 failed.     308 total reads,   5.84% used read proportion.
+fish34_s13_rep2 failed.     281 total reads,   5.78% used read proportion.
+fish34_s13_rep3 failed.     332 total reads,   6.53% used read proportion.
+fish34_s14_rep1 failed.     416 total reads,   7.78% used read proportion.
+fish34_s14_rep2 failed.     378 total reads,   7.94% used read proportion.
+fish34_s14_rep3 failed.     300 total reads,   7.92% used read proportion.
+fish42_s3_rep3 failed.       45 total reads,  36.29% used read proportion.
+fish43_s3_rep1 failed.       29 total reads,  16.76% used read proportion.
+fish43_s3_rep2 failed.       50 total reads,  11.66% used read proportion.
+fish43_s15_rep1 failed.      17 total reads,   9.60% used read proportion.
+fish43_s15_rep2 failed.       3 total reads,   5.36% used read proportion.
+fish44_s3_rep3 failed.      155 total reads,  18.19% used read proportion.
+fish45_s4_rep1 failed.        7 total reads,   3.07% used read proportion.
+fish45_s4_rep2 failed.        9 total reads,   7.03% used read proportion.
+fish45_s4_rep3 failed.        3 total reads,   3.30% used read proportion.
+fish45_s7_rep1 failed.      754 total reads,  69.49% used read proportion.
+fish45_s7_rep2 failed.      105 total reads,  35.47% used read proportion.
+fish50_s3_rep2 failed.        9 total reads,   2.68% used read proportion.
+fish50_s4_rep1 failed.        4 total reads,   5.88% used read proportion.
+fish50_s4_rep2 failed.      174 total reads,  12.58% used read proportion.
+fish50_s4_rep3 failed.      182 total reads,  14.31% used read proportion.
+fish51_s3_rep1 failed.     7000 total reads,  26.49% used read proportion.
+fish51_s3_rep3 failed.     4875 total reads,  29.46% used read proportion.
+fish51_s4_rep1 failed.      165 total reads,  16.34% used read proportion.
+fish51_s4_rep2 failed.      108 total reads,  12.90% used read proportion.
+fish51_s4_rep3 failed.       17 total reads,   3.78% used read proportion.
+fish52_s4_rep1 failed.        8 total reads,   4.94% used read proportion.
+fish52_s4_rep2 failed.        2 total reads,   1.63% used read proportion.
+fish52_s4_rep3 failed.        7 total reads,   3.78% used read proportion.
+fishctrl2_s1_rep1 failed.    24 total reads,  15.69% used read proportion.
+fishctrl2_s3_rep3 failed.    64 total reads,  43.54% used read proportion.
+fishctrl2_s5_rep2 failed. 15624 total reads,  23.77% used read proportion.
+fishctrl3_s4_rep1 failed.    15 total reads,  12.10% used read proportion.
+fishctrl3_s4_rep2 failed.     8 total reads,   9.88% used read proportion.
+fishctrl3_s4_rep3 failed.    34 total reads,  17.89% used read proportion.
+fishctrl3_s18_rep1 failed.    82 total reads,   9.08% used read proportion.
+fishctrl3_s18_rep2 failed.    82 total reads,   7.58% used read proportion.
+fishctrl3_s18_rep3 failed.    52 total reads,   7.98% used read proportion.
+fishwater_s8_rep2 failed.    50 total reads,  15.77% used read proportion.
+fishwater_s13_rep2 failed.    15 total reads,   4.85% used read proportion.
+fishwater_s14_rep3 failed.   395 total reads,  53.81% used read proportion.
+fishwater_s14_rep6 failed.    89 total reads,  18.16% used read proportion.
+fishwater_s15_rep6 failed.     7 total reads,  17.50% used read proportion.
+fishwater_s15_rep7 failed.    14 total reads,  17.07% used read proportion.
+fishwater_s17_rep3 failed.   456 total reads,  23.52% used read proportion.
+
+1159 files passed the filter.
+
+The contents of read counts from all files was written in a new file titled 'all_data.csv.
+The contents of read counts that passed were copied to a new file titled 'pass_data.csv'
+in the same subfolder.
+
+The passed-samples-info.csv was also written and saved.
+It contains only samples that pass this step.

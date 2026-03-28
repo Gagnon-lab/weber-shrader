@@ -2,7 +2,6 @@
 # potential to contain very large files.
 data/
 data*/
-experiments/
 model_simulations/*/
 fastq-data/clustering/
 **.DS_Store
