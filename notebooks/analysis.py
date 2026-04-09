@@ -28,12 +28,23 @@ no_collapse_hue = '#3ddb6f'
 small_label_settings = {
     'font.family': 'Arial',
     'font.size': 7,              # base font size
-    'xtick.labelsize': 5,        # x-axis tick label size
-    'ytick.labelsize': 5,        # y-axis tick label size
+    'xtick.labelsize': 6,        # x-axis tick label size
+    'ytick.labelsize': 6,        # y-axis tick label size
     'axes.labelsize': 7,         # axis label size
     'axes.titlesize': 7,         # title size
     'legend.fontsize': 7,        # legend font size
-    'figure.titlesize': 7        # figure title size
+    'figure.titlesize': 7,        # figure title size
+}
+
+large_label_settings = {
+    'font.family': 'Arial',
+    'font.size': 14,              # base font size
+    'xtick.labelsize': 9,        # x-axis tick label size
+    'ytick.labelsize': 9,        # y-axis tick label size
+    'axes.labelsize': 12,         # axis label size
+    'axes.titlesize': 12,         # title size
+    'legend.fontsize': 12,        # legend font size
+    'figure.titlesize': 12,        # figure title size
 }
 
 palette = {

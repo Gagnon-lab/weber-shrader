@@ -53,7 +53,8 @@ def get_anomaly_metrics(experiment, data_folder, root):
     kept_df['sample'] = kept_df['sample'].astype(int)
     if not 'pass' in kept_df.columns:
         kept_df['pass'] = kept_df['pass_prop'] & kept_df['pass_z']
-    return (info_df, kept_df)
+
+    return (info_df.query('sample != 3').copy(), kept_df.query('sample != 3').copy())
 
 def plot_fish(fish, ax, all_data):
     """
@@ -74,24 +75,38 @@ def show_anomalies(fish, axis, all_data, metrics, show_used=True, show_filtered=
     show_cutoff: Uses a dotted line to visualize the cutoff for a sample to be removed for each metric
     """
     fish_data = all_data.query('fish == @fish').copy()
+
+    met = metrics[0]
+    subset1 = met.merge(
+        fish_data[['fish', 'sample']],
+        on=['fish', 'sample'],
+        how='inner'
+    )
+
+    subset2 = metrics[1].merge(
+        fish_data[['fish', 'sample']],
+        on=['fish', 'sample'],
+        how='inner'
+    )
     
     #Set colors
     used_entries_color = 'red'
     kept_values_color = 'purple'
     
     # Plot proportion of used and filtered entries
+
     if show_used:
-        show_used_entries(metrics[0], fish, axis, used_entries_color, map_samples, show_cutoff)
+        show_used_entries(subset1, fish, axis, used_entries_color, map_samples, show_cutoff)
     if show_filtered:
-        show_filtered_proportion(metrics[1], fish, axis, kept_values_color, map_samples, show_cutoff)
+        show_filtered_proportion(subset2, fish, axis, kept_values_color, map_samples, show_cutoff)
 
     axis.set_xlabel('Time')
     axis.set_ylabel(None)
     xticks = np.unique(np.append(metrics[0][metrics[0]['fish'] == fish]['sample'], metrics[1][metrics[1]['fish'] == fish]['sample']))
     if map_samples:
-        axis.set_xticks(np.array([pipeline_utility.sample_map[x] for x in xticks]))
-    else:
-        axis.set_xticks(xticks)
+        xticks = np.array([pipeline_utility.sample_map[x] for x in xticks])
+    axis.set_xticks(xticks)
+    axis.set_xlim(xticks.min(), xticks.max())
     axis.set_ylim(0, 1)
 
 def show_used_entries(info_df, fish, axis, col, map_samples, show_cutoff):
@@ -104,7 +119,7 @@ def show_used_entries(info_df, fish, axis, col, map_samples, show_cutoff):
             
     fish_data['outlier'] = fish_data['trueUsedEntryProp'] < 0.3
 
-    axis.plot(fish_data['sample'], fish_data['trueUsedEntryProp'], color=col, marker='s', linestyle='', markersize=5, alpha=0.5)
+    axis.plot(fish_data['sample'], fish_data['trueUsedEntryProp'], color=col, marker='s', linestyle='', markersize=4, alpha=0.5)
     axis.plot(fish_data[fish_data['outlier']]['sample'], fish_data[fish_data['outlier']]['trueUsedEntryProp'], color=col, marker='x', linestyle='', markersize=10)
     if show_cutoff:
         outlier = 0.3
@@ -119,7 +134,7 @@ def show_filtered_proportion(kept_df, fish, axis, col, map_samples, show_cutoff)
     if map_samples:
         fish_data['sample'] = fish_data['sample'].map(lambda x: pipeline_utility.sample_map[x])
     
-    axis.plot(fish_data['sample'], fish_data['keptProp'], color=col, marker='^', linestyle='', markersize=5, alpha=0.5)
+    axis.plot(fish_data['sample'], fish_data['keptProp'], color=col, marker='^', linestyle='', markersize=4, alpha=0.5)
     axis.plot(fish_data[~fish_data['pass']]['sample'], fish_data[~fish_data['pass']]['keptProp'], color=col, marker='x', linestyle='', markersize=10)
     if show_cutoff:
         mean = fish_data['mean'].head(1).item()

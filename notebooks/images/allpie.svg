@@ -1,0 +1,2768 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="482.4pt" height="360pt" viewBox="0 0 482.4 360" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-04-09T09:58:56.208637</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.10.8, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 360 
+L 482.4 360 
+L 482.4 0 
+L 0 0 
+z
+" style="fill: #ffffff"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 14.753315 49.24197 
+C 14.612013 52.084262 14.895256 54.931803 15.593682 57.690569 
+C 16.292108 60.449335 17.397948 63.088622 18.874688 65.521281 
+C 20.351427 67.953941 22.18263 70.152899 24.307832 72.045544 
+C 26.433034 73.938189 28.82858 75.503462 31.415372 76.689672 
+C 34.002164 77.875882 36.751408 78.669832 39.572332 79.045303 
+C 42.393256 79.420775 45.254457 79.373588 48.061466 78.905305 
+C 50.868475 78.437021 53.590048 77.55285 56.13632 76.281988 
+C 58.682591 75.011125 61.025221 73.367715 63.086858 71.406023 
+C 65.148496 69.44433 66.906196 67.186186 68.301918 64.706155 
+C 69.697641 62.226125 70.715853 59.55181 71.322931 56.771514 
+C 71.93001 53.991218 72.119204 51.135886 71.884258 48.299798 
+C 71.649314 45.463711 70.992849 42.67844 69.936541 40.035941 
+C 68.880232 37.393443 67.435836 34.923131 65.651044 32.706578 
+C 63.866253 30.490025 61.760929 28.551896 59.404594 26.956192 
+C 57.048258 25.360489 54.467134 24.124968 51.746449 23.290425 
+C 49.025764 22.455883 46.195801 22.031606 43.349999 22.031606 
+L 43.35 50.663606 
+z
+" style="fill: #36025c; stroke: #ffffff; stroke-width: 0.5; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_3">
+    <path d="M 29.774277 25.454656 
+C 25.435224 27.791358 21.772085 31.209235 19.140765 35.376215 
+C 16.509446 39.543195 14.998012 44.319807 14.753315 49.24197 
+L 43.35 50.663606 
+z
+" style="fill: #36025c; stroke: #ffffff; stroke-width: 0.5; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 34.658012 23.382829 
+C 33.814206 23.651677 32.98332 23.95953 32.16805 24.305393 
+C 31.35278 24.651256 30.554001 25.034753 29.774277 25.454656 
+L 43.35 50.663606 
+z
+" style="fill: #36025c; stroke: #ffffff; stroke-width: 0.5; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_5">
+    <path d="M 38.098517 22.517322 
+C 37.516845 22.62585 36.938678 22.75238 36.364847 22.896737 
+C 35.791016 23.041093 35.221798 23.203201 34.658012 23.382829 
+L 43.35 50.663606 
+z
+" style="fill: #36025c; stroke: #ffffff; stroke-width: 0.5; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_6">
+    <path d="M 40.894846 22.137064 
+C 40.426021 22.177413 39.958261 22.229314 39.491994 22.29272 
+C 39.025727 22.356125 38.561093 22.431016 38.098517 22.517322 
+L 43.35 50.663606 
+z
+" style="fill: #36025c; stroke: #ffffff; stroke-width: 0.5; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_7">
+    <path d="M 42.833174 22.036271 
+C 42.509666 22.04211 42.18628 22.053435 41.863156 22.070239 
+C 41.540031 22.087042 41.217215 22.10932 40.894846 22.137064 
+L 43.35 50.663606 
+z
+" style="fill: #36025c; stroke: #ffffff; stroke-width: 0.5; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_8">
+    <path d="M 43.110014 22.032612 
+C 43.063872 22.032999 43.017723 22.033497 42.971583 22.034107 
+C 42.925443 22.034716 42.879311 22.035438 42.833174 22.036271 
+L 43.35 50.663606 
+z
+" style="fill: #36025c; stroke: #ffffff; stroke-width: 0.5; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_9">
+    <path d="M 43.350014 22.031606 
+C 43.310014 22.031606 43.27002 22.03169 43.23002 22.031857 
+C 43.19002 22.032024 43.150013 22.032277 43.110014 22.032612 
+L 43.35 50.663606 
+z
+" style="fill: #36025c; stroke: #ffffff; stroke-width: 0.5; stroke-linejoin: miter"/>
+   </g>
+   <g id="matplotlib.axis_1"/>
+   <g id="matplotlib.axis_2"/>
+   <g id="text_1">
+    <!-- Fish 1 (100%) -->
+    <g transform="translate(20.982813 13.400325) scale(0.07 -0.07)">
+     <defs>
+      <path id="Arial-BoldMT-46" d="M 472 0 
+L 472 4581 
+L 3613 4581 
+L 3613 3806 
+L 1397 3806 
+L 1397 2722 
+L 3309 2722 
+L 3309 1947 
+L 1397 1947 
+L 1397 0 
+L 472 0 
+z
+" transform="scale(0.015625)"/>
+      <path id="Arial-BoldMT-69" d="M 459 3769 
+L 459 4581 
+L 1338 4581 
+L 1338 3769 
+L 459 3769 
+z
+M 459 0 
+L 459 3319 
+L 1338 3319 
+L 1338 0 
+L 459 0 
+z
+" transform="scale(0.015625)"/>
+      <path id="Arial-BoldMT-73" d="M 150 947 
+L 1031 1081 
+Q 1088 825 1259 692 
+Q 1431 559 1741 559 
+Q 2081 559 2253 684 
+Q 2369 772 2369 919 
+Q 2369 1019 2306 1084 
+Q 2241 1147 2013 1200 
+Q 950 1434 666 1628 
+Q 272 1897 272 2375 
+Q 272 2806 612 3100 
+Q 953 3394 1669 3394 
+Q 2350 3394 2681 3172 
+Q 3013 2950 3138 2516 
+L 2309 2363 
+Q 2256 2556 2107 2659 
+Q 1959 2763 1684 2763 
+Q 1338 2763 1188 2666 
+Q 1088 2597 1088 2488 
+Q 1088 2394 1175 2328 
+Q 1294 2241 1995 2081 
+Q 2697 1922 2975 1691 
+Q 3250 1456 3250 1038 
+Q 3250 581 2869 253 
+Q 2488 -75 1741 -75 
+Q 1063 -75 667 200 
+Q 272 475 150 947 
+z
+" transform="scale(0.015625)"/>
+      <path id="Arial-BoldMT-68" d="M 1334 4581 
+L 1334 2897 
+Q 1759 3394 2350 3394 
+Q 2653 3394 2897 3281 
+Q 3141 3169 3264 2994 
+Q 3388 2819 3433 2606 
+Q 3478 2394 3478 1947 
+L 3478 0 
+L 2600 0 
+L 2600 1753 
+Q 2600 2275 2550 2415 
+Q 2500 2556 2373 2639 
+Q 2247 2722 2056 2722 
+Q 1838 2722 1666 2615 
+Q 1494 2509 1414 2295 
+Q 1334 2081 1334 1663 
+L 1334 0 
+L 456 0 
+L 456 4581 
+L 1334 4581 
+z
+" transform="scale(0.015625)"/>
+      <path id="Arial-BoldMT-20" transform="scale(0.015625)"/>
+      <path id="Arial-BoldMT-31" d="M 2519 0 
+L 1641 0 
+L 1641 3309 
+Q 1159 2859 506 2644 
+L 506 3441 
+Q 850 3553 1253 3867 
+Q 1656 4181 1806 4600 
+L 2519 4600 
+L 2519 0 
+z
+" transform="scale(0.015625)"/>
+      <path id="Arial-BoldMT-28" d="M 1916 -1347 
+L 1313 -1347 
+Q 834 -625 584 153 
+Q 334 931 334 1659 
+Q 334 2563 644 3369 
+Q 913 4069 1325 4659 
+L 1925 4659 
+Q 1497 3713 1336 3048 
+Q 1175 2384 1175 1641 
+Q 1175 1128 1270 590 
+Q 1366 53 1531 -431 
+Q 1641 -750 1916 -1347 
+z
+" transform="scale(0.015625)"/>
+      <path id="Arial-BoldMT-30" d="M 1756 4600 
+Q 2422 4600 2797 4125 
+Q 3244 3563 3244 2259 
+Q 3244 959 2794 391 
+Q 2422 -78 1756 -78 
+Q 1088 -78 678 436 
+Q 269 950 269 2269 
+Q 269 3563 719 4131 
+Q 1091 4600 1756 4600 
+z
+M 1756 3872 
+Q 1597 3872 1472 3770 
+Q 1347 3669 1278 3406 
+Q 1188 3066 1188 2259 
+Q 1188 1453 1269 1151 
+Q 1350 850 1473 750 
+Q 1597 650 1756 650 
+Q 1916 650 2041 751 
+Q 2166 853 2234 1116 
+Q 2325 1453 2325 2259 
+Q 2325 3066 2244 3367 
+Q 2163 3669 2039 3770 
+Q 1916 3872 1756 3872 
+z
+" transform="scale(0.015625)"/>
+      <path id="Arial-BoldMT-25" d="M 278 3450 
+Q 278 4066 548 4362 
+Q 819 4659 1281 4659 
+Q 1759 4659 2029 4364 
+Q 2300 4069 2300 3450 
+Q 2300 2834 2029 2537 
+Q 1759 2241 1297 2241 
+Q 819 2241 548 2536 
+Q 278 2831 278 3450 
+z
+M 963 3456 
+Q 963 3009 1066 2856 
+Q 1144 2744 1281 2744 
+Q 1422 2744 1500 2856 
+Q 1600 3009 1600 3456 
+Q 1600 3903 1500 4053 
+Q 1422 4169 1281 4169 
+Q 1144 4169 1066 4056 
+Q 963 3903 963 3456 
+z
+M 1950 -175 
+L 1300 -175 
+L 3741 4659 
+L 4372 4659 
+L 1950 -175 
+z
+M 3369 1028 
+Q 3369 1644 3639 1941 
+Q 3909 2238 4378 2238 
+Q 4850 2238 5120 1941 
+Q 5391 1644 5391 1028 
+Q 5391 409 5120 112 
+Q 4850 -184 4388 -184 
+Q 3909 -184 3639 112 
+Q 3369 409 3369 1028 
+z
+M 4053 1031 
+Q 4053 584 4156 434 
+Q 4234 319 4372 319 
+Q 4513 319 4588 431 
+Q 4691 584 4691 1031 
+Q 4691 1478 4591 1631 
+Q 4513 1744 4372 1744 
+Q 4231 1744 4156 1631 
+Q 4053 1478 4053 1031 
+z
+" transform="scale(0.015625)"/>
+      <path id="Arial-BoldMT-29" d="M 216 -1347 
+Q 475 -791 581 -494 
+Q 688 -197 778 190 
+Q 869 578 912 926 
+Q 956 1275 956 1641 
+Q 956 2384 797 3048 
+Q 638 3713 209 4659 
+L 806 4659 
+Q 1278 3988 1539 3234 
+Q 1800 2481 1800 1706 
+Q 1800 1053 1594 306 
+Q 1359 -531 822 -1347 
+L 216 -1347 
+z
+" transform="scale(0.015625)"/>
+     </defs>
+     <use xlink:href="#Arial-BoldMT-46"/>
+     <use xlink:href="#Arial-BoldMT-69" transform="translate(61.083984 0)"/>
+     <use xlink:href="#Arial-BoldMT-73" transform="translate(88.867188 0)"/>
+     <use xlink:href="#Arial-BoldMT-68" transform="translate(144.482422 0)"/>
+     <use xlink:href="#Arial-BoldMT-20" transform="translate(205.566406 0)"/>
+     <use xlink:href="#Arial-BoldMT-31" transform="translate(233.349609 0)"/>
+     <use xlink:href="#Arial-BoldMT-20" transform="translate(288.964844 0)"/>
+     <use xlink:href="#Arial-BoldMT-28" transform="translate(316.748047 0)"/>
+     <use xlink:href="#Arial-BoldMT-31" transform="translate(350.048828 0)"/>
+     <use xlink:href="#Arial-BoldMT-30" transform="translate(405.664062 0)"/>
+     <use xlink:href="#Arial-BoldMT-30" transform="translate(461.279297 0)"/>
+     <use xlink:href="#Arial-BoldMT-25" transform="translate(516.894531 0)"/>
+     <use xlink:href="#Arial-BoldMT-29" transform="translate(605.810547 0)"/>
+    </g>
+   </g>
+  </g>
+  <g id="axes_2">
+   <g id="patch_10">
+    <path d="M 147.230146 65.075983 
+C 149.764611 60.725345 151.107185 55.782178 151.121879 50.747165 
+C 151.136574 45.712152 149.822873 40.761232 147.313845 36.395875 
+C 144.804816 32.030519 141.188129 28.403261 136.830113 25.881504 
+C 132.472096 23.359746 127.525033 22.031606 122.489999 22.031606 
+L 122.49 50.663606 
+z
+" style="fill: #36025c; stroke: #ffffff; stroke-width: 0.5; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_11">
+    <path d="M 102.227478 70.892833 
+C 105.325015 73.995469 109.094189 76.345598 113.243462 77.761446 
+C 117.392735 79.177295 121.8123 79.62139 126.160315 79.059384 
+C 130.508331 78.497378 134.669729 76.944145 138.322639 74.519821 
+C 141.975548 72.095496 145.023295 68.864241 147.230146 65.075983 
+L 122.49 50.663606 
+z
+" style="fill: #d7c9f2; fill-opacity: 0.54902; stroke: #ffffff; stroke-width: 0.5; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_12">
+    <path d="M 101.831086 30.83936 
+C 96.648841 36.239795 93.785333 43.462642 93.859403 50.946949 
+C 93.933471 58.431258 96.939367 65.596018 102.227478 70.892833 
+L 122.49 50.663606 
+z
+" style="fill: #36025c; stroke: #ffffff; stroke-width: 0.5; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_13">
+    <path d="M 117.434673 22.481429 
+C 114.476434 23.012079 111.620113 24.005216 108.970783 25.424307 
+C 106.321455 26.843398 103.912007 28.670826 101.831086 30.83936 
+L 122.49 50.663606 
+z
+" style="fill: #d7c9f2; fill-opacity: 0.54902; stroke: #ffffff; stroke-width: 0.5; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_14">
+    <path d="M 122.49 22.031606 
+C 121.642867 22.031606 120.796157 22.069201 119.952357 22.144283 
+C 119.108557 22.219365 118.268498 22.331857 117.434673 22.481429 
+L 122.49 50.663606 
+z
+" style="fill: #36025c; stroke: #ffffff; stroke-width: 0.5; stroke-linejoin: miter"/>
+   </g>
+   <g id="matplotlib.axis_3"/>
+   <g id="matplotlib.axis_4"/>
+   <g id="text_2">
+    <!-- Fish 2 (61%) -->
+    <g transform="translate(102.069141 13.400325) scale(0.07 -0.07)">
+     <defs>
+      <path id="Arial-BoldMT-32" d="M 3238 816 
+L 3238 0 
+L 159 0 
+Q 209 463 459 877 
+Q 709 1291 1447 1975 
+Q 2041 2528 2175 2725 
+Q 2356 2997 2356 3263 
+Q 2356 3556 2198 3714 
+Q 2041 3872 1763 3872 
+Q 1488 3872 1325 3706 
+Q 1163 3541 1138 3156 
+L 263 3244 
+Q 341 3969 753 4284 
+Q 1166 4600 1784 4600 
+Q 2463 4600 2850 4234 
+Q 3238 3869 3238 3325 
+Q 3238 3016 3127 2736 
+Q 3016 2456 2775 2150 
+Q 2616 1947 2200 1565 
+Q 1784 1184 1673 1059 
+Q 1563 934 1494 816 
+L 3238 816 
+z
+" transform="scale(0.015625)"/>
+      <path id="Arial-BoldMT-36" d="M 3247 3459 
+L 2397 3366 
+Q 2366 3628 2234 3753 
+Q 2103 3878 1894 3878 
+Q 1616 3878 1423 3628 
+Q 1231 3378 1181 2588 
+Q 1509 2975 1997 2975 
+Q 2547 2975 2939 2556 
+Q 3331 2138 3331 1475 
+Q 3331 772 2918 347 
+Q 2506 -78 1859 -78 
+Q 1166 -78 719 461 
+Q 272 1000 272 2228 
+Q 272 3488 737 4044 
+Q 1203 4600 1947 4600 
+Q 2469 4600 2811 4308 
+Q 3153 4016 3247 3459 
+z
+M 1256 1544 
+Q 1256 1116 1453 883 
+Q 1650 650 1903 650 
+Q 2147 650 2309 840 
+Q 2472 1031 2472 1466 
+Q 2472 1913 2297 2120 
+Q 2122 2328 1859 2328 
+Q 1606 2328 1431 2129 
+Q 1256 1931 1256 1544 
+z
+" transform="scale(0.015625)"/>
+     </defs>
+     <use xlink:href="#Arial-BoldMT-46"/>
+     <use xlink:href="#Arial-BoldMT-69" transform="translate(61.083984 0)"/>
+     <use xlink:href="#Arial-BoldMT-73" transform="translate(88.867188 0)"/>
+     <use xlink:href="#Arial-BoldMT-68" transform="translate(144.482422 0)"/>
+     <use xlink:href="#Arial-BoldMT-20" transform="translate(205.566406 0)"/>
+     <use xlink:href="#Arial-BoldMT-32" transform="translate(233.349609 0)"/>
+     <use xlink:href="#Arial-BoldMT-20" transform="translate(288.964844 0)"/>
+     <use xlink:href="#Arial-BoldMT-28" transform="translate(316.748047 0)"/>
+     <use xlink:href="#Arial-BoldMT-36" transform="translate(350.048828 0)"/>
+     <use xlink:href="#Arial-BoldMT-31" transform="translate(405.664062 0)"/>
+     <use xlink:href="#Arial-BoldMT-25" transform="translate(461.279297 0)"/>
+     <use xlink:href="#Arial-BoldMT-29" transform="translate(550.195312 0)"/>
+    </g>
+   </g>
+  </g>
+  <g id="axes_3">
+   <g id="patch_15">
+    <path d="M 181.185075 70.708469 
+C 184.489659 74.079006 188.577022 76.580627 193.082008 77.989844 
+C 197.586995 79.39906 202.371329 79.672615 207.007581 78.786072 
+C 211.643833 77.899527 215.989703 75.880092 219.656929 72.908184 
+C 223.324155 69.936276 226.200182 66.103112 228.028067 61.751145 
+C 229.855952 57.399176 230.579591 52.661982 230.134333 47.962776 
+C 229.689076 43.26357 228.088585 38.746584 225.475855 34.815371 
+C 222.863125 30.884158 219.318348 27.659378 215.158208 25.429127 
+C 210.998068 23.198875 206.350252 22.031606 201.629999 22.031606 
+L 201.63 50.663606 
+z
+" style="fill: #36025c; stroke: #ffffff; stroke-width: 0.5; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_16">
+    <path d="M 173.209868 47.186897 
+C 172.687788 51.45461 173.133642 55.785612 174.514237 59.857454 
+C 175.894833 63.929296 178.175035 67.638353 181.185075 70.708469 
+L 201.63 50.663606 
+z
+" style="fill: #d7c9f2; fill-opacity: 0.54902; stroke: #ffffff; stroke-width: 0.5; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_17">
+    <path d="M 177.311565 35.550527 
+C 176.216491 37.31261 175.316171 39.188506 174.626475 41.145148 
+C 173.93678 43.10179 173.461786 45.12761 173.209868 47.186897 
+L 201.63 50.663606 
+z
+" style="fill: #d7c9f2; fill-opacity: 0.54902; stroke: #ffffff; stroke-width: 0.5; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_18">
+    <path d="M 182.113194 29.714007 
+C 181.188503 30.575456 180.321858 31.497186 179.518952 32.473141 
+C 178.716046 33.449096 177.978639 34.47714 177.311565 35.550527 
+L 201.63 50.663606 
+z
+" style="fill: #36025c; stroke: #ffffff; stroke-width: 0.5; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_19">
+    <path d="M 188.204015 25.37459 
+C 187.099571 25.960941 186.034722 26.619016 185.016314 27.344584 
+C 183.997905 28.070152 183.028123 28.861652 182.113194 29.714007 
+L 201.63 50.663606 
+z
+" style="fill: #d7c9f2; fill-opacity: 0.54902; stroke: #ffffff; stroke-width: 0.5; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_20">
+    <path d="M 194.029348 23.058869 
+C 193.019768 23.336845 192.026196 23.669999 191.053114 24.056824 
+C 190.080032 24.443649 189.128903 24.883566 188.204015 25.37459 
+L 201.63 50.663606 
+z
+" style="fill: #36025c; stroke: #ffffff; stroke-width: 0.5; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_21">
+    <path d="M 197.401497 22.34557 
+C 196.832949 22.430466 196.26708 22.532468 195.704673 22.651432 
+C 195.142266 22.770395 194.583575 22.906268 194.029348 23.058869 
+L 201.63 50.663606 
+z
+" style="fill: #d7c9f2; fill-opacity: 0.54902; stroke: #ffffff; stroke-width: 0.5; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_22">
+    <path d="M 200.012295 22.077343 
+C 199.575398 22.102067 199.139126 22.136805 198.703821 22.181526 
+C 198.268516 22.226248 197.834294 22.280944 197.401497 22.34557 
+L 201.63 50.663606 
+z
+" style="fill: #36025c; stroke: #ffffff; stroke-width: 0.5; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_23">
+    <path d="M 201.338286 22.033093 
+C 201.117154 22.035346 200.896048 22.04016 200.675027 22.047536 
+C 200.454007 22.054912 200.233086 22.064849 200.012295 22.077343 
+L 201.63 50.663606 
+z
+" style="fill: #36025c; stroke: #ffffff; stroke-width: 0.5; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_24">
+    <path d="M 201.629987 22.031606 
+C 201.581369 22.031606 201.532751 22.031731 201.484134 22.031978 
+C 201.435517 22.032226 201.386901 22.032598 201.338286 22.033093 
+L 201.63 50.663606 
+z
+" style="fill: #36025c; stroke: #ffffff; stroke-width: 0.5; stroke-linejoin: miter"/>
+   </g>
+   <g id="matplotlib.axis_5"/>
+   <g id="matplotlib.axis_6"/>
+   <g id="text_3">
+    <!-- Fish 5 (73%) -->
+    <g transform="translate(181.209141 13.400325) scale(0.07 -0.07)">
+     <defs>
+      <path id="Arial-BoldMT-35" d="M 284 1178 
+L 1159 1269 
+Q 1197 972 1381 798 
+Q 1566 625 1806 625 
+Q 2081 625 2272 848 
+Q 2463 1072 2463 1522 
+Q 2463 1944 2273 2155 
+Q 2084 2366 1781 2366 
+Q 1403 2366 1103 2031 
+L 391 2134 
+L 841 4519 
+L 3163 4519 
+L 3163 3697 
+L 1506 3697 
+L 1369 2919 
+Q 1663 3066 1969 3066 
+Q 2553 3066 2959 2641 
+Q 3366 2216 3366 1538 
+Q 3366 972 3038 528 
+Q 2591 -78 1797 -78 
+Q 1163 -78 763 262 
+Q 363 603 284 1178 
+z
+" transform="scale(0.015625)"/>
+      <path id="Arial-BoldMT-37" d="M 272 3703 
+L 272 4519 
+L 3275 4519 
+L 3275 3881 
+Q 2903 3516 2518 2831 
+Q 2134 2147 1932 1376 
+Q 1731 606 1734 0 
+L 888 0 
+Q 909 950 1279 1937 
+Q 1650 2925 2269 3703 
+L 272 3703 
+z
+" transform="scale(0.015625)"/>
+      <path id="Arial-BoldMT-33" d="M 241 1216 
+L 1091 1319 
+Q 1131 994 1309 822 
+Q 1488 650 1741 650 
+Q 2013 650 2198 856 
+Q 2384 1063 2384 1413 
+Q 2384 1744 2206 1937 
+Q 2028 2131 1772 2131 
+Q 1603 2131 1369 2066 
+L 1466 2781 
+Q 1822 2772 2009 2936 
+Q 2197 3100 2197 3372 
+Q 2197 3603 2059 3740 
+Q 1922 3878 1694 3878 
+Q 1469 3878 1309 3722 
+Q 1150 3566 1116 3266 
+L 306 3403 
+Q 391 3819 561 4067 
+Q 731 4316 1036 4458 
+Q 1341 4600 1719 4600 
+Q 2366 4600 2756 4188 
+Q 3078 3850 3078 3425 
+Q 3078 2822 2419 2463 
+Q 2813 2378 3048 2084 
+Q 3284 1791 3284 1375 
+Q 3284 772 2843 347 
+Q 2403 -78 1747 -78 
+Q 1125 -78 715 280 
+Q 306 638 241 1216 
+z
+" transform="scale(0.015625)"/>
+     </defs>
+     <use xlink:href="#Arial-BoldMT-46"/>
+     <use xlink:href="#Arial-BoldMT-69" transform="translate(61.083984 0)"/>
+     <use xlink:href="#Arial-BoldMT-73" transform="translate(88.867188 0)"/>
+     <use xlink:href="#Arial-BoldMT-68" transform="translate(144.482422 0)"/>
+     <use xlink:href="#Arial-BoldMT-20" transform="translate(205.566406 0)"/>
+     <use xlink:href="#Arial-BoldMT-35" transform="translate(233.349609 0)"/>
+     <use xlink:href="#Arial-BoldMT-20" transform="translate(288.964844 0)"/>
+     <use xlink:href="#Arial-BoldMT-28" transform="translate(316.748047 0)"/>
+     <use xlink:href="#Arial-BoldMT-37" transform="translate(350.048828 0)"/>
+     <use xlink:href="#Arial-BoldMT-33" transform="translate(405.664062 0)"/>
+     <use xlink:href="#Arial-BoldMT-25" transform="translate(461.279297 0)"/>
+     <use xlink:href="#Arial-BoldMT-29" transform="translate(550.195312 0)"/>
+    </g>
+   </g>
+  </g>
+  <g id="axes_4">
+   <g id="patch_25">
+    <path d="M 252.581711 45.642474 
+C 252.06933 48.518946 252.000247 51.456973 252.376869 54.354348 
+C 252.75349 57.251723 253.571397 60.074453 254.802134 62.724343 
+C 256.032871 65.374232 257.662004 67.820196 259.632852 69.977136 
+C 261.603701 72.134075 263.893135 73.976683 266.42153 75.440871 
+C 268.949925 76.905059 271.68761 77.973645 274.539343 78.609452 
+C 277.391075 79.24526 280.323402 79.440831 283.234311 79.18936 
+C 286.14522 78.937889 289.000561 78.24233 291.701003 77.126876 
+C 294.401445 76.011422 296.915305 74.489163 299.155136 72.613053 
+C 301.394966 70.736943 303.334485 68.528993 304.906223 66.066014 
+C 306.477961 63.603035 307.663476 60.913922 308.421529 58.092224 
+C 309.179582 55.270525 309.50128 52.349346 309.375427 49.430307 
+C 309.249575 46.511268 308.677651 43.628611 307.679551 40.882628 
+C 306.681451 38.136644 305.268886 35.559546 303.490996 33.240983 
+C 301.713106 30.92242 299.590749 28.889596 297.197756 27.213227 
+C 294.804763 25.536857 292.169219 24.236616 289.382791 23.357723 
+C 286.596364 22.478831 283.691749 22.031606 280.769999 22.031606 
+L 280.77 50.663606 
+z
+" style="fill: #36025c; stroke: #ffffff; stroke-width: 0.5; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_26">
+    <path d="M 274.773725 22.666533 
+C 269.211198 23.857889 264.127928 26.680407 260.175836 30.772106 
+C 256.223744 34.863805 253.579321 40.041955 252.581711 45.642474 
+L 280.77 50.663606 
+z
+" style="fill: #d7c9f2; fill-opacity: 0.54902; stroke: #ffffff; stroke-width: 0.5; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_27">
+    <path d="M 278.552115 22.117636 
+C 277.917155 22.166969 277.284025 22.237474 276.653767 22.329033 
+C 276.023509 22.420592 275.396475 22.533156 274.773725 22.666533 
+L 280.77 50.663606 
+z
+" style="fill: #36025c; stroke: #ffffff; stroke-width: 0.5; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_28">
+    <path d="M 280.769987 22.031606 
+C 280.399959 22.031606 280.029973 22.038779 279.660224 22.053121 
+C 279.290474 22.067464 278.921031 22.088974 278.552115 22.117636 
+L 280.77 50.663606 
+z
+" style="fill: #36025c; stroke: #ffffff; stroke-width: 0.5; stroke-linejoin: miter"/>
+   </g>
+   <g id="matplotlib.axis_7"/>
+   <g id="matplotlib.axis_8"/>
+   <g id="text_4">
+    <!-- Fish 6 (81%) -->
+    <g transform="translate(260.349141 13.400325) scale(0.07 -0.07)">
+     <defs>
+      <path id="Arial-BoldMT-38" d="M 1025 2472 
+Q 684 2616 529 2867 
+Q 375 3119 375 3419 
+Q 375 3931 733 4265 
+Q 1091 4600 1750 4600 
+Q 2403 4600 2764 4265 
+Q 3125 3931 3125 3419 
+Q 3125 3100 2959 2851 
+Q 2794 2603 2494 2472 
+Q 2875 2319 3073 2025 
+Q 3272 1731 3272 1347 
+Q 3272 713 2867 316 
+Q 2463 -81 1791 -81 
+Q 1166 -81 750 247 
+Q 259 634 259 1309 
+Q 259 1681 443 1992 
+Q 628 2303 1025 2472 
+z
+M 1206 3356 
+Q 1206 3094 1354 2947 
+Q 1503 2800 1750 2800 
+Q 2000 2800 2150 2948 
+Q 2300 3097 2300 3359 
+Q 2300 3606 2151 3754 
+Q 2003 3903 1759 3903 
+Q 1506 3903 1356 3753 
+Q 1206 3603 1206 3356 
+z
+M 1125 1394 
+Q 1125 1031 1311 828 
+Q 1497 625 1775 625 
+Q 2047 625 2225 820 
+Q 2403 1016 2403 1384 
+Q 2403 1706 2222 1901 
+Q 2041 2097 1763 2097 
+Q 1441 2097 1283 1875 
+Q 1125 1653 1125 1394 
+z
+" transform="scale(0.015625)"/>
+     </defs>
+     <use xlink:href="#Arial-BoldMT-46"/>
+     <use xlink:href="#Arial-BoldMT-69" transform="translate(61.083984 0)"/>
+     <use xlink:href="#Arial-BoldMT-73" transform="translate(88.867188 0)"/>
+     <use xlink:href="#Arial-BoldMT-68" transform="translate(144.482422 0)"/>
+     <use xlink:href="#Arial-BoldMT-20" transform="translate(205.566406 0)"/>
+     <use xlink:href="#Arial-BoldMT-36" transform="translate(233.349609 0)"/>
+     <use xlink:href="#Arial-BoldMT-20" transform="translate(288.964844 0)"/>
+     <use xlink:href="#Arial-BoldMT-28" transform="translate(316.748047 0)"/>
+     <use xlink:href="#Arial-BoldMT-38" transform="translate(350.048828 0)"/>
+     <use xlink:href="#Arial-BoldMT-31" transform="translate(405.664062 0)"/>
+     <use xlink:href="#Arial-BoldMT-25" transform="translate(461.279297 0)"/>
+     <use xlink:href="#Arial-BoldMT-29" transform="translate(550.195312 0)"/>
+    </g>
+   </g>
+  </g>
+  <g id="axes_5">
+   <g id="patch_29">
+    <path d="M 388.082023 45.552004 
+C 386.884907 38.95423 383.407253 32.982141 378.259877 28.684675 
+C 373.112501 24.387208 366.615497 22.031606 359.909999 22.031606 
+L 359.91 50.663606 
+z
+" style="fill: #36025c; stroke: #ffffff; stroke-width: 0.5; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_30">
+    <path d="M 371.469104 76.858615 
+C 377.349758 74.263653 382.188669 69.762514 385.201632 64.084664 
+C 388.214596 58.406814 389.229555 51.876488 388.082023 45.552004 
+L 359.91 50.663606 
+z
+" style="fill: #36025c; stroke: #ffffff; stroke-width: 0.5; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_31">
+    <path d="M 347.335353 76.386548 
+C 351.080943 78.217578 355.181658 79.208594 359.350048 79.29013 
+C 363.518438 79.371666 367.654774 78.54177 371.469104 76.858615 
+L 359.91 50.663606 
+z
+" style="fill: #36025c; stroke: #ffffff; stroke-width: 0.5; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_32">
+    <path d="M 334.309881 63.486452 
+C 335.705836 66.2734 337.547571 68.813786 339.762266 71.007161 
+C 341.97696 73.200537 344.535034 75.017614 347.335353 76.386548 
+L 359.91 50.663606 
+z
+" style="fill: #36025c; stroke: #ffffff; stroke-width: 0.5; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_33">
+    <path d="M 331.671216 45.934709 
+C 331.173433 48.907227 331.148107 51.939787 331.596173 54.920206 
+C 332.04424 57.900624 332.9601 60.791689 334.309881 63.486452 
+L 359.91 50.663606 
+z
+" style="fill: #36025c; stroke: #ffffff; stroke-width: 0.5; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_34">
+    <path d="M 336.727415 33.860061 
+C 335.434133 35.644304 334.351148 37.571903 333.49999 39.604545 
+C 332.648832 41.637187 332.035174 43.761315 331.671216 45.934709 
+L 359.91 50.663606 
+z
+" style="fill: #36025c; stroke: #ffffff; stroke-width: 0.5; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_35">
+    <path d="M 346.568561 25.329884 
+C 344.62894 26.351343 342.813028 27.592184 341.156546 29.028002 
+C 339.500064 30.463819 338.013942 32.085137 336.727415 33.860061 
+L 359.91 50.663606 
+z
+" style="fill: #36025c; stroke: #ffffff; stroke-width: 0.5; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_36">
+    <path d="M 353.000872 22.877722 
+C 351.884428 23.155333 350.785728 23.499979 349.710752 23.909788 
+C 348.635777 24.319597 347.586477 24.793821 346.568561 25.329884 
+L 359.91 50.663606 
+z
+" style="fill: #36025c; stroke: #ffffff; stroke-width: 0.5; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_37">
+    <path d="M 357.395463 22.142237 
+C 356.654871 22.20753 355.917097 22.301645 355.183832 22.424365 
+C 354.450566 22.547085 353.722365 22.698319 353.000872 22.877722 
+L 359.91 50.663606 
+z
+" style="fill: #36025c; stroke: #ffffff; stroke-width: 0.5; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_38">
+    <path d="M 359.910014 22.031606 
+C 359.490365 22.031606 359.070766 22.040832 358.651522 22.059277 
+C 358.232278 22.077722 357.813491 22.105383 357.395463 22.142237 
+L 359.91 50.663606 
+z
+" style="fill: #36025c; stroke: #ffffff; stroke-width: 0.5; stroke-linejoin: miter"/>
+   </g>
+   <g id="matplotlib.axis_9"/>
+   <g id="matplotlib.axis_10"/>
+   <g id="text_5">
+    <!-- Fish 8 (100%) -->
+    <g transform="translate(337.542813 13.400325) scale(0.07 -0.07)">
+     <use xlink:href="#Arial-BoldMT-46"/>
+     <use xlink:href="#Arial-BoldMT-69" transform="translate(61.083984 0)"/>
+     <use xlink:href="#Arial-BoldMT-73" transform="translate(88.867188 0)"/>
+     <use xlink:href="#Arial-BoldMT-68" transform="translate(144.482422 0)"/>
+     <use xlink:href="#Arial-BoldMT-20" transform="translate(205.566406 0)"/>
+     <use xlink:href="#Arial-BoldMT-38" transform="translate(233.349609 0)"/>
+     <use xlink:href="#Arial-BoldMT-20" transform="translate(288.964844 0)"/>
+     <use xlink:href="#Arial-BoldMT-28" transform="translate(316.748047 0)"/>
+     <use xlink:href="#Arial-BoldMT-31" transform="translate(350.048828 0)"/>
+     <use xlink:href="#Arial-BoldMT-30" transform="translate(405.664062 0)"/>
+     <use xlink:href="#Arial-BoldMT-30" transform="translate(461.279297 0)"/>
+     <use xlink:href="#Arial-BoldMT-25" transform="translate(516.894531 0)"/>
+     <use xlink:href="#Arial-BoldMT-29" transform="translate(605.810547 0)"/>
+    </g>
+   </g>
+  </g>
+  <g id="axes_6">
+   <g id="patch_39">
+    <path d="M 418.378413 70.474635 
+C 421.653977 73.892485 425.726637 76.445198 430.230481 77.903422 
+C 434.734323 79.361645 439.530294 79.680356 444.18749 78.830921 
+C 448.844686 77.981487 453.219319 75.99013 456.918343 73.035771 
+C 460.617366 70.081413 463.526575 66.255263 465.384585 61.901091 
+C 467.242595 57.546919 467.992041 52.799153 467.565591 48.084373 
+C 467.139139 43.369592 465.549958 38.833362 462.940826 34.883243 
+C 460.331693 30.933124 456.78317 27.691078 452.614075 25.448387 
+C 448.44498 23.205696 443.784026 22.031606 439.049999 22.031606 
+L 439.05 50.663606 
+z
+" style="fill: #36025c; stroke: #ffffff; stroke-width: 0.5; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_40">
+    <path d="M 417.037341 32.354203 
+C 412.539642 37.761605 410.188418 44.641165 410.435701 51.670256 
+C 410.682984 58.699348 413.511841 65.396669 418.378413 70.474635 
+L 439.05 50.663606 
+z
+" style="fill: #36025c; stroke: #ffffff; stroke-width: 0.5; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_41">
+    <path d="M 424.248539 26.154258 
+C 422.88465 26.977926 421.591895 27.914 420.383734 28.952735 
+C 419.175574 29.991471 418.056217 31.129248 417.037341 32.354203 
+L 439.05 50.663606 
+z
+" style="fill: #36025c; stroke: #ffffff; stroke-width: 0.5; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_42">
+    <path d="M 432.782151 22.726078 
+C 431.279266 23.063255 429.806029 23.521153 428.3768 24.095313 
+C 426.947572 24.669473 425.567007 25.358021 424.248539 26.154258 
+L 439.05 50.663606 
+z
+" style="fill: #36025c; stroke: #ffffff; stroke-width: 0.5; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_43">
+    <path d="M 435.481722 22.254826 
+C 435.028356 22.311772 434.576424 22.37956 434.126302 22.458135 
+C 433.676181 22.536711 433.227997 22.626051 432.782151 22.726078 
+L 439.05 50.663606 
+z
+" style="fill: #36025c; stroke: #ffffff; stroke-width: 0.5; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_44">
+    <path d="M 437.473081 22.075063 
+C 437.140268 22.093421 436.807801 22.117588 436.475832 22.147556 
+C 436.143863 22.177524 435.812442 22.213286 435.481722 22.254826 
+L 439.05 50.663606 
+z
+" style="fill: #36025c; stroke: #ffffff; stroke-width: 0.5; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_45">
+    <path d="M 439.049987 22.031606 
+C 438.787032 22.031606 438.524096 22.035228 438.261241 22.042472 
+C 437.998386 22.049717 437.735637 22.060581 437.473081 22.075063 
+L 439.05 50.663606 
+z
+" style="fill: #36025c; stroke: #ffffff; stroke-width: 0.5; stroke-linejoin: miter"/>
+   </g>
+   <g id="matplotlib.axis_11"/>
+   <g id="matplotlib.axis_12"/>
+   <g id="text_6">
+    <!-- Fish 9 (100%) -->
+    <g transform="translate(416.682813 13.400325) scale(0.07 -0.07)">
+     <defs>
+      <path id="Arial-BoldMT-39" d="M 291 1059 
+L 1141 1153 
+Q 1172 894 1303 769 
+Q 1434 644 1650 644 
+Q 1922 644 2112 894 
+Q 2303 1144 2356 1931 
+Q 2025 1547 1528 1547 
+Q 988 1547 595 1964 
+Q 203 2381 203 3050 
+Q 203 3747 617 4173 
+Q 1031 4600 1672 4600 
+Q 2369 4600 2816 4061 
+Q 3263 3522 3263 2288 
+Q 3263 1031 2797 475 
+Q 2331 -81 1584 -81 
+Q 1047 -81 715 205 
+Q 384 491 291 1059 
+z
+M 2278 2978 
+Q 2278 3403 2083 3637 
+Q 1888 3872 1631 3872 
+Q 1388 3872 1227 3680 
+Q 1066 3488 1066 3050 
+Q 1066 2606 1241 2398 
+Q 1416 2191 1678 2191 
+Q 1931 2191 2104 2391 
+Q 2278 2591 2278 2978 
+z
+" transform="scale(0.015625)"/>
+     </defs>
+     <use xlink:href="#Arial-BoldMT-46"/>
+     <use xlink:href="#Arial-BoldMT-69" transform="translate(61.083984 0)"/>
+     <use xlink:href="#Arial-BoldMT-73" transform="translate(88.867188 0)"/>
+     <use xlink:href="#Arial-BoldMT-68" transform="translate(144.482422 0)"/>
+     <use xlink:href="#Arial-BoldMT-20" transform="translate(205.566406 0)"/>
+     <use xlink:href="#Arial-BoldMT-39" transform="translate(233.349609 0)"/>
+     <use xlink:href="#Arial-BoldMT-20" transform="translate(288.964844 0)"/>
+     <use xlink:href="#Arial-BoldMT-28" transform="translate(316.748047 0)"/>
+     <use xlink:href="#Arial-BoldMT-31" transform="translate(350.048828 0)"/>
+     <use xlink:href="#Arial-BoldMT-30" transform="translate(405.664062 0)"/>
+     <use xlink:href="#Arial-BoldMT-30" transform="translate(461.279297 0)"/>
+     <use xlink:href="#Arial-BoldMT-25" transform="translate(516.894531 0)"/>
+     <use xlink:href="#Arial-BoldMT-29" transform="translate(605.810547 0)"/>
+    </g>
+   </g>
+  </g>
+  <g id="axes_7">
+   <g id="patch_46">
+    <path d="M 16.096085 129.141222 
+C 15.175679 131.999593 14.710655 134.985044 14.718087 137.987938 
+C 14.725519 140.990833 15.20532 143.973952 16.139864 146.827731 
+C 17.074409 149.681511 18.452111 152.370582 20.222381 154.79619 
+C 21.992651 157.221798 24.133549 159.353879 26.566439 161.114126 
+C 28.999329 162.874373 31.694061 164.240974 34.551671 165.163736 
+C 37.409282 166.086499 40.394348 166.553984 43.397248 166.54903 
+C 46.400147 166.544074 49.383662 166.066736 52.238211 165.134547 
+C 55.092761 164.202357 57.782967 162.826873 60.210034 161.058605 
+C 62.637101 159.290337 64.770945 157.151206 66.533199 154.719768 
+C 68.295453 152.288331 69.66428 149.594722 70.589399 146.737874 
+C 71.514518 143.881025 71.984468 140.896345 71.98199 137.893443 
+C 71.979512 134.89054 71.504637 131.90664 70.574804 129.051322 
+C 69.644971 126.196004 68.271703 123.504658 66.505438 121.076132 
+C 64.739173 118.647606 62.601797 116.511995 60.171813 114.747736 
+C 57.741829 112.983477 55.049365 111.612437 52.193281 110.684959 
+C 49.337197 109.757482 46.352902 109.285069 43.349999 109.285069 
+L 43.35 137.917069 
+z
+" style="fill: #d7c9f2; fill-opacity: 0.54902; stroke: #ffffff; stroke-width: 0.5; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_47">
+    <path d="M 26.492881 114.77341 
+C 24.058697 116.546394 21.919402 118.692356 20.154001 121.132044 
+C 18.3886 123.571731 17.019103 126.274734 16.096085 129.141222 
+L 43.35 137.917069 
+z
+" style="fill: #36025c; stroke: #ffffff; stroke-width: 0.5; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_48">
+    <path d="M 40.446733 109.432644 
+C 37.936761 109.688472 35.471578 110.27494 33.115297 111.176794 
+C 30.759015 112.078649 28.532239 113.288006 26.492881 114.77341 
+L 43.35 137.917069 
+z
+" style="fill: #d7c9f2; fill-opacity: 0.54902; stroke: #ffffff; stroke-width: 0.5; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_49">
+    <path d="M 43.35 109.285069 
+C 42.865263 109.285069 42.380605 109.297379 41.896493 109.321986 
+C 41.412381 109.346594 40.928972 109.383492 40.446733 109.432644 
+L 43.35 137.917069 
+z
+" style="fill: #36025c; stroke: #ffffff; stroke-width: 0.5; stroke-linejoin: miter"/>
+   </g>
+   <g id="matplotlib.axis_13"/>
+   <g id="matplotlib.axis_14"/>
+   <g id="text_7">
+    <!-- Fish 10 (12%) -->
+    <g transform="translate(20.982813 100.653788) scale(0.07 -0.07)">
+     <use xlink:href="#Arial-BoldMT-46"/>
+     <use xlink:href="#Arial-BoldMT-69" transform="translate(61.083984 0)"/>
+     <use xlink:href="#Arial-BoldMT-73" transform="translate(88.867188 0)"/>
+     <use xlink:href="#Arial-BoldMT-68" transform="translate(144.482422 0)"/>
+     <use xlink:href="#Arial-BoldMT-20" transform="translate(205.566406 0)"/>
+     <use xlink:href="#Arial-BoldMT-31" transform="translate(233.349609 0)"/>
+     <use xlink:href="#Arial-BoldMT-30" transform="translate(288.964844 0)"/>
+     <use xlink:href="#Arial-BoldMT-20" transform="translate(344.580078 0)"/>
+     <use xlink:href="#Arial-BoldMT-28" transform="translate(372.363281 0)"/>
+     <use xlink:href="#Arial-BoldMT-31" transform="translate(405.664062 0)"/>
+     <use xlink:href="#Arial-BoldMT-32" transform="translate(461.279297 0)"/>
+     <use xlink:href="#Arial-BoldMT-25" transform="translate(516.894531 0)"/>
+     <use xlink:href="#Arial-BoldMT-29" transform="translate(605.810547 0)"/>
+    </g>
+   </g>
+  </g>
+  <g id="axes_8">
+   <g id="patch_50">
+    <path d="M 149.553595 147.263363 
+C 151.042967 142.950665 151.48012 138.343783 150.828495 133.827924 
+C 150.176873 129.312065 148.455159 125.016699 145.807316 121.300987 
+C 143.159473 117.585274 139.661417 114.555745 135.605635 112.465713 
+C 131.549854 110.37568 127.052629 109.285069 122.489999 109.285069 
+L 122.49 137.917069 
+z
+" style="fill: #d7c9f2; fill-opacity: 0.54902; stroke: #ffffff; stroke-width: 0.5; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_51">
+    <path d="M 107.728963 162.450785 
+C 111.382903 164.649227 115.482249 166.003851 119.726662 166.41541 
+C 123.971075 166.826968 128.254306 166.28516 132.262547 164.829681 
+C 136.270789 163.374202 139.903701 161.041488 142.895126 158.002443 
+C 145.88655 154.963397 148.161602 151.294092 149.553595 147.263363 
+L 122.49 137.917069 
+z
+" style="fill: #d7c9f2; fill-opacity: 0.54902; stroke: #ffffff; stroke-width: 0.5; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_52">
+    <path d="M 96.707331 125.465345 
+C 93.603314 131.89256 93.012066 139.253781 95.050453 146.094029 
+C 97.08884 152.934277 101.613093 158.77109 107.728963 162.450785 
+L 122.49 137.917069 
+z
+" style="fill: #d7c9f2; fill-opacity: 0.54902; stroke: #ffffff; stroke-width: 0.5; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_53">
+    <path d="M 120.690805 109.341655 
+C 115.622807 109.660752 110.729775 111.322427 106.515552 114.155578 
+C 102.301328 116.988729 98.915709 120.892655 96.707331 125.465345 
+L 122.49 137.917069 
+z
+" style="fill: #36025c; stroke: #ffffff; stroke-width: 0.5; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_54">
+    <path d="M 122.49 109.285069 
+C 122.189931 109.285069 121.889886 109.289786 121.589965 109.299219 
+C 121.290043 109.308651 120.990282 109.322799 120.690805 109.341655 
+L 122.49 137.917069 
+z
+" style="fill: #36025c; stroke: #ffffff; stroke-width: 0.5; stroke-linejoin: miter"/>
+   </g>
+   <g id="matplotlib.axis_15"/>
+   <g id="matplotlib.axis_16"/>
+   <g id="text_8">
+    <!-- Fish 11 (18%) -->
+    <g transform="translate(100.315313 100.653788) scale(0.07 -0.07)">
+     <use xlink:href="#Arial-BoldMT-46"/>
+     <use xlink:href="#Arial-BoldMT-69" transform="translate(61.083984 0)"/>
+     <use xlink:href="#Arial-BoldMT-73" transform="translate(88.867188 0)"/>
+     <use xlink:href="#Arial-BoldMT-68" transform="translate(144.482422 0)"/>
+     <use xlink:href="#Arial-BoldMT-20" transform="translate(205.566406 0)"/>
+     <use xlink:href="#Arial-BoldMT-31" transform="translate(233.349609 0)"/>
+     <use xlink:href="#Arial-BoldMT-31" transform="translate(283.464844 0)"/>
+     <use xlink:href="#Arial-BoldMT-20" transform="translate(339.080078 0)"/>
+     <use xlink:href="#Arial-BoldMT-28" transform="translate(366.863281 0)"/>
+     <use xlink:href="#Arial-BoldMT-31" transform="translate(400.164062 0)"/>
+     <use xlink:href="#Arial-BoldMT-38" transform="translate(455.779297 0)"/>
+     <use xlink:href="#Arial-BoldMT-25" transform="translate(511.394531 0)"/>
+     <use xlink:href="#Arial-BoldMT-29" transform="translate(600.310547 0)"/>
+    </g>
+   </g>
+  </g>
+  <g id="axes_9">
+   <g id="patch_55">
+    <path d="M 227.740816 149.665122 
+C 229.702595 145.30494 230.541336 140.522027 230.180213 135.754495 
+C 229.819089 130.986963 228.269474 126.384959 225.67331 122.370023 
+C 223.077147 118.355088 219.516197 115.053666 215.316642 112.768167 
+C 211.117086 110.482667 206.411188 109.285069 201.629999 109.285069 
+L 201.63 137.917069 
+z
+" style="fill: #36025c; stroke: #ffffff; stroke-width: 0.5; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_56">
+    <path d="M 203.813925 166.465657 
+C 208.943243 166.073272 213.873245 164.30567 218.083346 161.3495 
+C 222.293447 158.393331 225.630045 154.356447 227.740816 149.665122 
+L 201.63 137.917069 
+z
+" style="fill: #36025c; stroke: #ffffff; stroke-width: 0.5; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_57">
+    <path d="M 183.672351 160.217613 
+C 186.484137 162.481821 189.698946 164.193944 193.146952 165.263537 
+C 196.594958 166.33313 200.214348 166.741021 203.813925 166.465657 
+L 201.63 137.917069 
+z
+" style="fill: #36025c; stroke: #ffffff; stroke-width: 0.5; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_58">
+    <path d="M 175.288664 149.138721 
+C 176.206494 151.293204 177.385196 153.326973 178.798326 155.194398 
+C 180.211456 157.061823 181.848367 158.74884 183.672351 160.217613 
+L 201.63 137.917069 
+z
+" style="fill: #36025c; stroke: #ffffff; stroke-width: 0.5; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_59">
+    <path d="M 172.998633 137.726639 
+C 172.985631 139.681842 173.172937 141.633245 173.557622 143.550276 
+C 173.942306 145.467307 174.522349 147.339901 175.288664 149.138721 
+L 201.63 137.917069 
+z
+" style="fill: #36025c; stroke: #ffffff; stroke-width: 0.5; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_60">
+    <path d="M 174.10385 130.036559 
+C 173.746223 131.28573 173.474042 132.557797 173.289199 133.843938 
+C 173.104355 135.130079 173.007275 136.427312 172.998633 137.726639 
+L 201.63 137.917069 
+z
+" style="fill: #36025c; stroke: #ffffff; stroke-width: 0.5; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_61">
+    <path d="M 177.134824 123.092164 
+C 176.478795 124.17612 175.895442 125.302423 175.388607 126.463652 
+C 174.881773 127.624881 174.452576 128.818477 174.10385 130.036559 
+L 201.63 137.917069 
+z
+" style="fill: #36025c; stroke: #ffffff; stroke-width: 0.5; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_62">
+    <path d="M 181.697644 117.362444 
+C 180.818565 118.214909 179.995076 119.122896 179.232257 120.0808 
+C 178.469437 121.038704 177.768855 122.044558 177.134824 123.092164 
+L 201.63 137.917069 
+z
+" style="fill: #36025c; stroke: #ffffff; stroke-width: 0.5; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_63">
+    <path d="M 185.65306 114.157254 
+C 184.947894 114.631433 184.264186 115.136769 183.603969 115.671763 
+C 182.943752 116.206756 182.307683 116.770873 181.697644 117.362444 
+L 201.63 137.917069 
+z
+" style="fill: #36025c; stroke: #ffffff; stroke-width: 0.5; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_64">
+    <path d="M 189.73314 111.873717 
+C 189.023433 112.197918 188.327269 112.550998 187.646403 112.932065 
+C 186.965538 113.313132 186.300539 113.721866 185.65306 114.157254 
+L 201.63 137.917069 
+z
+" style="fill: #36025c; stroke: #ffffff; stroke-width: 0.5; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_65">
+    <path d="M 193.465004 110.47396 
+C 192.827718 110.663569 192.19723 110.875317 191.574686 111.108822 
+C 190.952142 111.342328 190.337921 111.597448 189.73314 111.873717 
+L 201.63 137.917069 
+z
+" style="fill: #36025c; stroke: #ffffff; stroke-width: 0.5; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_66">
+    <path d="M 197.270427 109.618914 
+C 196.627397 109.717979 195.987923 109.838933 195.353133 109.981565 
+C 194.718343 110.124198 194.088605 110.288424 193.465004 110.47396 
+L 201.63 137.917069 
+z
+" style="fill: #36025c; stroke: #ffffff; stroke-width: 0.5; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_67">
+    <path d="M 200.053244 109.328517 
+C 199.587422 109.354209 199.122297 109.391283 198.658287 109.439704 
+C 198.194276 109.488126 197.731518 109.547879 197.270427 109.618914 
+L 201.63 137.917069 
+z
+" style="fill: #36025c; stroke: #ffffff; stroke-width: 0.5; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_68">
+    <path d="M 201.63 109.285069 
+C 201.367071 109.285069 201.104153 109.288691 200.841323 109.295933 
+C 200.578493 109.303176 200.315775 109.314039 200.053244 109.328517 
+L 201.63 137.917069 
+z
+" style="fill: #36025c; stroke: #ffffff; stroke-width: 0.5; stroke-linejoin: miter"/>
+   </g>
+   <g id="matplotlib.axis_17"/>
+   <g id="matplotlib.axis_18"/>
+   <g id="text_9">
+    <!-- Fish 13 (100%) -->
+    <g transform="translate(177.316484 100.653788) scale(0.07 -0.07)">
+     <use xlink:href="#Arial-BoldMT-46"/>
+     <use xlink:href="#Arial-BoldMT-69" transform="translate(61.083984 0)"/>
+     <use xlink:href="#Arial-BoldMT-73" transform="translate(88.867188 0)"/>
+     <use xlink:href="#Arial-BoldMT-68" transform="translate(144.482422 0)"/>
+     <use xlink:href="#Arial-BoldMT-20" transform="translate(205.566406 0)"/>
+     <use xlink:href="#Arial-BoldMT-31" transform="translate(233.349609 0)"/>
+     <use xlink:href="#Arial-BoldMT-33" transform="translate(288.964844 0)"/>
+     <use xlink:href="#Arial-BoldMT-20" transform="translate(344.580078 0)"/>
+     <use xlink:href="#Arial-BoldMT-28" transform="translate(372.363281 0)"/>
+     <use xlink:href="#Arial-BoldMT-31" transform="translate(405.664062 0)"/>
+     <use xlink:href="#Arial-BoldMT-30" transform="translate(461.279297 0)"/>
+     <use xlink:href="#Arial-BoldMT-30" transform="translate(516.894531 0)"/>
+     <use xlink:href="#Arial-BoldMT-25" transform="translate(572.509766 0)"/>
+     <use xlink:href="#Arial-BoldMT-29" transform="translate(661.425781 0)"/>
+    </g>
+   </g>
+  </g>
+  <g id="axes_10">
+   <g id="patch_69">
+    <path d="M 263.501356 160.755313 
+C 267.123714 163.49428 271.346266 165.33254 275.819162 166.117789 
+C 280.292058 166.903038 284.888254 166.612971 289.22694 165.271623 
+C 293.565627 163.930274 297.523571 161.575739 300.772846 158.403103 
+C 304.02212 155.230467 306.470436 151.329838 307.914944 147.024398 
+C 309.359451 142.718958 309.75912 138.13099 309.080837 133.640629 
+C 308.402553 129.150267 306.665586 124.885052 304.013843 121.198362 
+C 301.362101 117.511672 297.870907 114.508228 293.82951 112.43687 
+C 289.788114 110.365511 285.3113 109.285069 280.769999 109.285069 
+L 280.77 137.917069 
+z
+" style="fill: #36025c; stroke: #ffffff; stroke-width: 0.5; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_70">
+    <path d="M 252.828362 144.166577 
+C 253.562837 147.450419 254.870496 150.579224 256.691196 153.409087 
+C 258.511896 156.238951 260.817291 158.725816 263.501356 160.755313 
+L 280.77 137.917069 
+z
+" style="fill: #36025c; stroke: #ffffff; stroke-width: 0.5; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_71">
+    <path d="M 254.741596 125.987544 
+C 253.446797 128.812599 252.620528 131.829706 252.295263 134.92028 
+C 251.969999 138.010853 252.150057 141.133865 252.828362 144.166577 
+L 280.77 137.917069 
+z
+" style="fill: #36025c; stroke: #ffffff; stroke-width: 0.5; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_72">
+    <path d="M 259.803835 118.418059 
+C 258.765288 119.534749 257.817612 120.732633 256.969858 122.000264 
+C 256.122104 123.267896 255.37698 124.601232 254.741596 125.987544 
+L 280.77 137.917069 
+z
+" style="fill: #36025c; stroke: #ffffff; stroke-width: 0.5; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_73">
+    <path d="M 264.943437 114.056824 
+C 264.004783 114.679436 263.103686 115.356895 262.244846 116.085668 
+C 261.386007 116.814441 260.570919 117.593258 259.803835 118.418059 
+L 280.77 137.917069 
+z
+" style="fill: #36025c; stroke: #ffffff; stroke-width: 0.5; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_74">
+    <path d="M 269.256547 111.701961 
+C 268.505628 112.031758 267.769226 112.39367 267.049379 112.78669 
+C 266.329531 113.17971 265.626901 113.603479 264.943437 114.056824 
+L 280.77 137.917069 
+z
+" style="fill: #36025c; stroke: #ffffff; stroke-width: 0.5; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_75">
+    <path d="M 272.419556 110.529819 
+C 271.881445 110.69389 271.348287 110.873786 270.820775 111.06927 
+C 270.293263 111.264754 269.771627 111.475743 269.256547 111.701961 
+L 280.77 137.917069 
+z
+" style="fill: #36025c; stroke: #ffffff; stroke-width: 0.5; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_76">
+    <path d="M 275.34216 109.804261 
+C 274.849118 109.899455 274.358666 110.007601 273.871313 110.12859 
+C 273.383959 110.24958 272.899872 110.383369 272.419556 110.529819 
+L 280.77 137.917069 
+z
+" style="fill: #36025c; stroke: #ffffff; stroke-width: 0.5; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_77">
+    <path d="M 277.839679 109.435415 
+C 277.420967 109.478495 277.00325 109.530801 276.586845 109.592298 
+C 276.17044 109.653795 275.755449 109.724466 275.34216 109.804261 
+L 280.77 137.917069 
+z
+" style="fill: #36025c; stroke: #ffffff; stroke-width: 0.5; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_78">
+    <path d="M 279.89068 109.298575 
+C 279.548165 109.3091 279.205867 109.325772 278.863951 109.348584 
+C 278.522035 109.371396 278.180556 109.400345 277.839679 109.435415 
+L 280.77 137.917069 
+z
+" style="fill: #36025c; stroke: #ffffff; stroke-width: 0.5; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_79">
+    <path d="M 280.52043 109.286156 
+C 280.415453 109.287071 280.310482 109.288564 280.205521 109.290634 
+C 280.10056 109.292704 279.995611 109.295351 279.89068 109.298575 
+L 280.77 137.917069 
+z
+" style="fill: #36025c; stroke: #ffffff; stroke-width: 0.5; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_80">
+    <path d="M 280.77 109.285069 
+C 280.728405 109.285069 280.686809 109.28516 280.645214 109.28534 
+C 280.603619 109.285521 280.562024 109.285794 280.52043 109.286156 
+L 280.77 137.917069 
+z
+" style="fill: #36025c; stroke: #ffffff; stroke-width: 0.5; stroke-linejoin: miter"/>
+   </g>
+   <g id="matplotlib.axis_19"/>
+   <g id="matplotlib.axis_20"/>
+   <g id="text_10">
+    <!-- Fish 14 (100%) -->
+    <g transform="translate(256.456484 100.653788) scale(0.07 -0.07)">
+     <defs>
+      <path id="Arial-BoldMT-34" d="M 1994 0 
+L 1994 922 
+L 119 922 
+L 119 1691 
+L 2106 4600 
+L 2844 4600 
+L 2844 1694 
+L 3413 1694 
+L 3413 922 
+L 2844 922 
+L 2844 0 
+L 1994 0 
+z
+M 1994 1694 
+L 1994 3259 
+L 941 1694 
+L 1994 1694 
+z
+" transform="scale(0.015625)"/>
+     </defs>
+     <use xlink:href="#Arial-BoldMT-46"/>
+     <use xlink:href="#Arial-BoldMT-69" transform="translate(61.083984 0)"/>
+     <use xlink:href="#Arial-BoldMT-73" transform="translate(88.867188 0)"/>
+     <use xlink:href="#Arial-BoldMT-68" transform="translate(144.482422 0)"/>
+     <use xlink:href="#Arial-BoldMT-20" transform="translate(205.566406 0)"/>
+     <use xlink:href="#Arial-BoldMT-31" transform="translate(233.349609 0)"/>
+     <use xlink:href="#Arial-BoldMT-34" transform="translate(288.964844 0)"/>
+     <use xlink:href="#Arial-BoldMT-20" transform="translate(344.580078 0)"/>
+     <use xlink:href="#Arial-BoldMT-28" transform="translate(372.363281 0)"/>
+     <use xlink:href="#Arial-BoldMT-31" transform="translate(405.664062 0)"/>
+     <use xlink:href="#Arial-BoldMT-30" transform="translate(461.279297 0)"/>
+     <use xlink:href="#Arial-BoldMT-30" transform="translate(516.894531 0)"/>
+     <use xlink:href="#Arial-BoldMT-25" transform="translate(572.509766 0)"/>
+     <use xlink:href="#Arial-BoldMT-29" transform="translate(661.425781 0)"/>
+    </g>
+   </g>
+  </g>
+  <g id="axes_11">
+   <g id="patch_81">
+    <path d="M 361.673745 166.494693 
+C 369.097889 166.036492 376.058911 162.702792 381.069878 157.205694 
+C 386.080845 151.708597 388.757612 144.469516 388.528404 137.034777 
+C 388.299193 129.600038 385.181578 122.539596 379.841503 117.361616 
+C 374.501428 112.183636 367.34827 109.285069 359.909999 109.285069 
+L 359.91 137.917069 
+z
+" style="fill: #36025c; stroke: #ffffff; stroke-width: 0.5; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_82">
+    <path d="M 335.671543 153.158087 
+C 338.408502 157.510792 342.268063 161.04693 346.843077 163.393468 
+C 351.418091 165.740006 356.541818 166.811425 361.673745 166.494693 
+L 359.91 137.917069 
+z
+" style="fill: #36025c; stroke: #ffffff; stroke-width: 0.5; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_83">
+    <path d="M 331.50428 134.324514 
+C 331.091847 137.585557 331.244039 140.893401 331.954174 144.102794 
+C 332.664309 147.312188 333.921839 150.375456 335.671543 153.158087 
+L 359.91 137.917069 
+z
+" style="fill: #36025c; stroke: #ffffff; stroke-width: 0.5; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_84">
+    <path d="M 335.323902 123.243446 
+C 334.314743 124.934322 333.482704 126.724799 332.841002 128.586434 
+C 332.1993 130.448069 331.751353 132.370948 331.50428 134.324514 
+L 359.91 137.917069 
+z
+" style="fill: #36025c; stroke: #ffffff; stroke-width: 0.5; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_85">
+    <path d="M 342.6574 115.066703 
+C 341.186203 116.177493 339.825714 117.427777 338.59489 118.800128 
+C 337.364066 120.172479 336.268648 121.660496 335.323902 123.243446 
+L 359.91 137.917069 
+z
+" style="fill: #36025c; stroke: #ffffff; stroke-width: 0.5; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_86">
+    <path d="M 348.384261 111.707361 
+C 347.368736 112.153939 346.380024 112.659161 345.423127 113.220472 
+C 344.466229 113.781783 343.542764 114.398231 342.6574 115.066703 
+L 359.91 137.917069 
+z
+" style="fill: #36025c; stroke: #ffffff; stroke-width: 0.5; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_87">
+    <path d="M 353.992941 109.903147 
+C 353.030268 110.106481 352.078708 110.359306 351.142063 110.660608 
+C 350.205419 110.96191 349.284934 111.31129 348.384261 111.707361 
+L 359.91 137.917069 
+z
+" style="fill: #36025c; stroke: #ffffff; stroke-width: 0.5; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_88">
+    <path d="M 357.944166 109.352635 
+C 357.280231 109.398328 356.618092 109.467155 355.958953 109.55899 
+C 355.299815 109.650826 354.64408 109.765614 353.992941 109.903147 
+L 359.91 137.917069 
+z
+" style="fill: #36025c; stroke: #ffffff; stroke-width: 0.5; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_89">
+    <path d="M 359.91 109.285069 
+C 359.582095 109.285069 359.254221 109.290701 358.926509 109.301964 
+C 358.598798 109.313228 358.271297 109.330122 357.944166 109.352635 
+L 359.91 137.917069 
+z
+" style="fill: #36025c; stroke: #ffffff; stroke-width: 0.5; stroke-linejoin: miter"/>
+   </g>
+   <g id="matplotlib.axis_21"/>
+   <g id="matplotlib.axis_22"/>
+   <g id="text_11">
+    <!-- Fish 15 (100%) -->
+    <g transform="translate(335.596484 100.653788) scale(0.07 -0.07)">
+     <use xlink:href="#Arial-BoldMT-46"/>
+     <use xlink:href="#Arial-BoldMT-69" transform="translate(61.083984 0)"/>
+     <use xlink:href="#Arial-BoldMT-73" transform="translate(88.867188 0)"/>
+     <use xlink:href="#Arial-BoldMT-68" transform="translate(144.482422 0)"/>
+     <use xlink:href="#Arial-BoldMT-20" transform="translate(205.566406 0)"/>
+     <use xlink:href="#Arial-BoldMT-31" transform="translate(233.349609 0)"/>
+     <use xlink:href="#Arial-BoldMT-35" transform="translate(288.964844 0)"/>
+     <use xlink:href="#Arial-BoldMT-20" transform="translate(344.580078 0)"/>
+     <use xlink:href="#Arial-BoldMT-28" transform="translate(372.363281 0)"/>
+     <use xlink:href="#Arial-BoldMT-31" transform="translate(405.664062 0)"/>
+     <use xlink:href="#Arial-BoldMT-30" transform="translate(461.279297 0)"/>
+     <use xlink:href="#Arial-BoldMT-30" transform="translate(516.894531 0)"/>
+     <use xlink:href="#Arial-BoldMT-25" transform="translate(572.509766 0)"/>
+     <use xlink:href="#Arial-BoldMT-29" transform="translate(661.425781 0)"/>
+    </g>
+   </g>
+  </g>
+  <g id="axes_12">
+   <g id="patch_90">
+    <path d="M 467.039139 143.950272 
+C 467.939318 139.774171 467.893554 135.449064 466.905205 131.292946 
+C 465.916857 127.136827 464.01076 123.254117 461.327053 119.930285 
+C 458.643345 116.606452 455.249455 113.925004 451.394913 112.08309 
+C 447.540371 110.241175 443.322018 109.285069 439.049999 109.285069 
+L 439.05 137.917069 
+z
+" style="fill: #36025c; stroke: #ffffff; stroke-width: 0.5; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_91">
+    <path d="M 430.958464 165.381929 
+C 434.73665 166.495035 438.704195 166.816644 442.612333 166.326595 
+C 446.520472 165.836545 450.285773 164.545297 453.672159 162.533809 
+C 457.058545 160.522321 459.993723 157.833532 462.293657 154.636034 
+C 464.593591 151.438536 466.209185 147.80058 467.039139 143.950272 
+L 439.05 137.917069 
+z
+" style="fill: #36025c; stroke: #ffffff; stroke-width: 0.5; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_92">
+    <path d="M 415.659464 154.429919 
+C 417.506511 157.04627 419.779514 159.334273 422.383662 161.19849 
+C 424.987809 163.062707 427.886378 164.476849 430.958464 165.381929 
+L 439.05 137.917069 
+z
+" style="fill: #36025c; stroke: #ffffff; stroke-width: 0.5; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_93">
+    <path d="M 410.443246 136.71497 
+C 410.311378 139.85306 410.696766 142.991571 411.583941 146.004529 
+C 412.471115 149.017487 413.848046 151.864036 415.659464 154.429919 
+L 439.05 137.917069 
+z
+" style="fill: #36025c; stroke: #ffffff; stroke-width: 0.5; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_94">
+    <path d="M 412.891169 126.276322 
+C 412.159797 127.919844 411.584941 129.62864 411.174229 131.380036 
+C 410.763517 133.131432 410.518771 134.917648 410.443246 136.71497 
+L 439.05 137.917069 
+z
+" style="fill: #36025c; stroke: #ffffff; stroke-width: 0.5; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_95">
+    <path d="M 418.426578 118.055904 
+C 417.274297 119.252409 416.228323 120.546927 415.300503 121.924797 
+C 414.372682 123.302667 413.566529 124.75867 412.891169 126.276322 
+L 439.05 137.917069 
+z
+" style="fill: #36025c; stroke: #ffffff; stroke-width: 0.5; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_96">
+    <path d="M 422.764182 114.367896 
+C 421.982264 114.908644 421.227763 115.487999 420.503483 116.103812 
+C 419.779204 116.719625 419.086041 117.37113 418.426578 118.055904 
+L 439.05 137.917069 
+z
+" style="fill: #36025c; stroke: #ffffff; stroke-width: 0.5; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_97">
+    <path d="M 426.647434 112.110718 
+C 425.971931 112.435366 425.309436 112.78641 424.661478 113.163042 
+C 424.013521 113.539673 423.380601 113.941601 422.764182 114.367896 
+L 439.05 137.917069 
+z
+" style="fill: #d7c9f2; fill-opacity: 0.54902; stroke: #ffffff; stroke-width: 0.5; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_98">
+    <path d="M 430.237067 110.675122 
+C 429.623481 110.87362 429.016771 111.092797 428.417987 111.332267 
+C 427.819202 111.571738 427.228685 111.831368 426.647434 112.110718 
+L 439.05 137.917069 
+z
+" style="fill: #36025c; stroke: #ffffff; stroke-width: 0.5; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_99">
+    <path d="M 432.907691 109.951672 
+C 432.457083 110.050643 432.008927 110.160494 431.563628 110.281121 
+C 431.118329 110.401749 430.676017 110.533119 430.237067 110.675122 
+L 439.05 137.917069 
+z
+" style="fill: #36025c; stroke: #ffffff; stroke-width: 0.5; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_100">
+    <path d="M 435.361693 109.523623 
+C 434.94983 109.577123 434.539187 109.639578 434.130041 109.710944 
+C 433.720896 109.782311 433.313345 109.862574 432.907691 109.951672 
+L 439.05 137.917069 
+z
+" style="fill: #36025c; stroke: #ffffff; stroke-width: 0.5; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_101">
+    <path d="M 437.281928 109.339713 
+C 436.960969 109.359571 436.640368 109.384832 436.320261 109.415491 
+C 436.000154 109.44615 435.680586 109.482198 435.361693 109.523623 
+L 439.05 137.917069 
+z
+" style="fill: #36025c; stroke: #ffffff; stroke-width: 0.5; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_102">
+    <path d="M 438.177462 109.298367 
+C 438.02811 109.30292 437.878796 109.308642 437.729533 109.315534 
+C 437.58027 109.322425 437.431064 109.330485 437.281928 109.339713 
+L 439.05 137.917069 
+z
+" style="fill: #36025c; stroke: #ffffff; stroke-width: 0.5; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_103">
+    <path d="M 439.049987 109.285069 
+C 438.904543 109.285069 438.759101 109.286177 438.613674 109.288394 
+C 438.468247 109.29061 438.322838 109.293935 438.177462 109.298367 
+L 439.05 137.917069 
+z
+" style="fill: #36025c; stroke: #ffffff; stroke-width: 0.5; stroke-linejoin: miter"/>
+   </g>
+   <g id="matplotlib.axis_23"/>
+   <g id="matplotlib.axis_24"/>
+   <g id="text_12">
+    <!-- Fish 17 (98%) -->
+    <g transform="translate(416.682813 100.653788) scale(0.07 -0.07)">
+     <use xlink:href="#Arial-BoldMT-46"/>
+     <use xlink:href="#Arial-BoldMT-69" transform="translate(61.083984 0)"/>
+     <use xlink:href="#Arial-BoldMT-73" transform="translate(88.867188 0)"/>
+     <use xlink:href="#Arial-BoldMT-68" transform="translate(144.482422 0)"/>
+     <use xlink:href="#Arial-BoldMT-20" transform="translate(205.566406 0)"/>
+     <use xlink:href="#Arial-BoldMT-31" transform="translate(233.349609 0)"/>
+     <use xlink:href="#Arial-BoldMT-37" transform="translate(288.964844 0)"/>
+     <use xlink:href="#Arial-BoldMT-20" transform="translate(344.580078 0)"/>
+     <use xlink:href="#Arial-BoldMT-28" transform="translate(372.363281 0)"/>
+     <use xlink:href="#Arial-BoldMT-39" transform="translate(405.664062 0)"/>
+     <use xlink:href="#Arial-BoldMT-38" transform="translate(461.279297 0)"/>
+     <use xlink:href="#Arial-BoldMT-25" transform="translate(516.894531 0)"/>
+     <use xlink:href="#Arial-BoldMT-29" transform="translate(605.810547 0)"/>
+    </g>
+   </g>
+  </g>
+  <g id="axes_13">
+   <g id="patch_104">
+    <path d="M 15.635153 217.981745 
+C 14.889896 220.854924 14.595944 223.826595 14.763843 226.790102 
+C 14.931743 229.753609 15.559463 232.673068 16.624474 235.443685 
+C 17.689484 238.214301 19.178887 240.802529 21.039227 243.11547 
+C 22.899566 245.428412 25.108311 247.43806 27.586189 249.072283 
+C 30.064066 250.706507 32.781069 251.945514 35.639678 252.744837 
+C 38.498287 253.544161 41.463887 253.894122 44.430034 253.782155 
+C 47.396181 253.670188 50.326959 253.097653 53.117173 252.085096 
+C 55.907388 251.07254 58.523249 249.632227 60.870874 247.81585 
+C 63.218499 245.999473 65.269453 243.829031 66.950129 241.382421 
+C 68.630804 238.935812 69.920843 236.242668 70.773951 233.399646 
+C 71.627058 230.556624 72.032898 227.598149 71.976906 224.630418 
+C 71.920912 221.662687 71.403765 218.721634 70.444024 215.912815 
+C 69.484283 213.103996 68.093568 210.461423 66.321799 208.079953 
+C 64.550031 205.698483 62.418663 203.606949 60.004194 201.880421 
+C 57.589724 200.153893 54.921394 198.813278 52.094971 197.906693 
+C 49.268547 197.000107 46.318258 196.538532 43.349999 196.538532 
+L 43.35 225.170532 
+z
+" style="fill: #d7c9f2; fill-opacity: 0.54902; stroke: #ffffff; stroke-width: 0.5; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_105">
+    <path d="M 23.386949 204.645717 
+C 21.518078 206.463436 19.906201 208.527922 18.596053 210.781873 
+C 17.285904 213.035825 16.289722 215.458192 15.635153 217.981745 
+L 43.35 225.170532 
+z
+" style="fill: #d7c9f2; fill-opacity: 0.54902; stroke: #ffffff; stroke-width: 0.5; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_106">
+    <path d="M 33.589657 198.253491 
+C 31.687263 198.943314 29.863352 199.832878 28.148517 200.907261 
+C 26.433682 201.981644 24.837564 203.234804 23.386949 204.645717 
+L 43.35 225.170532 
+z
+" style="fill: #36025c; stroke: #ffffff; stroke-width: 0.5; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_107">
+    <path d="M 40.419461 196.6889 
+C 39.254524 196.808763 38.098044 196.999983 36.956525 197.261485 
+C 35.815007 197.522988 34.690601 197.85428 33.589657 198.253491 
+L 43.35 225.170532 
+z
+" style="fill: #36025c; stroke: #ffffff; stroke-width: 0.5; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_108">
+    <path d="M 42.187675 196.562134 
+C 41.892406 196.57413 41.597342 196.590697 41.302587 196.611829 
+C 41.007831 196.63296 40.713421 196.658654 40.419461 196.6889 
+L 43.35 225.170532 
+z
+" style="fill: #36025c; stroke: #ffffff; stroke-width: 0.5; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_109">
+    <path d="M 43.350014 196.538532 
+C 43.156236 196.538532 42.962469 196.5405 42.768731 196.544433 
+C 42.574993 196.548367 42.381293 196.554268 42.187675 196.562134 
+L 43.35 225.170532 
+z
+" style="fill: #36025c; stroke: #ffffff; stroke-width: 0.5; stroke-linejoin: miter"/>
+   </g>
+   <g id="matplotlib.axis_25"/>
+   <g id="matplotlib.axis_26"/>
+   <g id="text_13">
+    <!-- Fish 18 (12%) -->
+    <g transform="translate(20.982813 187.907251) scale(0.07 -0.07)">
+     <use xlink:href="#Arial-BoldMT-46"/>
+     <use xlink:href="#Arial-BoldMT-69" transform="translate(61.083984 0)"/>
+     <use xlink:href="#Arial-BoldMT-73" transform="translate(88.867188 0)"/>
+     <use xlink:href="#Arial-BoldMT-68" transform="translate(144.482422 0)"/>
+     <use xlink:href="#Arial-BoldMT-20" transform="translate(205.566406 0)"/>
+     <use xlink:href="#Arial-BoldMT-31" transform="translate(233.349609 0)"/>
+     <use xlink:href="#Arial-BoldMT-38" transform="translate(288.964844 0)"/>
+     <use xlink:href="#Arial-BoldMT-20" transform="translate(344.580078 0)"/>
+     <use xlink:href="#Arial-BoldMT-28" transform="translate(372.363281 0)"/>
+     <use xlink:href="#Arial-BoldMT-31" transform="translate(405.664062 0)"/>
+     <use xlink:href="#Arial-BoldMT-32" transform="translate(461.279297 0)"/>
+     <use xlink:href="#Arial-BoldMT-25" transform="translate(516.894531 0)"/>
+     <use xlink:href="#Arial-BoldMT-29" transform="translate(605.810547 0)"/>
+    </g>
+   </g>
+  </g>
+  <g id="axes_14">
+   <g id="patch_110">
+    <path d="M 117.349973 253.337384 
+C 121.262795 254.051416 125.281811 253.942343 129.150147 253.017144 
+C 133.018482 252.091945 136.651928 250.370755 139.818245 247.963587 
+C 142.984562 245.556419 145.614822 242.515677 147.540915 239.035708 
+C 149.467007 235.555738 150.647002 231.712298 151.005477 227.751047 
+C 151.363952 223.789795 150.893101 219.796962 149.623025 216.027755 
+C 148.352949 212.258548 146.311295 208.795022 143.628554 205.858542 
+C 140.945813 202.922061 137.680385 200.576556 134.040985 198.971941 
+C 130.401585 197.367325 126.467437 196.538532 122.489999 196.538532 
+L 122.49 225.170532 
+z
+" style="fill: #36025c; stroke: #ffffff; stroke-width: 0.5; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_111">
+    <path d="M 97.299325 211.560927 
+C 95.150912 215.537529 93.974341 219.966914 93.866197 224.48547 
+C 93.758051 229.004026 94.721381 233.484632 96.677099 237.559459 
+C 98.632816 241.634285 101.525898 245.188696 105.118853 247.930907 
+C 108.711808 250.673119 112.903551 252.52598 117.349973 253.337384 
+L 122.49 225.170532 
+z
+" style="fill: #36025c; stroke: #ffffff; stroke-width: 0.5; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_112">
+    <path d="M 119.653907 196.67934 
+C 114.995299 197.143071 110.520753 198.742399 106.623673 201.33671 
+C 102.726594 203.93102 99.524638 207.441987 97.299325 211.560927 
+L 122.49 225.170532 
+z
+" style="fill: #d7c9f2; fill-opacity: 0.54902; stroke: #ffffff; stroke-width: 0.5; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_113">
+    <path d="M 121.402571 196.559189 
+C 121.110599 196.570285 120.818807 196.585852 120.527312 196.605881 
+C 120.235817 196.62591 119.944652 196.650398 119.653907 196.67934 
+L 122.49 225.170532 
+z
+" style="fill: #36025c; stroke: #ffffff; stroke-width: 0.5; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_114">
+    <path d="M 122.49 196.538532 
+C 122.308717 196.538532 122.127438 196.540252 121.946187 196.543696 
+C 121.764937 196.54714 121.583723 196.552304 121.402571 196.559189 
+L 122.49 225.170532 
+z
+" style="fill: #36025c; stroke: #ffffff; stroke-width: 0.5; stroke-linejoin: miter"/>
+   </g>
+   <g id="matplotlib.axis_27"/>
+   <g id="matplotlib.axis_28"/>
+   <g id="text_14">
+    <!-- Fish 21 (84%) -->
+    <g transform="translate(100.122813 187.907251) scale(0.07 -0.07)">
+     <use xlink:href="#Arial-BoldMT-46"/>
+     <use xlink:href="#Arial-BoldMT-69" transform="translate(61.083984 0)"/>
+     <use xlink:href="#Arial-BoldMT-73" transform="translate(88.867188 0)"/>
+     <use xlink:href="#Arial-BoldMT-68" transform="translate(144.482422 0)"/>
+     <use xlink:href="#Arial-BoldMT-20" transform="translate(205.566406 0)"/>
+     <use xlink:href="#Arial-BoldMT-32" transform="translate(233.349609 0)"/>
+     <use xlink:href="#Arial-BoldMT-31" transform="translate(288.964844 0)"/>
+     <use xlink:href="#Arial-BoldMT-20" transform="translate(344.580078 0)"/>
+     <use xlink:href="#Arial-BoldMT-28" transform="translate(372.363281 0)"/>
+     <use xlink:href="#Arial-BoldMT-38" transform="translate(405.664062 0)"/>
+     <use xlink:href="#Arial-BoldMT-34" transform="translate(461.279297 0)"/>
+     <use xlink:href="#Arial-BoldMT-25" transform="translate(516.894531 0)"/>
+     <use xlink:href="#Arial-BoldMT-29" transform="translate(605.810547 0)"/>
+    </g>
+   </g>
+  </g>
+  <g id="axes_15">
+   <g id="patch_115">
+    <path d="M 181.41763 204.891195 
+C 179.088487 207.212645 177.176599 209.918103 175.765989 212.888661 
+C 174.35538 215.859219 173.467023 219.05071 173.139962 222.322874 
+C 172.812899 225.595039 173.051997 228.899222 173.846742 232.090211 
+C 174.641487 235.281199 175.980069 238.311553 177.803651 241.04808 
+C 179.627234 243.784606 181.908709 246.186625 184.547804 248.148565 
+C 187.186899 250.110505 190.144374 251.603197 193.290254 252.561042 
+C 196.436135 253.518886 199.723643 253.927639 203.0083 253.769338 
+C 206.292956 253.611036 209.525928 252.888031 212.565117 251.632102 
+C 215.604305 250.376172 218.404532 248.605985 220.842724 246.399348 
+C 223.280916 244.192711 225.320822 241.582428 226.872794 238.683219 
+C 228.424766 235.78401 229.465726 232.638983 229.949926 229.386356 
+C 230.434124 226.13373 230.354365 222.821861 229.714151 219.596314 
+C 229.073935 216.370766 227.882783 213.27949 226.193045 210.458351 
+C 224.503308 207.637213 222.340116 205.128161 219.798525 203.041453 
+C 217.256935 200.954746 214.374741 199.321411 211.278617 198.213239 
+C 208.182492 197.105067 204.918468 196.538532 201.629999 196.538532 
+L 201.63 225.170532 
+z
+" style="fill: #36025c; stroke: #ffffff; stroke-width: 0.5; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_116">
+    <path d="M 200.34813 196.567242 
+C 196.815366 196.725565 193.342318 197.537016 190.105135 198.96044 
+C 186.867953 200.383864 183.922311 202.394785 181.41763 204.891195 
+L 201.63 225.170532 
+z
+" style="fill: #d7c9f2; fill-opacity: 0.54902; stroke: #ffffff; stroke-width: 0.5; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_117">
+    <path d="M 201.251146 196.541039 
+C 201.100586 196.54303 200.950045 196.546212 200.799535 196.550579 
+C 200.649025 196.554946 200.498552 196.560501 200.34813 196.567242 
+L 201.63 225.170532 
+z
+" style="fill: #d7c9f2; fill-opacity: 0.54902; stroke: #ffffff; stroke-width: 0.5; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_118">
+    <path d="M 201.63 196.538532 
+C 201.566856 196.538532 201.503712 196.53874 201.440569 196.539158 
+C 201.377426 196.539576 201.314285 196.540203 201.251146 196.541039 
+L 201.63 225.170532 
+z
+" style="fill: #36025c; stroke: #ffffff; stroke-width: 0.5; stroke-linejoin: miter"/>
+   </g>
+   <g id="matplotlib.axis_29"/>
+   <g id="matplotlib.axis_30"/>
+   <g id="text_15">
+    <!-- Fish 23 (88%) -->
+    <g transform="translate(179.262813 187.907251) scale(0.07 -0.07)">
+     <use xlink:href="#Arial-BoldMT-46"/>
+     <use xlink:href="#Arial-BoldMT-69" transform="translate(61.083984 0)"/>
+     <use xlink:href="#Arial-BoldMT-73" transform="translate(88.867188 0)"/>
+     <use xlink:href="#Arial-BoldMT-68" transform="translate(144.482422 0)"/>
+     <use xlink:href="#Arial-BoldMT-20" transform="translate(205.566406 0)"/>
+     <use xlink:href="#Arial-BoldMT-32" transform="translate(233.349609 0)"/>
+     <use xlink:href="#Arial-BoldMT-33" transform="translate(288.964844 0)"/>
+     <use xlink:href="#Arial-BoldMT-20" transform="translate(344.580078 0)"/>
+     <use xlink:href="#Arial-BoldMT-28" transform="translate(372.363281 0)"/>
+     <use xlink:href="#Arial-BoldMT-38" transform="translate(405.664062 0)"/>
+     <use xlink:href="#Arial-BoldMT-38" transform="translate(461.279297 0)"/>
+     <use xlink:href="#Arial-BoldMT-25" transform="translate(516.894531 0)"/>
+     <use xlink:href="#Arial-BoldMT-29" transform="translate(605.810547 0)"/>
+    </g>
+   </g>
+  </g>
+  <g id="axes_16">
+   <g id="patch_119">
+    <path d="M 300.25243 246.152103 
+C 304.467852 242.237875 307.407396 237.142644 308.685893 231.534043 
+C 309.96439 225.925442 309.523452 220.059621 307.420851 214.705181 
+C 305.318249 209.350741 301.650018 204.752226 296.896802 201.512179 
+C 292.143586 198.272132 286.522474 196.538532 280.769999 196.538532 
+L 280.77 225.170532 
+z
+" style="fill: #36025c; stroke: #ffffff; stroke-width: 0.5; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_120">
+    <path d="M 252.762913 231.119858 
+C 253.814953 236.072454 256.162086 240.658495 259.563994 244.408432 
+C 262.965902 248.158368 267.302378 250.939691 272.129426 252.467636 
+C 276.956473 253.995579 282.103525 254.216154 287.043593 253.106771 
+C 291.98366 251.997389 296.542182 249.597252 300.25243 246.152103 
+L 280.77 225.170532 
+z
+" style="fill: #36025c; stroke: #ffffff; stroke-width: 0.5; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_121">
+    <path d="M 260.517601 204.93117 
+C 257.146129 208.304813 254.670462 212.468021 253.316288 217.041259 
+C 251.962114 221.614497 251.771873 226.454439 252.762913 231.119858 
+L 280.77 225.170532 
+z
+" style="fill: #36025c; stroke: #ffffff; stroke-width: 0.5; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_122">
+    <path d="M 269.164754 198.995932 
+C 267.556557 199.708972 266.017494 200.568707 264.567098 201.564232 
+C 263.116701 202.559757 261.761131 203.68684 260.517601 204.93117 
+L 280.77 225.170532 
+z
+" style="fill: #36025c; stroke: #ffffff; stroke-width: 0.5; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_123">
+    <path d="M 273.546676 197.464666 
+C 272.797146 197.660079 272.055855 197.885828 271.324633 198.141354 
+C 270.59341 198.396879 269.872858 198.681974 269.164754 198.995932 
+L 280.77 225.170532 
+z
+" style="fill: #36025c; stroke: #ffffff; stroke-width: 0.5; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_124">
+    <path d="M 277.971596 196.675614 
+C 277.225199 196.748916 276.481976 196.851514 275.743635 196.983175 
+C 275.005294 197.114835 274.272404 197.275459 273.546676 197.464666 
+L 280.77 225.170532 
+z
+" style="fill: #36025c; stroke: #ffffff; stroke-width: 0.5; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_125">
+    <path d="M 280.77 196.538532 
+C 280.30283 196.538532 279.835738 196.549966 279.369127 196.572823 
+C 278.902517 196.595679 278.436529 196.629954 277.971596 196.675614 
+L 280.77 225.170532 
+z
+" style="fill: #36025c; stroke: #ffffff; stroke-width: 0.5; stroke-linejoin: miter"/>
+   </g>
+   <g id="matplotlib.axis_31"/>
+   <g id="matplotlib.axis_32"/>
+   <g id="text_16">
+    <!-- Fish 26 (100%) -->
+    <g transform="translate(256.456484 187.907251) scale(0.07 -0.07)">
+     <use xlink:href="#Arial-BoldMT-46"/>
+     <use xlink:href="#Arial-BoldMT-69" transform="translate(61.083984 0)"/>
+     <use xlink:href="#Arial-BoldMT-73" transform="translate(88.867188 0)"/>
+     <use xlink:href="#Arial-BoldMT-68" transform="translate(144.482422 0)"/>
+     <use xlink:href="#Arial-BoldMT-20" transform="translate(205.566406 0)"/>
+     <use xlink:href="#Arial-BoldMT-32" transform="translate(233.349609 0)"/>
+     <use xlink:href="#Arial-BoldMT-36" transform="translate(288.964844 0)"/>
+     <use xlink:href="#Arial-BoldMT-20" transform="translate(344.580078 0)"/>
+     <use xlink:href="#Arial-BoldMT-28" transform="translate(372.363281 0)"/>
+     <use xlink:href="#Arial-BoldMT-31" transform="translate(405.664062 0)"/>
+     <use xlink:href="#Arial-BoldMT-30" transform="translate(461.279297 0)"/>
+     <use xlink:href="#Arial-BoldMT-30" transform="translate(516.894531 0)"/>
+     <use xlink:href="#Arial-BoldMT-25" transform="translate(572.509766 0)"/>
+     <use xlink:href="#Arial-BoldMT-29" transform="translate(661.425781 0)"/>
+    </g>
+   </g>
+  </g>
+  <g id="axes_17">
+   <g id="patch_126">
+    <path d="M 332.324663 232.841295 
+C 333.753178 237.978469 336.58872 242.615889 340.510342 246.228657 
+C 344.431964 249.841426 349.285903 252.287892 354.522762 253.291149 
+C 359.75962 254.294405 365.174065 253.815116 370.153255 251.907532 
+C 375.132444 249.999947 379.481151 246.738856 382.707158 242.493377 
+C 385.933165 238.247898 387.909986 233.184487 388.413868 227.876256 
+C 388.917752 222.568025 387.928941 217.223108 385.559359 212.446467 
+C 383.189778 207.669826 379.532325 203.648754 375.000988 200.838383 
+C 370.469649 198.028012 365.242091 196.538532 359.909999 196.538532 
+L 359.91 225.170532 
+z
+" style="fill: #36025c; stroke: #ffffff; stroke-width: 0.5; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_127">
+    <path d="M 331.485574 221.729107 
+C 331.260722 223.586269 331.218423 225.461001 331.35928 227.326415 
+C 331.50014 229.191828 331.823479 231.038957 332.324663 232.841295 
+L 359.91 225.170532 
+z
+" style="fill: #36025c; stroke: #ffffff; stroke-width: 0.5; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_128">
+    <path d="M 333.827599 213.359527 
+C 333.227463 214.684814 332.729213 216.053915 332.337171 217.454933 
+C 331.945129 218.855951 331.660437 220.284818 331.485574 221.729107 
+L 359.91 225.170532 
+z
+" style="fill: #36025c; stroke: #ffffff; stroke-width: 0.5; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_129">
+    <path d="M 338.260176 206.433495 
+C 337.359808 207.47383 336.535597 208.57771 335.793951 209.736555 
+C 335.052305 210.895399 334.395151 212.106193 333.827599 213.359527 
+L 359.91 225.170532 
+z
+" style="fill: #36025c; stroke: #ffffff; stroke-width: 0.5; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_130">
+    <path d="M 343.772919 201.519188 
+C 342.752977 202.215085 341.779115 202.976231 340.857437 203.797856 
+C 339.935759 204.619482 339.068195 205.499866 338.260176 206.433495 
+L 359.91 225.170532 
+z
+" style="fill: #d7c9f2; fill-opacity: 0.54902; stroke: #ffffff; stroke-width: 0.5; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_131">
+    <path d="M 346.149887 200.061755 
+C 345.742188 200.285183 345.339985 200.518509 344.943647 200.761523 
+C 344.54731 201.004536 344.156954 201.257165 343.772919 201.519188 
+L 359.91 225.170532 
+z
+" style="fill: #36025c; stroke: #ffffff; stroke-width: 0.5; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_132">
+    <path d="M 348.628801 198.854644 
+C 348.206257 199.035783 347.788131 199.227072 347.374799 199.428345 
+C 346.961467 199.629618 346.553049 199.840815 346.149887 200.061755 
+L 359.91 225.170532 
+z
+" style="fill: #36025c; stroke: #ffffff; stroke-width: 0.5; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_133">
+    <path d="M 350.913486 197.988659 
+C 350.526762 198.116656 350.142814 198.25289 349.761903 198.39727 
+C 349.380991 198.54165 349.003205 198.694144 348.628801 198.854644 
+L 359.91 225.170532 
+z
+" style="fill: #36025c; stroke: #ffffff; stroke-width: 0.5; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_134">
+    <path d="M 352.962204 197.394291 
+C 352.617208 197.480587 352.27385 197.573302 351.932308 197.672388 
+C 351.590766 197.771475 351.2511 197.876918 350.913486 197.988659 
+L 359.91 225.170532 
+z
+" style="fill: #36025c; stroke: #ffffff; stroke-width: 0.5; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_135">
+    <path d="M 354.728646 197.011253 
+C 354.432315 197.065779 354.136863 197.124978 353.842401 197.18883 
+C 353.54794 197.252683 353.254504 197.321177 352.962204 197.394291 
+L 359.91 225.170532 
+z
+" style="fill: #36025c; stroke: #ffffff; stroke-width: 0.5; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_136">
+    <path d="M 356.492638 196.743203 
+C 356.197336 196.778702 355.902606 196.8188 355.608553 196.863484 
+C 355.314501 196.908168 355.021163 196.957429 354.728646 197.011253 
+L 359.91 225.170532 
+z
+" style="fill: #36025c; stroke: #ffffff; stroke-width: 0.5; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_137">
+    <path d="M 358.211824 196.588936 
+C 357.9246 196.606002 357.637642 196.627396 357.351062 196.653111 
+C 357.064482 196.678826 356.778312 196.708861 356.492638 196.743203 
+L 359.91 225.170532 
+z
+" style="fill: #36025c; stroke: #ffffff; stroke-width: 0.5; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_138">
+    <path d="M 359.17687 196.54792 
+C 359.015928 196.552043 358.855024 196.557521 358.694174 196.564358 
+C 358.533325 196.571194 358.372536 196.579388 358.211824 196.588936 
+L 359.91 225.170532 
+z
+" style="fill: #36025c; stroke: #ffffff; stroke-width: 0.5; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_139">
+    <path d="M 359.91 196.538532 
+C 359.787798 196.538532 359.665597 196.539313 359.543405 196.540878 
+C 359.421213 196.542443 359.299032 196.544792 359.17687 196.54792 
+L 359.91 225.170532 
+z
+" style="fill: #36025c; stroke: #ffffff; stroke-width: 0.5; stroke-linejoin: miter"/>
+   </g>
+   <g id="matplotlib.axis_33"/>
+   <g id="matplotlib.axis_34"/>
+   <g id="text_17">
+    <!-- Fish 35 (96%) -->
+    <g transform="translate(337.542813 187.907251) scale(0.07 -0.07)">
+     <use xlink:href="#Arial-BoldMT-46"/>
+     <use xlink:href="#Arial-BoldMT-69" transform="translate(61.083984 0)"/>
+     <use xlink:href="#Arial-BoldMT-73" transform="translate(88.867188 0)"/>
+     <use xlink:href="#Arial-BoldMT-68" transform="translate(144.482422 0)"/>
+     <use xlink:href="#Arial-BoldMT-20" transform="translate(205.566406 0)"/>
+     <use xlink:href="#Arial-BoldMT-33" transform="translate(233.349609 0)"/>
+     <use xlink:href="#Arial-BoldMT-35" transform="translate(288.964844 0)"/>
+     <use xlink:href="#Arial-BoldMT-20" transform="translate(344.580078 0)"/>
+     <use xlink:href="#Arial-BoldMT-28" transform="translate(372.363281 0)"/>
+     <use xlink:href="#Arial-BoldMT-39" transform="translate(405.664062 0)"/>
+     <use xlink:href="#Arial-BoldMT-36" transform="translate(461.279297 0)"/>
+     <use xlink:href="#Arial-BoldMT-25" transform="translate(516.894531 0)"/>
+     <use xlink:href="#Arial-BoldMT-29" transform="translate(605.810547 0)"/>
+    </g>
+   </g>
+  </g>
+  <g id="axes_18">
+   <g id="patch_140">
+    <path d="M 453.696096 249.773037 
+C 459.082839 246.56626 463.270142 241.677397 465.611013 235.861836 
+C 467.951885 230.046274 468.319217 223.619803 466.656253 217.575385 
+C 464.993287 211.530968 461.390325 206.196821 456.404064 202.39713 
+C 451.417804 198.597439 445.319005 196.538532 439.049999 196.538532 
+L 439.05 225.170532 
+z
+" style="fill: #36025c; stroke: #ffffff; stroke-width: 0.5; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_141">
+    <path d="M 410.441778 224.003866 
+C 410.231646 229.156556 411.417464 234.271561 413.87341 238.806173 
+C 416.329356 243.340784 419.965389 247.128751 424.395723 249.768165 
+C 428.826057 252.407579 433.888264 253.801673 439.045237 253.802532 
+C 444.202211 253.803389 449.264884 252.410979 453.696096 249.773037 
+L 439.05 225.170532 
+z
+" style="fill: #36025c; stroke: #ffffff; stroke-width: 0.5; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_142">
+    <path d="M 413.500041 212.248029 
+C 412.578441 214.070186 411.85441 215.985714 411.340308 217.961897 
+C 410.826207 219.93808 410.524982 221.963601 410.441778 224.003866 
+L 439.05 225.170532 
+z
+" style="fill: #36025c; stroke: #ffffff; stroke-width: 0.5; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_143">
+    <path d="M 417.407728 206.424773 
+C 416.640324 207.310753 415.928051 208.243017 415.274926 209.216308 
+C 414.621802 210.189599 414.029055 211.202079 413.500041 212.248029 
+L 439.05 225.170532 
+z
+" style="fill: #36025c; stroke: #ffffff; stroke-width: 0.5; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_144">
+    <path d="M 422.495845 201.80921 
+C 421.559128 202.47298 420.66318 203.192491 419.812858 203.96384 
+C 418.962536 204.735189 418.159374 205.556985 417.407728 206.424773 
+L 439.05 225.170532 
+z
+" style="fill: #36025c; stroke: #ffffff; stroke-width: 0.5; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_145">
+    <path d="M 427.897003 198.800055 
+C 426.945837 199.202337 426.017137 199.655782 425.114966 200.15841 
+C 424.212794 200.661038 423.338474 201.212111 422.495845 201.80921 
+L 439.05 225.170532 
+z
+" style="fill: #36025c; stroke: #ffffff; stroke-width: 0.5; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_146">
+    <path d="M 431.72616 197.491067 
+C 431.073534 197.66375 430.427225 197.859454 429.788434 198.077824 
+C 429.149642 198.296193 428.518766 198.53709 427.897003 198.800055 
+L 439.05 225.170532 
+z
+" style="fill: #36025c; stroke: #ffffff; stroke-width: 0.5; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_147">
+    <path d="M 435.083458 196.814615 
+C 434.517787 196.893744 433.954605 196.989783 433.394679 197.102601 
+C 432.834754 197.215419 432.278336 197.344965 431.72616 197.491067 
+L 439.05 225.170532 
+z
+" style="fill: #36025c; stroke: #ffffff; stroke-width: 0.5; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_148">
+    <path d="M 437.455809 196.582948 
+C 437.059024 196.605074 436.662742 196.63546 436.267222 196.674084 
+C 435.871701 196.712707 435.477028 196.75956 435.083458 196.814615 
+L 439.05 225.170532 
+z
+" style="fill: #36025c; stroke: #ffffff; stroke-width: 0.5; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_149">
+    <path d="M 439.049987 196.538532 
+C 438.784149 196.538532 438.518324 196.542235 438.252589 196.549638 
+C 437.986854 196.557042 437.721235 196.568146 437.455809 196.582948 
+L 439.05 225.170532 
+z
+" style="fill: #36025c; stroke: #ffffff; stroke-width: 0.5; stroke-linejoin: miter"/>
+   </g>
+   <g id="matplotlib.axis_35"/>
+   <g id="matplotlib.axis_36"/>
+   <g id="text_18">
+    <!-- Fish 37 (100%) -->
+    <g transform="translate(414.736484 187.907251) scale(0.07 -0.07)">
+     <use xlink:href="#Arial-BoldMT-46"/>
+     <use xlink:href="#Arial-BoldMT-69" transform="translate(61.083984 0)"/>
+     <use xlink:href="#Arial-BoldMT-73" transform="translate(88.867188 0)"/>
+     <use xlink:href="#Arial-BoldMT-68" transform="translate(144.482422 0)"/>
+     <use xlink:href="#Arial-BoldMT-20" transform="translate(205.566406 0)"/>
+     <use xlink:href="#Arial-BoldMT-33" transform="translate(233.349609 0)"/>
+     <use xlink:href="#Arial-BoldMT-37" transform="translate(288.964844 0)"/>
+     <use xlink:href="#Arial-BoldMT-20" transform="translate(344.580078 0)"/>
+     <use xlink:href="#Arial-BoldMT-28" transform="translate(372.363281 0)"/>
+     <use xlink:href="#Arial-BoldMT-31" transform="translate(405.664062 0)"/>
+     <use xlink:href="#Arial-BoldMT-30" transform="translate(461.279297 0)"/>
+     <use xlink:href="#Arial-BoldMT-30" transform="translate(516.894531 0)"/>
+     <use xlink:href="#Arial-BoldMT-25" transform="translate(572.509766 0)"/>
+     <use xlink:href="#Arial-BoldMT-29" transform="translate(661.425781 0)"/>
+    </g>
+   </g>
+  </g>
+  <g id="axes_19">
+   <g id="patch_150">
+    <path d="M 71.977792 312.914886 
+C 72.042963 309.114219 71.350614 305.338348 69.941227 301.808059 
+C 68.53184 298.27777 66.433431 295.063236 63.7687 292.352421 
+C 61.103968 289.641606 57.925884 287.48839 54.420278 286.018685 
+C 50.914671 284.548979 47.151224 283.791995 43.349999 283.791995 
+L 43.35 312.423995 
+z
+" style="fill: #36025c; stroke: #ffffff; stroke-width: 0.5; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_151">
+    <path d="M 50.202568 340.223882 
+C 56.335302 338.712186 61.798768 335.212809 65.736587 330.274263 
+C 69.674407 325.335717 71.869499 319.230259 71.977792 312.914886 
+L 43.35 312.423995 
+z
+" style="fill: #36025c; stroke: #ffffff; stroke-width: 0.5; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_152">
+    <path d="M 19.767371 328.661329 
+C 23.065246 333.451067 27.745372 337.12429 33.181573 339.189542 
+C 38.617775 341.254793 44.556288 341.615667 50.202568 340.223882 
+L 43.35 312.423995 
+z
+" style="fill: #36025c; stroke: #ffffff; stroke-width: 0.5; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_153">
+    <path d="M 14.768594 314.125357 
+C 14.922954 316.718473 15.429499 319.278558 16.274267 321.735068 
+C 17.119036 324.191578 18.294201 326.52174 19.767371 328.661329 
+L 43.35 312.423995 
+z
+" style="fill: #36025c; stroke: #ffffff; stroke-width: 0.5; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_154">
+    <path d="M 17.149747 300.876779 
+C 16.235342 302.951535 15.570609 305.127578 15.169532 307.359144 
+C 14.768456 309.59071 14.633865 311.862042 14.768594 314.125357 
+L 43.35 312.423995 
+z
+" style="fill: #36025c; stroke: #ffffff; stroke-width: 0.5; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_155">
+    <path d="M 20.739691 294.857966 
+C 20.021072 295.782945 19.359888 296.751152 18.759873 297.757124 
+C 18.159858 298.763097 17.622139 299.804937 17.149747 300.876779 
+L 43.35 312.423995 
+z
+" style="fill: #36025c; stroke: #ffffff; stroke-width: 0.5; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_156">
+    <path d="M 24.20538 291.133741 
+C 23.57397 291.701518 22.968129 292.297103 22.389656 292.918729 
+C 21.811183 293.540354 21.260651 294.187407 20.739691 294.857966 
+L 43.35 312.423995 
+z
+" style="fill: #36025c; stroke: #ffffff; stroke-width: 0.5; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_157">
+    <path d="M 27.884299 288.328278 
+C 27.234576 288.745299 26.601991 289.188426 25.988084 289.656578 
+C 25.374177 290.124729 24.779456 290.61752 24.20538 291.133741 
+L 43.35 312.423995 
+z
+" style="fill: #36025c; stroke: #ffffff; stroke-width: 0.5; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_158">
+    <path d="M 31.757223 286.243869 
+C 31.086217 286.540996 30.426876 286.863815 29.780673 287.211602 
+C 29.134469 287.559388 28.501882 287.931886 27.884299 288.328278 
+L 43.35 312.423995 
+z
+" style="fill: #36025c; stroke: #ffffff; stroke-width: 0.5; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_159">
+    <path d="M 35.826566 284.798112 
+C 35.131359 284.987439 34.443546 285.202942 33.764598 285.444159 
+C 33.085649 285.685377 32.416046 285.952136 31.757223 286.243869 
+L 43.35 312.423995 
+z
+" style="fill: #36025c; stroke: #ffffff; stroke-width: 0.5; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_160">
+    <path d="M 39.970745 283.992111 
+C 39.27131 284.075241 38.575188 284.184151 37.883786 284.318622 
+C 37.192383 284.453094 36.506172 284.613033 35.826566 284.798112 
+L 43.35 312.423995 
+z
+" style="fill: #36025c; stroke: #ffffff; stroke-width: 0.5; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_161">
+    <path d="M 43.35 283.791995 
+C 42.785434 283.791995 42.220991 283.808694 41.657412 283.842068 
+C 41.093833 283.875442 40.531365 283.925478 39.970745 283.992111 
+L 43.35 312.423995 
+z
+" style="fill: #36025c; stroke: #ffffff; stroke-width: 0.5; stroke-linejoin: miter"/>
+   </g>
+   <g id="matplotlib.axis_37"/>
+   <g id="matplotlib.axis_38"/>
+   <g id="text_19">
+    <!-- Fish 38 (100%) -->
+    <g transform="translate(19.036484 275.160713) scale(0.07 -0.07)">
+     <use xlink:href="#Arial-BoldMT-46"/>
+     <use xlink:href="#Arial-BoldMT-69" transform="translate(61.083984 0)"/>
+     <use xlink:href="#Arial-BoldMT-73" transform="translate(88.867188 0)"/>
+     <use xlink:href="#Arial-BoldMT-68" transform="translate(144.482422 0)"/>
+     <use xlink:href="#Arial-BoldMT-20" transform="translate(205.566406 0)"/>
+     <use xlink:href="#Arial-BoldMT-33" transform="translate(233.349609 0)"/>
+     <use xlink:href="#Arial-BoldMT-38" transform="translate(288.964844 0)"/>
+     <use xlink:href="#Arial-BoldMT-20" transform="translate(344.580078 0)"/>
+     <use xlink:href="#Arial-BoldMT-28" transform="translate(372.363281 0)"/>
+     <use xlink:href="#Arial-BoldMT-31" transform="translate(405.664062 0)"/>
+     <use xlink:href="#Arial-BoldMT-30" transform="translate(461.279297 0)"/>
+     <use xlink:href="#Arial-BoldMT-30" transform="translate(516.894531 0)"/>
+     <use xlink:href="#Arial-BoldMT-25" transform="translate(572.509766 0)"/>
+     <use xlink:href="#Arial-BoldMT-29" transform="translate(661.425781 0)"/>
+    </g>
+   </g>
+  </g>
+  <g id="axes_20">
+   <g id="patch_162">
+    <path d="M 114.863403 340.021575 
+C 118.800753 341.109664 122.925748 341.342642 126.960577 340.704826 
+C 130.995407 340.067008 134.847407 338.57304 138.257158 336.323538 
+C 141.666909 334.074035 144.556102 331.120658 146.730155 327.662313 
+C 148.904208 324.203968 150.313191 320.320074 150.862216 316.272206 
+C 151.411241 312.224339 151.087699 308.105461 149.913377 304.192965 
+C 148.739055 300.280468 146.74092 296.664207 144.053549 293.587733 
+C 141.366177 290.511258 138.051281 288.045219 134.332114 286.355704 
+C 130.612948 284.666189 126.574929 283.791995 122.489999 283.791995 
+L 122.49 312.423995 
+z
+" style="fill: #36025c; stroke: #ffffff; stroke-width: 0.5; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_163">
+    <path d="M 103.035615 291.416417 
+C 99.293894 294.881493 96.54501 299.284129 95.074369 304.167205 
+C 93.60373 309.050282 93.464059 314.238745 94.66986 319.19387 
+C 95.875662 324.148995 98.383706 328.693146 101.933588 332.354508 
+C 105.48347 336.01587 109.947919 338.663179 114.863403 340.021575 
+L 122.49 312.423995 
+z
+" style="fill: #36025c; stroke: #ffffff; stroke-width: 0.5; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_164">
+    <path d="M 113.920079 285.104626 
+C 111.900674 285.738101 109.95772 286.593534 108.126852 287.655236 
+C 106.295984 288.716937 104.588462 289.978379 103.035615 291.416417 
+L 122.49 312.423995 
+z
+" style="fill: #36025c; stroke: #ffffff; stroke-width: 0.5; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_165">
+    <path d="M 119.920673 283.907509 
+C 118.902795 283.99922 117.890557 284.145363 116.888305 284.345312 
+C 115.886054 284.545261 114.895227 284.798728 113.920079 285.104626 
+L 122.49 312.423995 
+z
+" style="fill: #36025c; stroke: #ffffff; stroke-width: 0.5; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_166">
+    <path d="M 121.697597 283.802961 
+C 121.400991 283.811173 121.104523 283.823995 120.808316 283.841423 
+C 120.512108 283.858851 120.216196 283.880883 119.920673 283.907509 
+L 122.49 312.423995 
+z
+" style="fill: #36025c; stroke: #ffffff; stroke-width: 0.5; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_167">
+    <path d="M 122.49 283.791995 
+C 122.357916 283.791995 122.225826 283.792909 122.093754 283.794737 
+C 121.961682 283.796565 121.829631 283.799306 121.697597 283.802961 
+L 122.49 312.423995 
+z
+" style="fill: #36025c; stroke: #ffffff; stroke-width: 0.5; stroke-linejoin: miter"/>
+   </g>
+   <g id="matplotlib.axis_39"/>
+   <g id="matplotlib.axis_40"/>
+   <g id="text_20">
+    <!-- Fish 40 (100%) -->
+    <g transform="translate(98.176484 275.160713) scale(0.07 -0.07)">
+     <use xlink:href="#Arial-BoldMT-46"/>
+     <use xlink:href="#Arial-BoldMT-69" transform="translate(61.083984 0)"/>
+     <use xlink:href="#Arial-BoldMT-73" transform="translate(88.867188 0)"/>
+     <use xlink:href="#Arial-BoldMT-68" transform="translate(144.482422 0)"/>
+     <use xlink:href="#Arial-BoldMT-20" transform="translate(205.566406 0)"/>
+     <use xlink:href="#Arial-BoldMT-34" transform="translate(233.349609 0)"/>
+     <use xlink:href="#Arial-BoldMT-30" transform="translate(288.964844 0)"/>
+     <use xlink:href="#Arial-BoldMT-20" transform="translate(344.580078 0)"/>
+     <use xlink:href="#Arial-BoldMT-28" transform="translate(372.363281 0)"/>
+     <use xlink:href="#Arial-BoldMT-31" transform="translate(405.664062 0)"/>
+     <use xlink:href="#Arial-BoldMT-30" transform="translate(461.279297 0)"/>
+     <use xlink:href="#Arial-BoldMT-30" transform="translate(516.894531 0)"/>
+     <use xlink:href="#Arial-BoldMT-25" transform="translate(572.509766 0)"/>
+     <use xlink:href="#Arial-BoldMT-29" transform="translate(661.425781 0)"/>
+    </g>
+   </g>
+  </g>
+  <g id="axes_21">
+   <g id="patch_168">
+    <path d="M 182.996127 334.162675 
+C 186.500331 337.166393 190.679413 339.27875 195.176014 340.31911 
+C 199.672614 341.359472 204.354804 341.297315 208.822203 340.137956 
+C 213.289602 338.978596 217.411137 336.75605 220.83437 333.660369 
+C 224.257604 330.564689 226.882097 326.686699 228.483429 322.358015 
+C 230.084761 318.029331 230.615945 313.376952 230.031563 308.798714 
+C 229.44718 304.220476 227.764375 299.850704 225.127047 296.063057 
+C 222.489718 292.275412 218.975248 289.181027 214.884157 287.0445 
+C 210.793066 284.907973 206.245382 283.791995 201.629999 283.791995 
+L 201.63 312.423995 
+z
+" style="fill: #36025c; stroke: #ffffff; stroke-width: 0.5; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_169">
+    <path d="M 177.509338 296.997228 
+C 173.790866 302.811278 172.297062 309.778193 173.305009 316.605655 
+C 174.312958 323.433117 177.75623 329.671162 182.996127 334.162675 
+L 201.63 312.423995 
+z
+" style="fill: #36025c; stroke: #ffffff; stroke-width: 0.5; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_170">
+    <path d="M 184.125016 289.766392 
+C 182.82522 290.770598 181.614245 291.88479 180.505495 293.096638 
+C 179.396744 294.308486 178.394324 295.6135 177.509338 296.997228 
+L 201.63 312.423995 
+z
+" style="fill: #36025c; stroke: #ffffff; stroke-width: 0.5; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_171">
+    <path d="M 188.99434 286.73097 
+C 188.134556 287.153806 187.296531 287.619537 186.483442 288.126397 
+C 185.670353 288.633258 184.883224 289.18061 184.125016 289.766392 
+L 201.63 312.423995 
+z
+" style="fill: #36025c; stroke: #ffffff; stroke-width: 0.5; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_172">
+    <path d="M 192.581813 285.25928 
+C 191.968136 285.463688 191.361555 285.688835 190.763128 285.934327 
+C 190.164701 286.17982 189.57477 286.445519 188.99434 286.73097 
+L 201.63 312.423995 
+z
+" style="fill: #36025c; stroke: #ffffff; stroke-width: 0.5; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_173">
+    <path d="M 195.250646 284.511716 
+C 194.800134 284.61468 194.35218 284.728537 193.907178 284.853186 
+C 193.462177 284.977834 193.02026 285.113239 192.581813 285.25928 
+L 201.63 312.423995 
+z
+" style="fill: #36025c; stroke: #ffffff; stroke-width: 0.5; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_174">
+    <path d="M 197.914156 284.034139 
+C 197.466785 284.092694 197.02086 284.161815 196.576756 284.241445 
+C 196.132652 284.321075 195.690492 284.411188 195.250646 284.511716 
+L 201.63 312.423995 
+z
+" style="fill: #36025c; stroke: #ffffff; stroke-width: 0.5; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_175">
+    <path d="M 199.957543 283.840882 
+C 199.61596 283.860868 199.274764 283.886977 198.934117 283.919194 
+C 198.593471 283.951412 198.253429 283.989733 197.914156 284.034139 
+L 201.63 312.423995 
+z
+" style="fill: #36025c; stroke: #ffffff; stroke-width: 0.5; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_176">
+    <path d="M 201.378451 283.7931 
+C 201.141481 283.795182 200.904545 283.800205 200.6677 283.80817 
+C 200.430855 283.816134 200.194117 283.82704 199.957543 283.840882 
+L 201.63 312.423995 
+z
+" style="fill: #36025c; stroke: #ffffff; stroke-width: 0.5; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_177">
+    <path d="M 201.630014 283.791995 
+C 201.588086 283.791995 201.546159 283.792087 201.504231 283.792271 
+C 201.462304 283.792455 201.420377 283.792732 201.378451 283.7931 
+L 201.63 312.423995 
+z
+" style="fill: #36025c; stroke: #ffffff; stroke-width: 0.5; stroke-linejoin: miter"/>
+   </g>
+   <g id="matplotlib.axis_41"/>
+   <g id="matplotlib.axis_42"/>
+   <g id="text_21">
+    <!-- Fish 41 (100%) -->
+    <g transform="translate(177.316484 275.160713) scale(0.07 -0.07)">
+     <use xlink:href="#Arial-BoldMT-46"/>
+     <use xlink:href="#Arial-BoldMT-69" transform="translate(61.083984 0)"/>
+     <use xlink:href="#Arial-BoldMT-73" transform="translate(88.867188 0)"/>
+     <use xlink:href="#Arial-BoldMT-68" transform="translate(144.482422 0)"/>
+     <use xlink:href="#Arial-BoldMT-20" transform="translate(205.566406 0)"/>
+     <use xlink:href="#Arial-BoldMT-34" transform="translate(233.349609 0)"/>
+     <use xlink:href="#Arial-BoldMT-31" transform="translate(288.964844 0)"/>
+     <use xlink:href="#Arial-BoldMT-20" transform="translate(344.580078 0)"/>
+     <use xlink:href="#Arial-BoldMT-28" transform="translate(372.363281 0)"/>
+     <use xlink:href="#Arial-BoldMT-31" transform="translate(405.664062 0)"/>
+     <use xlink:href="#Arial-BoldMT-30" transform="translate(461.279297 0)"/>
+     <use xlink:href="#Arial-BoldMT-30" transform="translate(516.894531 0)"/>
+     <use xlink:href="#Arial-BoldMT-25" transform="translate(572.509766 0)"/>
+     <use xlink:href="#Arial-BoldMT-29" transform="translate(661.425781 0)"/>
+    </g>
+   </g>
+  </g>
+  <g id="axes_22">
+   <g id="patch_178">
+    <path d="M 308.4937 319.578569 
+C 309.585494 315.347911 309.694535 310.922939 308.812448 306.64364 
+C 307.930361 302.364341 306.080331 298.343191 303.4045 294.889149 
+C 300.728669 291.435106 297.297368 288.638958 293.374237 286.715541 
+C 289.451107 284.792124 285.139264 283.791995 280.769999 283.791995 
+L 280.77 312.423995 
+z
+" style="fill: #36025c; stroke: #ffffff; stroke-width: 0.5; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_179">
+    <path d="M 278.285325 340.94798 
+C 285.033207 341.535778 291.775545 339.710415 297.305266 335.79869 
+C 302.834987 331.886964 306.801152 326.137128 308.4937 319.578569 
+L 280.77 312.423995 
+z
+" style="fill: #36025c; stroke: #ffffff; stroke-width: 0.5; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_180">
+    <path d="M 254.5033 323.81925 
+C 256.55635 328.551646 259.850676 332.642399 264.036539 335.657219 
+C 268.222403 338.67204 273.14624 340.500324 278.285325 340.94798 
+L 280.77 312.423995 
+z
+" style="fill: #d7c9f2; fill-opacity: 0.54902; stroke: #ffffff; stroke-width: 0.5; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_181">
+    <path d="M 255.799697 298.414164 
+C 253.640632 302.262354 252.400077 306.558069 252.175206 310.964833 
+C 251.950332 315.371596 252.747169 319.77127 254.5033 323.81925 
+L 280.77 312.423995 
+z
+" style="fill: #36025c; stroke: #ffffff; stroke-width: 0.5; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_182">
+    <path d="M 261.253354 291.474247 
+C 260.172146 292.481494 259.170534 293.570928 258.257498 294.73279 
+C 257.344462 295.894652 256.522739 297.125455 255.799697 298.414164 
+L 280.77 312.423995 
+z
+" style="fill: #d7c9f2; fill-opacity: 0.54902; stroke: #ffffff; stroke-width: 0.5; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_183">
+    <path d="M 264.92624 288.575165 
+C 264.275842 289.00725 263.643388 289.465764 263.030471 289.949551 
+C 262.417554 290.433338 261.82469 290.941994 261.253354 291.474247 
+L 280.77 312.423995 
+z
+" style="fill: #36025c; stroke: #ffffff; stroke-width: 0.5; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_184">
+    <path d="M 268.976492 286.333679 
+C 268.272596 286.651859 267.581858 286.998396 266.905986 287.372437 
+C 266.230115 287.746477 265.569662 288.147713 264.92624 288.575165 
+L 280.77 312.423995 
+z
+" style="fill: #36025c; stroke: #ffffff; stroke-width: 0.5; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_185">
+    <path d="M 272.283726 285.078527 
+C 271.720247 285.253394 271.162308 285.445637 270.610707 285.654979 
+C 270.059107 285.864321 269.514107 286.090662 268.976492 286.333679 
+L 280.77 312.423995 
+z
+" style="fill: #d7c9f2; fill-opacity: 0.54902; stroke: #ffffff; stroke-width: 0.5; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_186">
+    <path d="M 275.025291 284.374222 
+C 274.562907 284.468919 274.102943 284.575036 273.645806 284.692474 
+C 273.188668 284.809912 272.734499 284.938635 272.283726 285.078527 
+L 280.77 312.423995 
+z
+" style="fill: #36025c; stroke: #ffffff; stroke-width: 0.5; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_187">
+    <path d="M 277.688183 283.958333 
+C 277.241411 284.006704 276.795847 284.065585 276.351847 284.134927 
+C 275.907847 284.20427 275.465535 284.284059 275.025291 284.374222 
+L 280.77 312.423995 
+z
+" style="fill: #d7c9f2; fill-opacity: 0.54902; stroke: #ffffff; stroke-width: 0.5; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_188">
+    <path d="M 279.996882 283.802434 
+C 279.611245 283.812851 279.225858 283.83106 278.840957 283.857052 
+C 278.456056 283.883043 278.071719 283.91681 277.688183 283.958333 
+L 280.77 312.423995 
+z
+" style="fill: #36025c; stroke: #ffffff; stroke-width: 0.5; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_189">
+    <path d="M 280.393453 283.794471 
+C 280.32735 283.79534 280.261243 283.796439 280.195147 283.797766 
+C 280.129051 283.799094 280.062967 283.800649 279.996882 283.802434 
+L 280.77 312.423995 
+z
+" style="fill: #36025c; stroke: #ffffff; stroke-width: 0.5; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_190">
+    <path d="M 280.769987 283.791995 
+C 280.707229 283.791995 280.644472 283.792201 280.581716 283.792614 
+C 280.51896 283.793027 280.456205 283.793645 280.393453 283.794471 
+L 280.77 312.423995 
+z
+" style="fill: #36025c; stroke: #ffffff; stroke-width: 0.5; stroke-linejoin: miter"/>
+   </g>
+   <g id="matplotlib.axis_43"/>
+   <g id="matplotlib.axis_44"/>
+   <g id="text_22">
+    <!-- Fish 42 (75%) -->
+    <g transform="translate(258.402813 275.160713) scale(0.07 -0.07)">
+     <use xlink:href="#Arial-BoldMT-46"/>
+     <use xlink:href="#Arial-BoldMT-69" transform="translate(61.083984 0)"/>
+     <use xlink:href="#Arial-BoldMT-73" transform="translate(88.867188 0)"/>
+     <use xlink:href="#Arial-BoldMT-68" transform="translate(144.482422 0)"/>
+     <use xlink:href="#Arial-BoldMT-20" transform="translate(205.566406 0)"/>
+     <use xlink:href="#Arial-BoldMT-34" transform="translate(233.349609 0)"/>
+     <use xlink:href="#Arial-BoldMT-32" transform="translate(288.964844 0)"/>
+     <use xlink:href="#Arial-BoldMT-20" transform="translate(344.580078 0)"/>
+     <use xlink:href="#Arial-BoldMT-28" transform="translate(372.363281 0)"/>
+     <use xlink:href="#Arial-BoldMT-37" transform="translate(405.664062 0)"/>
+     <use xlink:href="#Arial-BoldMT-35" transform="translate(461.279297 0)"/>
+     <use xlink:href="#Arial-BoldMT-25" transform="translate(516.894531 0)"/>
+     <use xlink:href="#Arial-BoldMT-29" transform="translate(605.810547 0)"/>
+    </g>
+   </g>
+  </g>
+  <g id="axes_23">
+   <g id="patch_191">
+    <path d="M 369.405068 339.435753 
+C 375.779692 337.19497 381.159807 332.768382 384.586643 326.944831 
+C 388.01348 321.12128 389.270619 314.268552 388.134034 307.607837 
+C 386.997447 300.947122 383.538914 294.899074 378.374766 290.541493 
+C 373.210617 286.183911 366.666992 283.791995 359.909999 283.791995 
+L 359.91 312.423995 
+z
+" style="fill: #36025c; stroke: #ffffff; stroke-width: 0.5; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_192">
+    <path d="M 335.619021 327.581162 
+C 339.063889 333.101932 344.290036 337.2867 350.430411 339.441189 
+C 356.570786 341.595676 363.265929 341.593758 369.405068 339.435753 
+L 359.91 312.423995 
+z
+" style="fill: #36025c; stroke: #ffffff; stroke-width: 0.5; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_193">
+    <path d="M 331.296505 311.394745 
+C 331.194452 314.231828 331.51492 317.068383 332.247375 319.811186 
+C 332.979829 322.553989 334.116158 325.172665 335.619021 327.581162 
+L 359.91 312.423995 
+z
+" style="fill: #36025c; stroke: #ffffff; stroke-width: 0.5; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_194">
+    <path d="M 336.662064 295.710977 
+C 335.023078 297.990819 333.728337 300.499405 332.819464 303.156076 
+C 331.910592 305.812747 331.39744 308.588722 331.296505 311.394745 
+L 359.91 312.423995 
+z
+" style="fill: #36025c; stroke: #ffffff; stroke-width: 0.5; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_195">
+    <path d="M 342.07363 290.026331 
+C 341.046723 290.844109 340.077272 291.731542 339.17214 292.682349 
+C 338.267009 293.633156 337.428336 294.645086 336.662064 295.710977 
+L 359.91 312.423995 
+z
+" style="fill: #36025c; stroke: #ffffff; stroke-width: 0.5; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_196">
+    <path d="M 347.547319 286.598512 
+C 346.574096 287.064395 345.627985 287.584919 344.713515 288.157592 
+C 343.799046 288.730266 342.917677 289.354175 342.07363 290.026331 
+L 359.91 312.423995 
+z
+" style="fill: #36025c; stroke: #ffffff; stroke-width: 0.5; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_197">
+    <path d="M 350.455327 285.398069 
+C 349.960119 285.571311 349.469765 285.758133 348.984823 285.95832 
+C 348.49988 286.158508 348.020531 286.371985 347.547319 286.598512 
+L 359.91 312.423995 
+z
+" style="fill: #36025c; stroke: #ffffff; stroke-width: 0.5; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_198">
+    <path d="M 352.899137 284.663605 
+C 352.486631 284.767782 352.076499 284.881142 351.669046 285.003599 
+C 351.261593 285.126056 350.856919 285.257577 350.455327 285.398069 
+L 359.91 312.423995 
+z
+" style="fill: #36025c; stroke: #ffffff; stroke-width: 0.5; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_199">
+    <path d="M 354.973633 284.220737 
+C 354.625297 284.281705 354.278121 284.349123 353.932283 284.422954 
+C 353.586444 284.496785 353.242003 284.577014 352.899137 284.663605 
+L 359.91 312.423995 
+z
+" style="fill: #36025c; stroke: #ffffff; stroke-width: 0.5; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_200">
+    <path d="M 356.808421 283.96048 
+C 356.501319 283.993945 356.194779 284.032376 355.888921 284.075761 
+C 355.583063 284.119146 355.277927 284.167477 354.973633 284.220737 
+L 359.91 312.423995 
+z
+" style="fill: #36025c; stroke: #ffffff; stroke-width: 0.5; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_201">
+    <path d="M 358.429591 283.830292 
+C 358.158848 283.84431 357.88831 283.862172 357.618075 283.883873 
+C 357.347839 283.905574 357.077931 283.931113 356.808421 283.96048 
+L 359.91 312.423995 
+z
+" style="fill: #36025c; stroke: #ffffff; stroke-width: 0.5; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_202">
+    <path d="M 359.91 283.791995 
+C 359.663152 283.791995 359.416321 283.795186 359.169555 283.80157 
+C 358.922789 283.807955 358.676109 283.817529 358.429591 283.830292 
+L 359.91 312.423995 
+z
+" style="fill: #36025c; stroke: #ffffff; stroke-width: 0.5; stroke-linejoin: miter"/>
+   </g>
+   <g id="matplotlib.axis_45"/>
+   <g id="matplotlib.axis_46"/>
+   <g id="text_23">
+    <!-- Fish 43 (100%) -->
+    <g transform="translate(335.596484 275.160713) scale(0.07 -0.07)">
+     <use xlink:href="#Arial-BoldMT-46"/>
+     <use xlink:href="#Arial-BoldMT-69" transform="translate(61.083984 0)"/>
+     <use xlink:href="#Arial-BoldMT-73" transform="translate(88.867188 0)"/>
+     <use xlink:href="#Arial-BoldMT-68" transform="translate(144.482422 0)"/>
+     <use xlink:href="#Arial-BoldMT-20" transform="translate(205.566406 0)"/>
+     <use xlink:href="#Arial-BoldMT-34" transform="translate(233.349609 0)"/>
+     <use xlink:href="#Arial-BoldMT-33" transform="translate(288.964844 0)"/>
+     <use xlink:href="#Arial-BoldMT-20" transform="translate(344.580078 0)"/>
+     <use xlink:href="#Arial-BoldMT-28" transform="translate(372.363281 0)"/>
+     <use xlink:href="#Arial-BoldMT-31" transform="translate(405.664062 0)"/>
+     <use xlink:href="#Arial-BoldMT-30" transform="translate(461.279297 0)"/>
+     <use xlink:href="#Arial-BoldMT-30" transform="translate(516.894531 0)"/>
+     <use xlink:href="#Arial-BoldMT-25" transform="translate(572.509766 0)"/>
+     <use xlink:href="#Arial-BoldMT-29" transform="translate(661.425781 0)"/>
+    </g>
+   </g>
+  </g>
+  <g id="axes_24">
+   <g id="patch_203">
+    <path d="M 427.950699 338.817118 
+C 431.859136 340.460763 436.084313 341.215896 440.320122 341.02781 
+C 444.55593 340.839724 448.697549 339.713071 452.444923 337.729478 
+C 456.192297 335.745884 459.45269 332.954438 461.989894 329.557373 
+C 464.527099 326.160309 466.278326 322.241692 467.116701 318.085422 
+C 467.955077 313.929152 467.859852 309.638085 466.837929 305.523097 
+C 465.816007 301.40811 463.892672 297.571032 461.207272 294.289862 
+C 458.521871 291.008693 455.140854 288.364625 451.309176 286.549219 
+C 447.477499 284.733813 443.289981 283.791995 439.049999 283.791995 
+L 439.05 312.423995 
+z
+" style="fill: #36025c; stroke: #ffffff; stroke-width: 0.5; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_204">
+    <path d="M 411.258516 305.537423 
+C 409.61697 312.16206 410.396978 319.160189 413.45688 325.260803 
+C 416.516782 331.361417 421.659389 336.171386 427.950699 338.817118 
+L 439.05 312.423995 
+z
+" style="fill: #d7c9f2; fill-opacity: 0.54902; stroke: #ffffff; stroke-width: 0.5; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_205">
+    <path d="M 425.936624 286.971474 
+C 422.308099 288.840925 419.120936 291.464871 416.589467 294.666857 
+C 414.057999 297.868844 412.24027 301.575453 411.258516 305.537423 
+L 439.05 312.423995 
+z
+" style="fill: #36025c; stroke: #ffffff; stroke-width: 0.5; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_206">
+    <path d="M 439.05 283.791995 
+C 436.777092 283.791995 434.512254 284.062641 432.303347 284.598213 
+C 430.094439 285.133785 427.957134 285.930489 425.936624 286.971474 
+L 439.05 312.423995 
+z
+" style="fill: #36025c; stroke: #ffffff; stroke-width: 0.5; stroke-linejoin: miter"/>
+   </g>
+   <g id="matplotlib.axis_47"/>
+   <g id="matplotlib.axis_48"/>
+   <g id="text_24">
+    <!-- Fish 45 (77%) -->
+    <g transform="translate(416.682813 275.160713) scale(0.07 -0.07)">
+     <use xlink:href="#Arial-BoldMT-46"/>
+     <use xlink:href="#Arial-BoldMT-69" transform="translate(61.083984 0)"/>
+     <use xlink:href="#Arial-BoldMT-73" transform="translate(88.867188 0)"/>
+     <use xlink:href="#Arial-BoldMT-68" transform="translate(144.482422 0)"/>
+     <use xlink:href="#Arial-BoldMT-20" transform="translate(205.566406 0)"/>
+     <use xlink:href="#Arial-BoldMT-34" transform="translate(233.349609 0)"/>
+     <use xlink:href="#Arial-BoldMT-35" transform="translate(288.964844 0)"/>
+     <use xlink:href="#Arial-BoldMT-20" transform="translate(344.580078 0)"/>
+     <use xlink:href="#Arial-BoldMT-28" transform="translate(372.363281 0)"/>
+     <use xlink:href="#Arial-BoldMT-37" transform="translate(405.664062 0)"/>
+     <use xlink:href="#Arial-BoldMT-37" transform="translate(461.279297 0)"/>
+     <use xlink:href="#Arial-BoldMT-25" transform="translate(516.894531 0)"/>
+     <use xlink:href="#Arial-BoldMT-29" transform="translate(605.810547 0)"/>
+    </g>
+   </g>
+  </g>
+ </g>
+</svg>

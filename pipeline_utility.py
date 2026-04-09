@@ -314,7 +314,7 @@ def plot_muller(data, fish, ax = None, replicate = None, add_legend = False, map
     ax.stackplot(ts, freqs[::-1], colors = colors_extended[::-1]);
     ax.set_xticks(ts);
     ax.set_xlabel("Time")
-    ax.set_ylabel("Clonal frequency")
+    ax.set_ylabel("Barcode frequency")
     ax.set_xlim(ts[0], ts[-1])
     ax.set_ylim(0, 1);
 

@@ -64,6 +64,6 @@ def plot(results, ax = None, replicate = None, unedited_index = None, colors = N
     ax.set_xticks(times)
     
     ax.set_xlabel("Time")
-    ax.set_ylabel("Clonal frequency")
+    ax.set_ylabel("Barcode frequency")
     ax.set_xlim(times[0], times[-1])
     ax.set_ylim(0, 1);
