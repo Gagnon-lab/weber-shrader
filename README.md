@@ -71,9 +71,9 @@ To run on other parameter values, edit the shell scripts accordingly, changing t
     b. `name = 'full_pipeline_TQ14'`: the default pipeline using the Trim Quality 14 GESTALT output.
     c. `name = 'full_pipeline_MP0.95'`: the default pipeline using the Match Proportion 0.95 GESTALT output.
     d. `name = 'no_cluster'`: skip the clustering step.
-    d. `name = 'keep_questionable'`: does not remove barcodes appearing in multiple fish.
-    d. `name = 'no_filter'`: ignores both the used entry proportion from GESTALT and the kept entry cutoff at the end of the pipeline.
-    d. `name = 'used_filter'`: ignores the kept entry cutoff at the end of the pipeline.
+    e. `name = 'keep_questionable'`: does not remove barcodes appearing in multiple fish.
+    f. `name = 'no_filter'`: ignores both the used entry proportion from GESTALT and the kept entry cutoff at the end of the pipeline.
+    g. `name = 'used_filter'`: ignores the kept entry cutoff at the end of the pipeline.
 Note that if the results already exist in `experiments/` (for example, if you just cloned this repository), then you should either delete these results or change the `name` parameter above. The quality control code will not overwrite this data automatically.
 
 Running this code will (re-)produce tables of final clonal reads in the `experiments/` subfolder.
