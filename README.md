@@ -67,13 +67,13 @@ To run on other parameter values, edit the shell scripts accordingly, changing t
 1. Make sure that the `gestalt_output/` directory contains the subdirectories `mp0.8_tq10`, `mp0.95_tq10`, and `mp0.8_tq14`, each containing `.allReadCounts` and `merged.info` files. These can either be downloaded from this repository or re-generated using the instructions above.
 2. Install the Python environment using the steps above.
 3. Run the pipeline. The `pipeline.ipynb` notebook contains a `preset` parameter that will configure different settings for the run:
-    a. `'full_pipeline'`: the default data cleaning pipeline.
-    b. `name = 'full_pipeline_TQ14'`: the default pipeline using the Trim Quality 14 GESTALT output.
-    c. `name = 'full_pipeline_MP0.95'`: the default pipeline using the Match Proportion 0.95 GESTALT output.
-    d. `name = 'no_cluster'`: skip the clustering step.
-    e. `name = 'keep_questionable'`: does not remove barcodes appearing in multiple fish.
-    f. `name = 'no_filter'`: ignores both the used entry proportion from GESTALT and the kept entry cutoff at the end of the pipeline.
-    g. `name = 'used_filter'`: ignores the kept entry cutoff at the end of the pipeline.
+    - `'full_pipeline'`: the default data cleaning pipeline.
+    - `'full_pipeline_TQ14'`: the default pipeline using the Trim Quality 14 GESTALT output.
+    - `'full_pipeline_MP0.95'`: the default pipeline using the Match Proportion 0.95 GESTALT output.
+    - `'no_cluster'`: skip the clustering step.
+    - `'keep_questionable'`: does not remove barcodes appearing in multiple fish.
+    - `'no_filter'`: ignores both the used entry proportion from GESTALT and the kept entry cutoff at the end of the pipeline.
+    - `'used_filter'`: ignores the kept entry cutoff at the end of the pipeline.
 Note that if the results already exist in `experiments/` (for example, if you just cloned this repository), then you should either delete these results or change the `name` parameter above. The quality control code will not overwrite this data automatically.
 
 Running this code will (re-)produce tables of final clonal reads in the `experiments/` subfolder.
