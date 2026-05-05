@@ -73,11 +73,8 @@ df = pd.read_csv(file_path)
 
 exp_scenario = 'full_pipeline'
 
-invalid_real_entries = df.query('scenario == @exp_scenario').query('n_transient < 2')
-if len(invalid_real_entries) > 0:
-    print(f'There are {len(invalid_real_entries)} real clones that have < 2 observation times.')
-
 # Only include data that has at least 2 observations and are not trivial.
+invalid_real_entries = df.query('scenario == @exp_scenario').query('n_transient < 2')
 df = df.query('n_transient > 1').copy()
 
 df['l_gap'] = df['l_max'] - df['l_null']
