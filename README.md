@@ -56,9 +56,14 @@ singularity build GESTALT.sif docker://aaronmck/genomics:sc_GESTALT
 ```
 The other necessary files to run GESTALT are included in the sample directories.
 
-For each sample, you can run the bash (`.sh`) script file (or edit as necessary). This produces an `OUTPUT/` directory. After running on all samples, copy the `.allReadCounts` and `merged.info` files from HPC cluster to your local `gestalt_output/mp0.8_tq10`.
+A shell script is inlcuded in each sample directory (TODO: name and extension)('GESTALT_sample#.sh') that runs the GESTALT pipeline using the singularity container. Edit the following shell variables:
+* GROUPDATA: should hold the directory holding GESTALT.sif
+* DATA_DIR: should hold the enclosing directory, i.e. the absolute path to gestalt/sample#/
+If running GESTALT on an HPC cluster that requires job scheduling (e.g. Slurm, OpenPBS, etc.), further edit this file so that it is compatible with the scheduler. We found that 2 cpu cores were sufficient on CHPC at the University of Utah.
 
-To run on other parameter values, edit the shell scripts accordingly, changing the settings to `--matchProportion 0.95` or `--trimQual 14`.
+For each sample, run the script. This produces an `OUTPUT/` directory. After running on all samples, copy the `.allReadCounts` and `merged.info` files from HPC cluster to your local `gestalt_output/mp0.8_tq10`.
+
+To run on other parameter values, edit the shell script 'run_gestalt_pipeline.sh' accordingly, changing the settings to `--matchProportion 0.95` or `--trimQual 14`.
 
 
 <!-- Install the GESTALT pipeline from [github.com/aaronmck/Cas9FateMapping](https://github.com/aaronmck/Cas9FateMapping) and the `pipeline/gestalt_pipeline_no_trees.scala` file from [github.com/Gagnon-lab/takasugi-genetics](https://github.com/Gagnon-lab/takasugi-genetics) -->
@@ -67,13 +72,13 @@ To run on other parameter values, edit the shell scripts accordingly, changing t
 1. Make sure that the `gestalt_output/` directory contains the subdirectories `mp0.8_tq10`, `mp0.95_tq10`, and `mp0.8_tq14`, each containing `.allReadCounts` and `merged.info` files. These can either be downloaded from this repository or re-generated using the instructions above.
 2. Install the Python environment using the steps above.
 3. Run the pipeline. The `pipeline.ipynb` notebook contains a `preset` parameter that will configure different settings for the run:
-    a. `'full_pipeline'`: the default data cleaning pipeline.
-    b. `name = 'full_pipeline_TQ14'`: the default pipeline using the Trim Quality 14 GESTALT output.
-    c. `name = 'full_pipeline_MP0.95'`: the default pipeline using the Match Proportion 0.95 GESTALT output.
-    d. `name = 'no_cluster'`: skip the clustering step.
-    e. `name = 'keep_questionable'`: does not remove barcodes appearing in multiple fish.
-    f. `name = 'no_filter'`: ignores both the used entry proportion from GESTALT and the kept entry cutoff at the end of the pipeline.
-    g. `name = 'used_filter'`: ignores the kept entry cutoff at the end of the pipeline.
+    - `'full_pipeline'`: the default data cleaning pipeline.
+    - `'full_pipeline_TQ14'`: the default pipeline using the Trim Quality 14 GESTALT output.
+    - `'full_pipeline_MP0.95'`: the default pipeline using the Match Proportion 0.95 GESTALT output.
+    - `'no_cluster'`: skip the clustering step.
+    - `'keep_questionable'`: does not remove barcodes appearing in multiple fish.
+    - `'no_filter'`: ignores both the used entry proportion from GESTALT and the kept entry cutoff at the end of the pipeline.
+    - `'used_filter'`: ignores the kept entry cutoff at the end of the pipeline.
 Note that if the results already exist in `experiments/` (for example, if you just cloned this repository), then you should either delete these results or change the `name` parameter above. The quality control code will not overwrite this data automatically.
 
 Running this code will (re-)produce tables of final clonal reads in the `experiments/` subfolder.
