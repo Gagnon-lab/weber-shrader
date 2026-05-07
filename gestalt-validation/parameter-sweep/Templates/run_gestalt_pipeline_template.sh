@@ -1,3 +1,0 @@
-java -Xmx4g -jar /app/queue.jar -S /my_data/gestalt_pipeline_no_trees.scala -i /my_data/***TEAR_SHEET*** --web /my_data/var/www/html --aggLocation /my_data/var/www/html/***EXP_NAME***/ --expName ***EXP_NAME*** --eda /app/EDNAFULL.Ns_are_zero --matchProportion ***MATCH_PROPORTION*** --matchCount ***MATCH_COUNT*** --trimQual ***TRIM_QUAL*** --trimWindow ***TRIM_WINDOW*** --primersToUse "BOTH" -run -resMemReqParam mfree -s /app/sc_GESTALT/scripts/ -b /app/bin/
-mkdir -p /my_data/***OUTPUT_FOLDER***/html
-cp -r /my_data/var/www/html/***EXP_NAME*** /my_data/***OUTPUT_FOLDER***/html
