@@ -1,0 +1,2 @@
+java -Xmx4g -jar /app/queue.jar -S /my_data/gestalt_pipeline_no_trees.scala -i /my_data/Sample9tearsheet.txt --web /my_data/var/www/html --aggLocation /my_data/var/www/html/Longitudinal_Sample9/ --expName Longitudinal_Sample9 --eda /app/EDNAFULL.Ns_are_zero --matchProportion 0.8 --matchCount 25 --trimQual 14 --primersToUse "BOTH" -run -resMemReqParam mfree -s /app/sc_GESTALT/scripts/ -b /app/bin/ 
+cp -r /my_data/var/www/html /my_data/Longitudinal_Sample9-OUTPUT
