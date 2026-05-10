@@ -257,7 +257,37 @@ sample_map = {
     18: 26
 }
 
-def plot_muller(data, fish, ax = None, replicate = None, add_legend = False, map_samples = False):
+def barcodes_to_colors(df):
+    sort = df.sort_values(
+        by=['sample', 'reads'],
+        ascending=[True, False]
+    )
+
+    n_barcodes = sort['barcode'].nunique()
+    ordered_barcodes = sort['barcode'].unique()
+    
+    colors = np.array(["#ff4d6f", "#579ea4", "#df7713", "#f9c000", "#86ad34",
+              "#5d7298", "#81b28d", "#7e1a2f", "#2d2651", "#c8350d", "#bd777a",
+              '#1a5f7a', '#8b4c8f', '#4a9eff', '#ffd93d', '#3dcc8e', '#ff8c42',
+              '#e63946', '#a0c334', '#6b4e71', '#00b4d8'])
+    unedited_barcode = 'NONE_NONE_NONE_NONE_NONE_NONE_NONE_NONE_NONE_NONE'
+    
+    repeats = -(-n_barcodes // len(colors))
+    colors_extended = np.tile(colors, repeats)[:n_barcodes]
+
+    color_dict = dict()
+
+    i = 0
+    for barcode in sort['barcode'].unique():
+        if barcode == unedited_barcode:
+            color_dict[barcode] = '#aaaaaa'
+        else:
+            color_dict[barcode] = colors_extended[i]
+            i = i + 1
+
+    return ordered_barcodes, color_dict
+
+def plot_muller(data, fish, ax = None, replicate = None, add_legend = False, map_samples = False, color_dict = None, order = None):
     """
     Plot a Muller plot of the barcode data.
 
@@ -277,32 +307,50 @@ def plot_muller(data, fish, ax = None, replicate = None, add_legend = False, map
     if replicate is not None:
         subset = subset.query('replicate == @replicate')
 
-    sorted_data = subset.sort_values(by=['sample', 'reads'], ascending=[True, False])
-    barcode_order = sorted_data['barcode'].unique()
+    # sorted_data = subset.sort_values(by=['sample', 'reads'], ascending=[True, False])
+        
+    # barcode_order = sorted_data['barcode'].unique()
+    
+    # grouped = subset.groupby(['barcode', 'sample'], as_index = False).aggregate({'reads': 'sum'})
+    # matrix = grouped.pivot(index = 'barcode', columns = 'sample', values = 'reads')
+    # matrix.fillna(0, inplace = True)
+    # matrix = matrix.loc[barcode_order]
+    # freqs = matrix.div(matrix.sum(axis=0), axis=1)
+    
+    # Source: https://github.com/BlakeRMills/MoMAColors/blob/main/R/Colors.R
+    # colors = np.array(["#ff4d6f", "#579ea4", "#df7713", "#f9c000", "#86ad34",
+    #           "#5d7298", "#81b28d", "#7e1a2f", "#2d2651", "#c8350d", "#bd777a",
+    #           '#1a5f7a', '#8b4c8f', '#4a9eff', '#ffd93d', '#3dcc8e', '#ff8c42',
+    #           '#e63946', '#a0c334', '#6b4e71', '#00b4d8'])
+    
+    # n_clones = np.shape(freqs)[0]
+    # repeats = -(-n_clones // len(colors))
+    # colors_extended = np.tile(colors, repeats)[:n_clones]
+
+    if color_dict is None or order is None:
+        order, color_dict = barcodes_to_colors(subset)
+        
+
+    # barcode_order = sorted_data['barcode'].unique()
+
     
     grouped = subset.groupby(['barcode', 'sample'], as_index = False).aggregate({'reads': 'sum'})
     matrix = grouped.pivot(index = 'barcode', columns = 'sample', values = 'reads')
     matrix.fillna(0, inplace = True)
-    matrix = matrix.loc[barcode_order]
+
+    order = [x for x in order if x in matrix.index]
+    matrix = matrix.loc[order]
     freqs = matrix.div(matrix.sum(axis=0), axis=1)
     
-    # Source: https://github.com/BlakeRMills/MoMAColors/blob/main/R/Colors.R
-    colors = np.array(["#ff4d6f", "#579ea4", "#df7713", "#f9c000", "#86ad34",
-              "#5d7298", "#81b28d", "#7e1a2f", "#2d2651", "#c8350d", "#bd777a",
-              '#1a5f7a', '#8b4c8f', '#4a9eff', '#ffd93d', '#3dcc8e', '#ff8c42',
-              '#e63946', '#a0c334', '#6b4e71', '#00b4d8'])
+    colors_extended = [color_dict[bc] for bc in order]
     
-    n_clones = np.shape(freqs)[0]
-    repeats = -(-n_clones // len(colors))
-    colors_extended = np.tile(colors, repeats)[:n_clones]
+    # unedited_index = where_unedited(freqs.index)
+    # if unedited_index is not None:
+    #     # put in grey in the element corresponding to the unedited array.
+    #     colors_extended = np.insert(colors_extended, unedited_index, '#aaaaaa')
     
-    unedited_index = where_unedited(freqs.index)
-    if unedited_index is not None:
-        # put in grey in the element corresponding to the unedited array.
-        colors_extended = np.insert(colors_extended, unedited_index, '#aaaaaa')
-    
-        # remove the last index so that the array maintains the correct length.
-        colors_extended = colors_extended[:-1]
+    #     # remove the last index so that the array maintains the correct length.
+    #     colors_extended = colors_extended[:-1]
     
     ts = matrix.columns
     if map_samples:
@@ -319,7 +367,7 @@ def plot_muller(data, fish, ax = None, replicate = None, add_legend = False, map
     ax.set_ylim(0, 1);
 
     # Create legend handles
-    legend_labels = barcode_order
+    legend_labels = order
     legend_colors = colors_extended
     handles = [Patch(facecolor=c, label=b) for c, b in zip(legend_colors, legend_labels)]
     

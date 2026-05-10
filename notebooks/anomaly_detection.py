@@ -56,12 +56,12 @@ def get_anomaly_metrics(experiment, data_folder, root):
 
     return (info_df.query('sample != 3').copy(), kept_df.query('sample != 3').copy())
 
-def plot_fish(fish, ax, all_data):
+def plot_fish(fish, ax, all_data, **kwargs):
     """
     Plots muller for a given fish
     """
     fish_data = all_data.query('fish == @fish').copy()
-    pipeline_utility.plot_muller(all_data, fish, ax, map_samples=True)
+    pipeline_utility.plot_muller(all_data, fish, ax, map_samples=True, **kwargs)
     ax.set_title(f'{fish}')
     plt.tight_layout()
 
