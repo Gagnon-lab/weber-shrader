@@ -36,6 +36,7 @@ model interface.
 
 Other files:
 * `analysis.py`: Helper functions and data loading that is used by most other notebooks in this directory.
+* `anomaly_detection.py`: Helper code for `anomaly_detection.ipynb`.
 * `cattelan_data.csv`: Data from Cattelan & Gasparini (2021) used in `sperm_decay.ipynb`.
 
 ## References
