@@ -68,7 +68,32 @@ palette = {
     # 'Exp. data (truncated)': trunc_hue
 }
 
-# Load in the cloner results file.
+# master_fish_order and master_colors define the order and colors for many
+# main and supplemental figure panels.
+master_fish_order = [
+    "fish1", "fish2", "fish4", "fish5", "fish8",
+    "fish10", "fish12", "fish13", "fish14", "fish15",
+    "fish16", "fish17", "fish18", "fish22", "fish26",
+    "fish35", "fish37", "fish38", "fish40", 
+    "fish42", "fish44", "fish45", "fish50", 
+    "fish51" 
+]
+
+master_colors = [
+    "#14466C", "#2278B5", "#add8e6", #blues
+    "#CD6C18", "#F57F20", "#FCBB78", #oranges
+    "#1A702E", "#2FA148", "#9ED08A", #greens
+    "#C4AA00", "#FCEA00", "#FFF468", #yellows
+    "#940C07","#E62923", "#F69797", #reds
+    "#673484", "#9268AD", "#C5B1D6", #purples
+    "#CD2A91", "#E580BD", "#FCC7DC", #pinks
+    "#008080", "#43b3ae", "#96ded1", #teals
+    "#282B3D", "#7C83BC", "#C3CDE6" #periwinkles
+]
+
+color_map = dict(zip(master_fish_order, master_colors))
+
+# Load in the clone results file.
 
 file_path = os.path.join('..', 'model_simulations', 'all_clone_results.csv')
 df = pd.read_csv(file_path)
