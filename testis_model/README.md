@@ -19,7 +19,5 @@ experimental data.
 Gillespie simulations of the model.
 * `likelihood.py`: Contains the `LikelihoodModel` class that is used to estimate
 rates of genetic drift.
+* `metrics.py`: Various metrics that can be computed from the simulations. 
 * `visualize.py`: Contains code to create Muller plots of model simulations.
-
-An detailed example of the model code being used is given in
-`sperm-data-analysis/notebooks/tour.ipynb`.

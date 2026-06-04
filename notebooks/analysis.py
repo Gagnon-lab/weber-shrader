@@ -34,6 +34,7 @@ small_label_settings = {
     'axes.titlesize': 7,         # title size
     'legend.fontsize': 7,        # legend font size
     'figure.titlesize': 7,        # figure title size
+    'svg.fonttype': 'none',
 }
 
 large_label_settings = {
@@ -53,6 +54,7 @@ palette = {
     'Model': hue(2),
     'Model\n($rp=2$)': hue(2),
     'Model ($rp=2$)': hue(2),
+    'Model (rp=2)': hue(2),
     'Model\n($rp=0.5$)': hue(0.5),
     'Model\n($rp=8$)': hue(8),
     'Model\n($rp=25$)': hue(25),
@@ -64,6 +66,13 @@ palette = {
     'Exp. data (TQ 14)': tq_hue,
     'Exp. data\n(no cluster)': no_collapse_hue,
     'Exp. data (no cluster)': no_collapse_hue,
+    'Experimental\ndata': exp_hue,
+    'Sim. data\n(rp=0)': hue(0),
+    'Sim. data\n(rp=0.5)': hue(0.5),
+    'Sim. data\n(rp=2)': hue(2),
+    'Sim. data\n(rp=8)': hue(8),
+    'Sim. data\n(rp=25)': hue(25),
+    'Simulated data': hue(2),
     # 'Exp. data\n(trunc.)': trunc_hue,
     # 'Exp. data (truncated)': trunc_hue
 }
