@@ -57,7 +57,7 @@ singularity build GESTALT.sif docker://aaronmck/genomics:sc_GESTALT
 ```
 The other necessary files to run GESTALT are included in the sample directories.
 
-A shell script is inlcuded in each sample directory (TODO: name and extension)('GESTALT_sample#.sh') that runs the GESTALT pipeline using the singularity container. Edit the following shell variables:
+A shell script is inlcuded in each sample directory ('GESTALT_sample#.sh') that runs the GESTALT pipeline using the singularity container. Edit the following shell variables:
 * GROUPDATA: should hold the directory holding GESTALT.sif
 * DATA_DIR: should hold the enclosing directory, i.e. the absolute path to gestalt/sample#/
 If running GESTALT on an HPC cluster that requires job scheduling (e.g. Slurm, OpenPBS, etc.), further edit this file so that it is compatible with the scheduler. We found that 2 cpu cores were sufficient on CHPC at the University of Utah.
