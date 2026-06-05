@@ -6,7 +6,7 @@
   <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
    <cc:Work>
     <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
-    <dc:date>2026-06-04T08:40:38.826716</dc:date>
+    <dc:date>2026-06-05T12:52:38.168934</dc:date>
     <dc:format>image/svg+xml</dc:format>
     <dc:creator>
      <cc:Agent>
@@ -45,7 +45,7 @@ z
     </g>
     <g id="line2d_1">
      <defs>
-      <path id="m7c515ad5de" d="M -5 5 
+      <path id="me4344f1938" d="M -5 5 
 L 5 5 
 L 5 -5 
 L -5 -5 
@@ -53,7 +53,7 @@ z
 " style="stroke: #ff0000; stroke-opacity: 0.5; stroke-linejoin: miter"/>
      </defs>
      <g>
-      <use xlink:href="#m7c515ad5de" x="200.442969" y="62.136875" style="fill: #ff0000; fill-opacity: 0.5; stroke: #ff0000; stroke-opacity: 0.5; stroke-linejoin: miter"/>
+      <use xlink:href="#me4344f1938" x="200.442969" y="62.136875" style="fill: #ff0000; fill-opacity: 0.5; stroke: #ff0000; stroke-opacity: 0.5; stroke-linejoin: miter"/>
      </g>
     </g>
     <g id="text_1">
@@ -61,14 +61,14 @@ z
     </g>
     <g id="line2d_2">
      <defs>
-      <path id="m42f124da8c" d="M -5 5 
+      <path id="mdae00963f8" d="M -5 5 
 L 5 -5 
 M -5 -5 
 L 5 5 
 " style="stroke: #ff0000"/>
      </defs>
      <g>
-      <use xlink:href="#m42f124da8c" x="200.442969" y="72.120625" style="fill: #ff0000; stroke: #ff0000"/>
+      <use xlink:href="#mdae00963f8" x="200.442969" y="72.120625" style="fill: #ff0000; stroke: #ff0000"/>
      </g>
     </g>
     <g id="text_2">
@@ -85,14 +85,14 @@ L 207.442969 82.107656
     </g>
     <g id="line2d_4">
      <defs>
-      <path id="m56115d0534" d="M 0 -5 
+      <path id="m1a11faee72" d="M 0 -5 
 L -5 5 
 L 5 5 
 z
 " style="stroke: #800080; stroke-opacity: 0.5; stroke-linejoin: miter"/>
      </defs>
      <g>
-      <use xlink:href="#m56115d0534" x="313.544375" y="62.136875" style="fill: #800080; fill-opacity: 0.5; stroke: #800080; stroke-opacity: 0.5; stroke-linejoin: miter"/>
+      <use xlink:href="#m1a11faee72" x="313.544375" y="62.136875" style="fill: #800080; fill-opacity: 0.5; stroke: #800080; stroke-opacity: 0.5; stroke-linejoin: miter"/>
      </g>
     </g>
     <g id="text_4">
@@ -100,14 +100,14 @@ z
     </g>
     <g id="line2d_5">
      <defs>
-      <path id="m8f61707847" d="M -5 5 
+      <path id="mb865e2bb80" d="M -5 5 
 L 5 -5 
 M -5 -5 
 L 5 5 
 " style="stroke: #800080"/>
      </defs>
      <g>
-      <use xlink:href="#m8f61707847" x="313.544375" y="72.120625" style="fill: #800080; stroke: #800080"/>
+      <use xlink:href="#mb865e2bb80" x="313.544375" y="72.120625" style="fill: #800080; stroke: #800080"/>
      </g>
     </g>
     <g id="text_5">

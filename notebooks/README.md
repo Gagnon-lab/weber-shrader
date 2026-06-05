@@ -2,12 +2,12 @@
 
 This directory contains several notebooks to conduct the main analysis for the paper.
 
-## Sub-directories
+## Sub-directories and files
 * `images/`: Images generated are outputted to this directory.
-* `OUTPUT_MP_TQ_extracted/`: Data for `singleton_proportion.ipynb`.
 
 Figure-generating files:
 * `anomaly_detection.ipynb`: Anomaly detection in Figure S8.
+* `barcode_edit_map.ipynb`: Map of edit locations on fish, for Supplemental Figure S3.
 * `barcodes_per_fish.ipynb`: Swarm plots for Figures 1E and 2G.
 * `barcodes_s1.ipynb`: Figure 1F.
 * `caterpillar.ipynb`: Caterpillar plots for Figure 4C and S7F.
@@ -15,6 +15,7 @@ Figure-generating files:
 * `cosines.iypnb`: Cosine similarity plots for Figures 1H, 1I, and S5.
 * `correlation.ipynb`: Correlation plots for Figure 4B and S7E.
 * `drift_vs_samples.ipynb`: Plotting drift confidence vs num. samples for Figures 3E and S7D.
+* `fish_lifespan_sampling_course.ipynb`: Fish sampling time plot for Figure 2A.
 * `gestalt_params.ipynb`: Gestalt parameter sensitivity in Figure S10.
 * `inference_strategy.iypnb`: Inferred drift rates for Figure 3C.
 * `model_bias.ipynb`: The bias of model estimated drift rates, for Supplemental Table S2.
@@ -33,7 +34,6 @@ Figure-generating files:
 Other files:
 * `analysis.py`: Helper functions and data loading that is used by most other notebooks in this directory.
 * `anomaly_detection.py`: Helper code for `anomaly_detection.ipynb`.
-* `cattelan_data.csv`: Data from Cattelan & Gasparini (2021) used in `sperm_decay.ipynb`.
 
 ## References
 * Cattelan, S., & Gasparini, C. (2021). Male sperm storage impairs sperm quality in the zebrafish. Scientific reports, 11(1), 16689.
