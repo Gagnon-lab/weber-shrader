@@ -5,6 +5,7 @@ data*/
 model_simulations/*/
 fastq-data/clustering/
 **.DS_Store
+**.sh
 
 ##################################################################
 # PYTHON GITIGNORE                                               #
