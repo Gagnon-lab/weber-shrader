@@ -34,6 +34,3 @@ Figure-generating files:
 Other files:
 * `analysis.py`: Helper functions and data loading that is used by most other notebooks in this directory.
 * `anomaly_detection.py`: Helper code for `anomaly_detection.ipynb`.
-
-## References
-* Cattelan, S., & Gasparini, C. (2021). Male sperm storage impairs sperm quality in the zebrafish. Scientific reports, 11(1), 16689.

@@ -12,7 +12,7 @@ Alternatively, the package can be installed in editable mode using
 
 ## Sub-packages
 
-This package contains four subpackages:
+This package contains five subpackages:
 * `data_processing.py`: Contains functions used to manipulate both simulated and
 experimental data.
 * `gillespie.py`: Contains the `AdvancedTestisModel` class that is used to run
