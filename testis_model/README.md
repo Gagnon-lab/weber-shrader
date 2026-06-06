@@ -1,4 +1,4 @@
-# `sperm-data-analysis/testis_model`
+# `weber-shrader/testis_model`
 
 This directory contains the package to simulate and perform inference on the 
 neutral drift mathematical model.

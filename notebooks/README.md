@@ -1,4 +1,4 @@
-# `sperm-data-analysis/notebooks`
+# `weber-shrader/notebooks`
 
 This directory contains several notebooks to conduct the main analysis for the paper.
 

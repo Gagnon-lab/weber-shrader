@@ -1,4 +1,4 @@
-# `sperm-data-analysis/experiments`
+# `weber-shrader/experiments`
 
 This directory contains the outputs from running `pipeline.ipynb` in the main
 directory. There should be seven sub-directories:

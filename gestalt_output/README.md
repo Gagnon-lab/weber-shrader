@@ -1,4 +1,4 @@
-# `sperm-data-analysis/gestalt`
+# `weber-shrader/gestalt`
 
 This directory contains output from the GESTALT pipeline. To re-generate this data, follow the instructions in the
 main README file.

@@ -1,4 +1,4 @@
-# `sperm-data-analysis/gestalt`
+# `weber-shrader/gestalt`
 
 This directory contains files needed to run the GESTALT barcode analysis pipeline. Before running the GESTALT pipeline, the `fastq` files should be downloaded from GEO (using the instructions in the main README).
 

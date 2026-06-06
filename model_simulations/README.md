@@ -1,4 +1,4 @@
-# `sperm-data-analysis/model_simulations`
+# `weber-shrader/model_simulations`
 
 This directory contains files needed to conduct a large, computationally intensive
 simulation study. The general workflow is as follows:
