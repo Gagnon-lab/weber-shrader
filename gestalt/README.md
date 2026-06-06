@@ -22,7 +22,7 @@ Each of these folders should then contain the files:
 * `gestalt_pipeline_no_trees.scala`: the GESTALT script.
 * `GESTALT_Sample{number}.sh`: An example bash script to run the GESTALT pipeline.
 * `run_gestalt_pipeline.sh`: Another script that directly runs the GESTALT pipeline.
-* `Sample9tearsheet.txt`: metadata linking each `fastq` file to a fish, sample, replicate.
+* `Sample{number}tearsheet.txt`: metadata linking each `fastq` file to a fish, sample, replicate.
 * `sperm.referenceseq.fa`: The reference sequence.
 * `sperm.referenceseq.fa.cutSites`: The sites and cut positions.
 * `sperm.referenceseq.fa.primers`: The primers.
