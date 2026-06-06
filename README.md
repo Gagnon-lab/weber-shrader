@@ -1,6 +1,6 @@
-# sperm-data-analysis
+# weber-shrader
 This repository contains all of the data cleaning, mathematical modeling, and
-statistical analysis done by Weber et. al. (2026).
+statistical analysis done by Weber et. al. (2026?).
 
 ## Sub-directories
 
