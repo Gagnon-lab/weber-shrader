@@ -41,44 +41,44 @@ jupyter lab
 ## Reproducing our analysis
 
 Our analysis code consists of 4 main steps:
-* Running GESTALT on raw sequencing data (McKenna et. al. 2016).
+* Running GESTALT on raw sequencing data (as in McKenna et al., 2016; Raj et al., 2018).
 * A secondary data cleaning pipeline that was developed for this project.
 * Computing clonal metrics from both simulated and experimental data (e.g. first/last time of appearance, drift strength).
 * Statistical testing and figure generation.
 
 Each step produces intermediate result files, so readers interested in simply re-generating the figures can skip ahead to that section.
 
-### Reproducing GESTALT runs
-Download the fastq files from (TODO: link) and place them into the `gestalt/` directory according to the sample number. For example, the data folder for sample 9 can be placed in the `gestalt/sample9/` directory.
+## Downloading the raw sequencing data
+A GEO link to download the raw `fastq` data will be added in the near future.
+
+### Reproducing GESTALT barcode analysis pipeline
+Download the `fastq` files using the instructions above, and place them into the `gestalt/` directory according to the sample number. For example, the data folder for sample 9 can be placed in the `gestalt/Longitudinal_Sample9/` directory.
 
 Next, download the Docker container. The Center for High Performance Computing (CHPC) at the University of Utah offers Singularity as a container alternative. You can download the container as a Singularity image using:
 ```
 singularity build GESTALT.sif docker://aaronmck/genomics:sc_GESTALT 
 ```
-The other necessary files to run GESTALT are included in the sample directories.
+The other necessary files to run the GESTALT barcode analysis pipeline are included in the sample directories.
 
-A shell script is inlcuded in each sample directory (TODO: name and extension)('GESTALT_sample#.sh') that runs the GESTALT pipeline using the singularity container. Edit the following shell variables:
+A shell script is included in each sample directory ('GESTALT_sample{number}.sh') that runs the GESTALT pipeline using the singularity container. Edit the following shell variables:
 * GROUPDATA: should hold the directory holding GESTALT.sif
 * DATA_DIR: should hold the enclosing directory, i.e. the absolute path to gestalt/sample#/
-If running GESTALT on an HPC cluster that requires job scheduling (e.g. Slurm, OpenPBS, etc.), further edit this file so that it is compatible with the scheduler. We found that 2 cpu cores were sufficient on CHPC at the University of Utah.
+If running the GESTALT barcode analysis pipeline on an HPC cluster that requires job scheduling (e.g. Slurm, OpenPBS, etc.), further edit this file so that it is compatible with the scheduler. We found that 2 cpu cores were sufficient on CHPC at the University of Utah.
 
 For each sample, run the script. This produces an `OUTPUT/` directory. After running on all samples, copy the `.allReadCounts` and `merged.info` files from HPC cluster to your local `gestalt_output/mp0.8_tq10`.
 
 To run on other parameter values, edit the shell script 'run_gestalt_pipeline.sh' accordingly, changing the settings to `--matchProportion 0.95` or `--trimQual 14`.
-
-
-<!-- Install the GESTALT pipeline from [github.com/aaronmck/Cas9FateMapping](https://github.com/aaronmck/Cas9FateMapping) and the `pipeline/gestalt_pipeline_no_trees.scala` file from [github.com/Gagnon-lab/takasugi-genetics](https://github.com/Gagnon-lab/takasugi-genetics) -->
 
 ### Secondary quality control pipeline
 1. Make sure that the `gestalt_output/` directory contains the subdirectories `mp0.8_tq10`, `mp0.95_tq10`, and `mp0.8_tq14`, each containing `.allReadCounts` and `merged.info` files. These can either be downloaded from this repository or re-generated using the instructions above.
 2. Install the Python environment using the steps above.
 3. Run the pipeline. The `pipeline.ipynb` notebook contains a `preset` parameter that will configure different settings for the run:
     - `'full_pipeline'`: the default data cleaning pipeline.
-    - `'full_pipeline_TQ14'`: the default pipeline using the Trim Quality 14 GESTALT output.
-    - `'full_pipeline_MP0.95'`: the default pipeline using the Match Proportion 0.95 GESTALT output.
+    - `'full_pipeline_TQ14'`: the pipeline using the Trim Quality 14 GESTALT pipeline parameter.
+    - `'full_pipeline_MP0.95'`: the pipeline using the Match Proportion 0.95 GESTALT pipeline parameter.
     - `'no_cluster'`: skip the clustering step.
     - `'keep_questionable'`: does not remove barcodes appearing in multiple fish.
-    - `'no_filter'`: ignores both the used entry proportion from GESTALT and the kept entry cutoff at the end of the pipeline.
+    - `'no_filter'`: ignores both the used entry proportion from the GESTALT barcode analysis pipeline and the kept entry cutoff at the end of the secondary pipeline.
     - `'used_filter'`: ignores the kept entry cutoff at the end of the pipeline.
 Note that if the results already exist in `experiments/` (for example, if you just cloned this repository), then you should either delete these results or change the `name` parameter above. The quality control code will not overwrite this data automatically.
 
@@ -96,3 +96,4 @@ Running this code will (re-)produce tables of final clonal reads in the `experim
 
 ## References
 * McKenna, A., Findlay, G. M., Gagnon, J. A., Horwitz, M. S., Schier, A. F., & Shendure, J. (2016). Whole-organism lineage tracing by combinatorial and cumulative genome editing. Science, 353(6298), aaf7907.
+* Raj, B., Wagner, D. E., McKenna, A., Pandey, S., Klein, A. M., Shendure, J., ... & Schier, A. F. (2018). Simultaneous single-cell profiling of lineages and cell types in the vertebrate brain. Nature biotechnology, 36(5), 442-450.

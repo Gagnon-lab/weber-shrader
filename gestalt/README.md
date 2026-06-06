@@ -1,7 +1,6 @@
 # `sperm-data-analysis/gestalt`
 
-This directory contains files needed to run the GESTALT pipeline. Before running GESTALT, the `fastq` files
-should be downloaded from GEO (using the instructions in the main README).
+This directory contains files needed to run the GESTALT barcode analysis pipeline. Before running the GESTALT pipeline, the `fastq` files should be downloaded from GEO (using the instructions in the main README).
 
 This directory should contain folders:
 * `Longitudinal_Samples1and2`
@@ -21,8 +20,8 @@ This directory should contain folders:
 
 Each of these folders should then contain the files:
 * `gestalt_pipeline_no_trees.scala`: the GESTALT script.
-* `GESTALT_Sample{number}.sh`: An example bash script to run GESTALT.
-* `run_gestalt_pipeline.sh`: Another script that directly runs GESTALT.
+* `GESTALT_Sample{number}.sh`: An example bash script to run the GESTALT pipeline.
+* `run_gestalt_pipeline.sh`: Another script that directly runs the GESTALT pipeline.
 * `Sample9tearsheet.txt`: metadata linking each `fastq` file to a fish, sample, replicate.
 * `sperm.referenceseq.fa`: The reference sequence.
 * `sperm.referenceseq.fa.cutSites`: The sites and cut positions.
