@@ -32,11 +32,22 @@ def process_clone(data):
         r_opt, l_max, lower, upper, l_null = \
             run_likelihood(data, lm = lm)
 
+        data_early = data.query('time <= 12').copy()
+        r_opt_e, l_max_e, lower_e, upper_e, l_null_e = \
+            run_likelihood(data_early, lm = lm)
+
+        data_late = data.query('time > 12').copy()
+        r_opt_l, l_max_l, lower_l, upper_l, l_null_l = \
+            run_likelihood(data, lm = lm)
+
     series['r_opt'] = r_opt
     series['l_max'] = l_max
     series['lower'] = lower
     series['upper'] = upper
     series['l_null'] = l_null
+    
+    series['r_opt_e'] = r_opt_e
+    series['r_opt_l'] = r_opt_l
 
     return series
 

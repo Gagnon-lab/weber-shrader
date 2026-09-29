@@ -1,6 +1,7 @@
 import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
+from matplotlib.patches import Rectangle
 
 # Source: https://github.com/BlakeRMills/MoMAColors/blob/main/R/Colors.R
 default_colors = np.array(["#ff4d6f", "#579ea4", "#df7713", "#f9c000", "#86ad34",
@@ -67,3 +68,38 @@ def plot(results, ax = None, replicate = None, unedited_index = None, colors = N
     ax.set_ylabel("Barcode frequency")
     ax.set_xlim(times[0], times[-1])
     ax.set_ylim(0, 1);
+
+def plot_tubules(spatial_result, time, ax=None, colors=None):
+    """Plot the clonal composition of every tubule at a sample or record time."""
+    if colors is None:
+        colors = default_colors
+
+    tubules = None
+    for prefix in ("sample", "record"):
+        times = np.asarray(spatial_result[f"{prefix}_times"])
+        matches = np.flatnonzero(np.isclose(times, time))
+        if len(matches):
+            tubules = spatial_result[f"{prefix}_states"][matches[0]]
+            break
+    if tubules is None:
+        available = np.unique(np.concatenate((spatial_result["sample_times"], spatial_result["record_times"])))
+        raise ValueError(f"time {time} not found; available times are {available.tolist()}")
+    if ax is None:
+        _, ax = plt.subplots(figsize=(12, max(2.5, 0.6 * len(tubules))))
+
+    max_clone = max(int(np.max(tubule)) for tubule in tubules if len(tubule))
+    clone_colors = np.tile(colors, -(-(max_clone + 1) // len(colors)))
+    row_spacing = 1.25
+    for i, tubule in enumerate(tubules):
+        y = i * row_spacing
+        for x, clone in enumerate(tubule):
+            ax.add_patch(Rectangle((x, y), 1, 1, facecolor=clone_colors[clone],
+                                  ))#edgecolor="white", linewidth=0.25))
+
+    max_length = max(map(len, tubules))
+    ax.set(xlim=(0, max_length), ylim=(len(tubules) * row_spacing, 0),
+           xlabel="Position", ylabel="Tubule", title=f"Time {time:g}")
+    ax.set_yticks(np.arange(len(tubules)) * row_spacing + 0.5,
+                  labels=np.arange(1, len(tubules) + 1))
+    ax.set_aspect("auto")
+    return ax

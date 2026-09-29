@@ -72,15 +72,15 @@ To run on other parameter values, edit the shell script 'run_gestalt_pipeline.sh
 ### Secondary quality control pipeline
 1. Make sure that the `gestalt_output/` directory contains the subdirectories `mp0.8_tq10`, `mp0.95_tq10`, and `mp0.8_tq14`, each containing `.allReadCounts` and `merged.info` files. These can either be downloaded from this repository or re-generated using the instructions above.
 2. Install the Python environment using the steps above.
-3. Run the pipeline. The `pipeline.ipynb` notebook contains a `preset` parameter that will configure different settings for the run:
-    - `'full_pipeline'`: the default data cleaning pipeline.
-    - `'full_pipeline_TQ14'`: the pipeline using the Trim Quality 14 GESTALT pipeline parameter.
-    - `'full_pipeline_MP0.95'`: the pipeline using the Match Proportion 0.95 GESTALT pipeline parameter.
-    - `'no_cluster'`: skip the clustering step.
-    - `'keep_questionable'`: does not remove barcodes appearing in multiple fish.
-    - `'no_filter'`: ignores both the used entry proportion from the GESTALT barcode analysis pipeline and the kept entry cutoff at the end of the secondary pipeline.
-    - `'used_filter'`: ignores the kept entry cutoff at the end of the pipeline.
-Note that if the results already exist in `experiments/` (for example, if you just cloned this repository), then you should either delete these results or change the `name` parameter above. The quality control code will not overwrite this data automatically.
+3. Run the pipeline. Set `config_name` in the first code cell of `pipeline.ipynb` to the stem of a YAML file in `configs/`. Each YAML file contains the complete settings record for one run:
+    - `full_pipeline`: the default data cleaning pipeline.
+    - `full_pipeline_TQ14`: uses the Trim Quality 14 GESTALT output.
+    - `full_pipeline_MP0.95`: uses the Match Proportion 0.95 GESTALT output.
+    - `no_cluster`: skips the clustering step.
+    - `keep_questionable`: retains barcodes appearing in multiple fish.
+    - `no_filter`: disables the used-entry and final anomaly filters.
+    - `used_filter`: disables the final anomaly filter.
+   To make a custom run, copy an existing YAML file, give it a new filename and output `name`, then select that filename in the notebook. The selected YAML is copied into the resulting `experiments/<name>/` directory. See `configs/README.md` for details.
 
 Running this code will (re-)produce tables of final clonal reads in the `experiments/` subfolder.
 

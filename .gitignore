@@ -6,6 +6,8 @@ model_simulations/*/
 fastq-data/clustering/
 **.DS_Store
 **.sh
+**/cshl*
+experiments/full_pipeline_no_compress
 
 ##################################################################
 # PYTHON GITIGNORE                                               #
